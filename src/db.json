@@ -1,0 +1,325 @@
+{
+    "Experiences": [
+        {
+            "id": 1,
+            "image": "image/image22.jpeg",
+            "image2": "image/image13.jpeg",
+            "image3": "image/image13.jpeg",
+            "title": "Thanks, iOS 16.1, for the iPhone Battery Icon We Wanted All Along",
+            "containe": "  All the complaints about iOS 16's battery percentage icon redesign hit a nerve at Apple.",
+            "update": "N.R.P-Last updated: February 12,2021",
+            "title2": "7 Hidden iOS 16 Features We Were Surprised to Find",
+            "update2": "N.R.P-Last updated: February 12,2021",
+            "title3": "Kindle Scribe Is More Than an E-Reader. You Can Draw on It, Too",
+            "update3": "N.R.P-Last updated: February 12,2022"
+        }
+    ],
+    "Fourate": [
+        {
+            "id": 1,
+            "image": "image/image13.jpeg",
+            "title": "Hidden iOS 16 Features We Were Surprised to Find",
+            "update": "N.R.P-Last updated: February 12,2021"
+        },
+        {
+            "id": 2,
+            "image": "image/image11.jpg",
+            "title": "Hate the New iPhone Battery Icon on iOS 16? You Won't Have to Wait Too Long for a Fix",
+            "update": "N.R.P-Last updated: February 12,2021"
+        },
+        {
+            "id": 3,
+            "image": "image/image24.jpeg",
+            "title": "Galaxy Z Fold 4: Samsung's Foldable Phone Gets Better Design, Same Steep Price",
+            "update": "N.R.P-Last updated: February 12,2021"
+        },
+        {
+            "id": 4,
+            "image": "image/image22.jpeg",
+            "title": "Scribe Is More Than an E-Reader. You Can Draw on It, Too",
+            "update": "N.R.P-Last updated: February 12,2021"
+        },
+        {
+            "id": 5,
+            "image": "image/image7.jpeg",
+            "title": "Should You Upgrade to the Apple Watch Series 8? How It Compares to Older Watches",
+            "containe": "  All the complaints about iOS 16's battery percentage icon redesign hit a nerve at Apple.",
+            "update": "N.R.P-Last updated: February 12,2021"
+        }
+       
+    ],
+    "TechDeals":[
+        {
+            "id": 1,
+            "image": "image/image7.jpeg",
+            "title": "Second Prime Day in October: Here are 9 Amazon Prime Perks You'll Want to Use",
+            "description":" If you've got an Amazon Prime account, you can get exclusive discounts and early access to Prime day deals. ",
+            "update": "N.R.P-Last updated: February 12,2021"
+        },
+        {
+            "id": 2,
+            "image": "image/image24.jpeg",
+            "title": "Best PlayStation Deals: Save on Headsets, Refurb Consoles and More",
+            "description":" Save big on all the PlayStation accessories you need to expand your gaming setup on the cheap. ",
+            "update": "N.R.P-Last updated: February 12,2021"
+        }
+
+    ],
+    "TechRight":[
+        {
+            "id": 1,
+           
+            "title": "Get CompTIA, AWS and Cisco Certified With This $35 Training Bundle",
+            "description":" Today only at StackSocial, you can save over $400 on this course bundle that prepares you for 13 different IT certification exams."
+            
+        },
+        {
+            "id": 2,
+           
+            "title": "Amazon Kicks Off Epic Sale With Up to 59% Off Echo, Fire TV, Fire Tablets and More",
+            "description":" This limited-time sale makes Amazon's highly rated devices even more affordable than usual. Grab some today."
+            
+        },{
+            "id": 3,
+           
+            "title": "Apple's AirPods Pro 2 Discounted at Amazon, Save on Apple's Latest Earbuds Now",
+            "description":" The AirPods Pro 2 recently started shipping, and Amazon is still offering a chance to save on them."
+            
+        }
+    ],
+    "Mobaile":[
+        {
+            "id": 1,
+            "image": "image/image11.jpg",
+            "title": "Hate the New iPhone Battery Icon on iOS 16? You Won't Have to Wait Too Long for a Fix",
+            "description":" Apple listened to the complaints about the iOS 16's battery percentage icon redesign and is making a change with iOS 16.1. ",
+            "update": "N.R.P-Last updated: February 12,2021"
+        },
+        {
+            "id": 2,
+            "image": "image/image22.jpeg",
+            "title": "Galaxy Z Fold 4: Samsung's Foldable Phone Gets Better Design, Same Steep Price",
+            "description":" The new Z Fold 4 is available next week for a whopping $1,800. ",
+            "update": "N.R.P-Last updated: February 12,2021"
+        }
+
+    ],
+    "MobaileRight":[
+        {
+            "id": 1,
+           
+            "title": "iPhone 14 Pro vs. Pixel 6 Pro Camera Comparison",
+            "description":" Apple's new flagship iPhone packs 48 megapixels. How does that compare with Google's camera?"
+            
+        },
+        {
+            "id": 2,
+           
+            "title": "Should You Upgrade to the Apple Watch Series 8? See How It Compares to Your Watch",
+            "description":" It depends on which Apple Watch you currently own. If you have the Series 3, it's definitely time for an upgrade."
+            
+        },{
+            "id": 3,
+           
+            "title": "iOS 16 Is Here, but It Won't Run on Every iPhone. Here's How to Find Out",
+            "description":" Check to see if Apple's newest mobile software will work on your iPhone."
+            
+        }
+    ],
+    "Computing":[
+        {
+            "id": 1,
+            "image": "image/image7.jpeg",
+            "title": " Amazon Fire TV Omni QLED vs. Samsung The Frame TV: Works of Art",
+            "description":" Amazon's newest TV displays paintings and fine art, but Samsung got there first. Here's how they compare.",
+            "update": "N.R.P-Last updated: February 12,2021"
+        },
+        {
+            "id": 2,
+            "image": "image/image24.jpeg",
+            "title": "New Fire TV Omni QLED: Amazon Gets A Creepy Detection Feature",
+            "description":" The new 65- and 75-inch TVs turn on automatically to display art, photos and widgets, plus promise better picture quality. ",
+            "update": "N.R.P-Last updated: February 12,2021"
+        }
+
+    ],
+    "ComputingRight":[
+        {
+            "id": 1,
+           
+            "title": "LG C1 OLED TV: Worth the price if you want the best",
+            "description":"With a world-beating picture, oodles of features and slim styling, the LG C1 remains the TV to beat."
+            
+        },
+        {
+            "id": 2,
+           
+            "title": " QLED vs. OLED TVs: Which TV Technology Is Better in 2022?",
+            "description":" In our side-by-side reviews, OLED has beaten QLED every time."
+            
+        },
+        {
+            "id": 3,
+           
+            "title": "Best TV for 2022: Top 9 Smart TVs From Budget to High-End",
+            "description":" We compare TVs in a lab, side by side, to find the best picture, design and features for the money."
+            
+        }
+    ],
+
+    "Gaming":[
+        {
+            "id": 1,
+            "image": "image/image7.jpeg",
+            "title": "  Google to Shut Down Stadia, Refund All Purchases",
+            "description":" The search giant's cloud gaming service will be shuttered on Jan. 18, but players won't lose money.",
+            "update": "N.R.P-Last updated: February 12,2021"
+        },
+        {
+            "id": 2,
+            "image": "image/image24.jpeg",
+            "title": "Best VR Headsets of 2022",
+            "description":" The Quest 2 still remains the best, but new options are coming soon. ",
+            "update": "N.R.P-Last updated: February 12,2021"
+        }
+
+    ],
+    "GamingRight":[
+        {
+            "id": 1,
+           
+            "title": " Best VR Headsets of 2022",
+            "description":"Gaming anywhere is everywhere."
+            
+        },
+        {
+            "id": 2,
+           
+            "title": "  Pokemon Scarlet and Violet: Every New Pokemon Revealed So Far",
+            "description":" Here's a closer look at some new Pokemon debuting in the upcoming Nintendo Switch games."
+            
+        },
+        {
+            "id": 3,
+           
+            "title": "Overwatch 2 Reignited My Obsession",
+            "description":" Playing in Overwatch 2 early access has completely reignited my love for the series."
+            
+        }
+    ],
+    "HomeEntertainment":[
+        {
+            "id": 1,
+            "image": "image/image7.jpeg",
+            "title": "  Amazon Fire TV Omni QLED vs. Samsung The Frame TV: Works of Art",
+            "description":" Amazon's newest TV displays paintings and fine art, but Samsung got there first. Here's how they compare.",
+            "update": "N.R.P-Last updated: February 12,2021"
+        },
+        {
+            "id": 2,
+            "image": "image/image24.jpeg",
+            "title": " New Fire TV Omni QLED: Amazon Gets A Creepy Detection Feature",
+            "description":"The new 65- and 75-inch TVs turn on automatically to display art, photos and widgets, plus promise better picture quality.",
+            "update": "N.R.P-Last updated: February 12,2021"
+        }
+
+    ],
+    "EntertainmentRight":[
+        {
+            "id": 1,
+           
+            "title": "  LG C1 OLED TV: Worth the price if you want the best",
+            "description":"With a world-beating picture, oodles of features and slim styling, the LG C1 remains the TV to beat."
+            
+        },
+        {
+            "id": 2,
+           
+            "title": "QLED vs. OLED TVs: Which TV Technology Is Better in 2022?",
+            "description":" In our side-by-side reviews, OLED has beaten QLED every time."
+            
+        },
+        {
+            "id": 3,
+           
+            "title": "LG C2 OLED TV Review: Early Favorite for Best High-End TV",
+            "description":" The C2 sets the pace for 2022 with superb picture quality, numerous sizes and a track record of success."
+            
+        }
+    ],
+    "Services":[
+        {
+            "id": 1,
+            "image": "image/image7.jpeg",
+            "title": "  One Way to Save Money on Netflix, HBO Max and Other Streaming Services",
+            "description":" Avoid spending too much on streaming TV by using this clever tactic.",
+            "update": "N.R.P-Last updated: February 12,2021"
+        },
+        {
+            "id": 2,
+            "image": "image/image24.jpeg",
+            "title": " 4 Annoying iOS 16 Features You Can Fix Right Now",
+            "description":"There's a lot to love about the latest iPhone update, but some features and settings can be a bit irritating.",
+            "update": "N.R.P-Last updated: February 12,2021"
+        }
+
+    ],
+    "SoftwareRight":[
+        {
+            "id": 1,
+           
+            "title": "  Best Streaming Service of 2022: Netflix, HBO Max, Disney Plus and More",
+            "description":" Best Streaming Service of 2022: Netflix, HBO Max, Disney Plus and More"
+            
+        },
+        {
+            "id": 2,
+           
+            "title": "Netflix's Most Popular Shows and Movies, Ranked (According to Netflix)",
+            "description":" Netflix publishes weekly charts of its most watched series and films, hoping you'll find something new to watch. We track the all-timers."
+            
+        },
+        {
+            "id": 3,
+           
+            "title": " Best Live TV Streaming Service for Cord Cutting in 2022",
+            "description":" Are you looking to cut cable but want to keep live sports, news and originals? YouTube TV, Hulu Plus Live TV or Sling TV could be the services for you."
+            
+        }
+    ],
+    "Latest":[
+        {
+            "id":1,
+            "title":"The iPhone 14 Plus Is a Big, Bold Purple Behemoth",
+            "desc":"Apple's newest phone is an iPhone 14, but bigger.",
+            "update":"N.R.P-Last updated: February 12,2021"
+        },{
+            "id":2,
+            "title":"Google Pixel 7 vs. Apple iPhone 14 vs. Samsung Galaxy S22: The $200 Difference",
+            "desc":"The Pixel 7 is keeping its $599 price, and that might be a big selling point against the more expensive Galaxy S22 and iPhone 14.",
+            "update":"N.R.P-Last updated: February 12,2021"
+        }
+        ,{
+            "id":3,
+            "title":"Streaming Services in October: You May Want to Cancel These",
+            "desc":"Netflix and other services can be cut midmonth if you run out of stuff to watch.",
+            "update":"N.R.P-Last updated: February 12,2021"
+        }
+        ,{
+            "id":4,
+            "title":"Google Apologizes for Home Mini Speaker Reportedly Reading N-Word Aloud",
+            "desc":"Netflix and other services can be cut midmonth if you run out of stuff to watch.",
+            "update":"N.R.P-Last updated: February 12,2021"
+        }
+        ,{
+            "id":5,
+            "title":"All the Times Google Threw Shade at Apple During the Pixel 7 Event",
+            "desc":"The Google event was basically a subtweet at Apple.",
+            "update":"N.R.P-Last updated: February 12,2021"
+        }
+        
+    
+
+             
+    ]
+}

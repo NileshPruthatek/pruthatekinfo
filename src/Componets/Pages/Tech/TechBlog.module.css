@@ -1,0 +1,494 @@
+
+.universalSubnavitems{
+	
+    display: inline-block;
+    font-size: 1rem;
+    white-space: nowrap;
+    direction: ltr;
+	margin: 10px;
+    text-decoration: none;
+    color:#141414;
+	
+}
+.universalSubnavitems:hover{
+    color:  #0f8209;
+}
+.ctileListtileBlock {
+    margin-bottom: 30px;
+    position: relative;
+}
+.TechCard{
+    width: 400px;
+    height: auto;
+   
+}
+.navdecoration{
+    color: black !important;
+    text-decoration-line: none;
+}
+.cardtext{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.Leftsideimage{
+    
+    width: 300px;
+    height: 220px;
+}
+.howtocardright{
+    width: 550px;
+    height: 220px;
+}
+.Techsmallres{
+    font-size: 1rem;
+    margin-left: 10px;
+}
+.TechUpate{
+    margin-left: 10px;
+}
+
+/*================================Our Favorite Picks======================*/
+.fouratesColums{
+    display: flex;
+    flex-direction: row;
+
+}
+.TechHeading{
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-left:120px ;
+    border-left: 2px solid #56a646;
+    margin-bottom: 20px;
+}
+.navourfavorite{
+    font-size: 1rem;
+    color: #141414;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.navourfavorite:hover{
+    color: #0f8209;
+    cursor: pointer;
+    border-bottom: 2px solid #0f8209;
+}
+.FourateCard{
+    width: 220px;
+    height: 300px;
+    margin: 10px;
+  
+    border-bottom: 2px solid #0f8209;
+   
+   
+}
+.FourateImage{
+    width: 219px;
+    height: 120px;
+    overflow: hidden;
+}
+.Ourtext{
+    font-size: 0.8rem;
+    margin-top: 25px;
+    
+}
+.Updated{
+    margin-top: 25px;
+}
+.Prevbtn{
+    background-color: #0f8209 !important;
+    
+}
+.Nextbtn{
+    background-color: #0f8209 !important;
+    margin-right: 50px;
+   
+}
+
+/*=================================Tech Deals======================= */
+.TechDealsColums{
+    display: flex;
+    flex-direction: row;
+}
+
+.TechDealsCards{
+    width: 250px;
+    height: 450px;
+    margin: 10px
+}
+.TechDealsTitle{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+   
+}
+.TechDealscardContaine{
+    font-size: 0.8rem;
+    
+
+}
+.TechDealRightTile{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    margin-left: 10px;
+
+}
+.TechDealsRightContaine{
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+.TechDealsRightCards{
+    width: auto;
+    height: 150px;
+    margin: 5px;
+}
+
+/*===================================Latest =====================================*/
+.latestcard{
+    width: 900px;
+    height: 180px;
+}
+.LatestTitle{
+    font-size: 1.2rem;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+.Latstdesc{
+    font-size: 0.9rem;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+.LatestUpate{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.Latestimage{
+    width: 197px;
+    height: 178px;
+    margin-left: 90px;
+}
+.SeeMorebtn{
+    border: 1px solid #0f8209;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 10px;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 16px;
+    width: 900px;
+    height: 48px;
+    line-height: 48px;
+    margin-left: 20px;
+   
+    
+}
+.SeeMorebtn:hover{
+    color: #fff;
+    fill: #fff;
+    background-color: #0f8209;
+}
+/*==================================Responsive ===================================*/
+@media (min-width: 320px) and (max-width: 420px) {
+    .universalSubnavitems{
+	
+        display: inline-block;
+        font-size: 0.8rem;
+        white-space: nowrap;
+        direction: ltr;
+        margin: 5px;
+        text-decoration: none;
+        color:#141414;
+        
+    }
+    .TechCard{
+        width: 350px;
+        height: auto;
+       
+        margin-left: 20px;
+    }
+    .TechImage{
+        width: 345px;
+        height: auto;
+    }
+    .howtocardright{
+        width: 350px;
+        height: 200px;
+    }
+    .Leftsideimage{
+    
+        width: 180px;
+        height: 200px;
+    }
+    /*================================Our Favorite Picks======================*/
+    
+
+.fouratesColums{
+    display: flex;
+    flex-direction: column;
+    
+}
+.TechHeading{
+    font-size: 1rem;
+    padding: 10px;
+    margin-left:30px ;
+    border-left: 2px solid #56a646;
+    margin-bottom: 20px;
+}
+.FourateCard{
+   
+    width: 220px;
+    height: 300px;
+    margin: 10px;
+    margin-left:30px ;
+    border-bottom: 2px solid #0f8209;
+   
+   
+}
+
+.Prevbtn{
+    background-color: #0f8209 !important;
+    width: 100px;
+    margin-left: 105px;
+}
+.Nextbtn{
+    background-color: #0f8209 !important;
+    margin-left: 105px;
+    width: 100px;
+   
+   
+}
+/*=================================Tech Deals======================= */
+.TechDealsColums{
+    display: flex;
+    flex-direction: column;
+}
+
+.TechDealscardContaine{
+    font-size: 0.8rem;
+
+}
+.TechDealRightTile{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+.TechDealsRightCards{
+    width: auto;
+    height: 150px;
+    margin: 5px;
+}
+
+/*===================================Latest =====================================*/
+.latestcard{
+    width: 420px;
+    height: 210px;
+}
+.Latestimage{
+    width: 120px;
+    height: 210px;
+    margin-left: 0px;
+}
+.LatestTitle{
+    font-size: 1rem;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+.Latstdesc{
+    font-size: 0.8rem;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+
+}
+@media (min-width: 420px) and (max-width: 600px) {
+    .universalSubnavitems{
+	
+        display: inline-block;
+        font-size: 0.8rem;
+        white-space: nowrap;
+        direction: ltr;
+        margin: 10px;
+        text-decoration: none;
+        color:#141414;
+        
+    }
+    .TechCard{
+        width: 350px;
+        height: auto;
+       
+        margin-left: 20px;
+    }
+    .TechImage{
+        width: 345px;
+        height: auto;
+    }
+    .howtocardright{
+        width: 350px;
+        height: 200px;
+    }
+    .Leftsideimage{
+    
+        width: 180px;
+        height: 200px;
+    }
+    .TechDealsRightCards{
+        width: auto;
+        height: 400px;
+        margin: 5px;
+    }
+    /*================================Our Favorite Picks======================*/
+    .fouratesColums{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .FourateCard{
+   
+        width: 220px;
+        height: 300px;
+        margin: 10px;
+        margin-left:30px ;
+        border-bottom: 2px solid #0f8209;
+       
+       
+    }
+    
+    .Prevbtn{
+        background-color: #0f8209 !important;
+        width: 100px;
+        margin-left: 105px;
+    }
+    .Prevbtn{
+        background-color: #0f8209 !important;
+        width: 100px;
+        margin-left: 105px;
+    }
+    .Nextbtn{
+        background-color: #0f8209 !important;
+        margin-left: 105px;
+        width: 100px;
+       
+       
+    }
+
+
+    .TechHeading{
+        font-size: 1rem;
+        padding: 10px;
+        margin-left:30px ;
+        border-left: 2px solid #56a646;
+        margin-bottom: 20px;
+    }
+    /*=================================Tech Deals======================= */
+.TechDealsColums{
+    display: flex;
+    flex-direction: column;
+}
+.TechDealsCards{
+    width: 250px;
+    height: 450px;
+    margin: 10px;
+    margin-left: 20px;
+
+}
+.TechDealsRightCards{
+    width: auto;
+    height: 150px;
+    margin: 5px;
+}
+/*===================================Latest =====================================*/
+.latestcard{
+    width: 420px;
+    height: 210px;
+}
+.Latestimage{
+    width: 120px;
+    height: 210px;
+    margin-left: 0px;
+}
+.LatestTitle{
+    font-size: 1rem;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+.Latstdesc{
+    font-size: 0.8rem;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+.SeeMorebtn{
+    width: 400px;
+}
+
+}
+@media (min-width: 600px) and (max-width: 750px) {
+
+    .universalSubnavitems{
+	
+        display: inline-block;
+        font-size: 0.8rem;
+        white-space: nowrap;
+        direction: ltr;
+        margin: 10px;
+        text-decoration: none;
+        color:#141414;
+        
+    }
+    
+   
+
+}
+@media (min-width: 750px) and (max-width: 900px) {
+
+    .TechCard{
+        width: 350px;
+        height: auto;
+       
+        
+    }
+    .TechImage{
+        width: 345px;
+        height: auto;
+    }
+    .howtocardright{
+        width: 350px;
+        height: 200px;
+    }
+    .Leftsideimage{
+    
+        width: 180px;
+        height: 200px;
+    }
+}
+@media (min-width: 900px) and (max-width: 1024px) {
+    .TechCard{
+        width: 300px;
+        height: auto;
+       
+       
+    }
+    .TechImage{
+        width: 300px;
+        height: auto;
+    }
+    .howtocardright{
+        width: 400px;
+        height: 200px;
+        margin-left: 20px;
+    }
+    .Leftsideimage{
+    
+        width: 200px;
+        height: 200px;
+    }
+}

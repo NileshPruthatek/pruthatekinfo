@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Nunito+Sans:ital,wght@0,200;1,700&family=Poppins:ital,wght@1,200&display=swap');
+
+.logoimage{
+    width:350px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.navitem{
+    font-size: 1.2rem;
+    letter-spacing: 0.2px;
+    margin: 8px;
+    display: block;
+    height: 64px;
+    line-height: 64px;
+}
+.navitem:hover{
+    text-underline-offset: 2px;
+    text-decoration: underline;
+    text-decoration-color: #0f8209;
+}
+
+.Title{
+    
+    font-size: 1.3rem;
+    letter-spacing: 0.2px;
+    margin-left: -10px;
+    font-family: 'Nunito Sans', sans-serif;
+   
+}
+.submenu {
+  
+    font-size: 0.9rem;
+     margin: -10px;
+     font-family: 'Nunito Sans', sans-serif;
+     font-weight: 700;
+
+  
+}
+.Title:hover{
+    text-underline-offset: 2px;
+    text-decoration: underline;
+    text-decoration-color: #0f8209;
+   
+  
+}
+.submenu:hover{
+    text-underline-offset: 2px;
+    text-decoration: underline;
+    text-decoration-color: #0f8209;
+}
+
+.headingtitle{
+    flex: 1;
+    white-space: nowrap;
+    color: #0f8209;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    font-family: Sentinel,serif;
+    font-weight: 600;
+    letter-spacing: -.032em;
+    word-spacing: 0.15em;
+    margin-left: 20px;
+}
+@media (min-width: 375px) and (max-width: 667px) {
+    .logoimage{
+        width:250px;
+        height: 100px;
+        object-fit: cover;
+        cursor: pointer;
+        
+    }
+    .navitem{
+        font-size: 1rem;
+        letter-spacing: 0.2px;
+        margin: 0px;
+        display: block;
+        height: 64px;
+        line-height: 50px;
+    }
+
+}
+@media (min-width: 600px) and (max-width: 700px) {
+    .logoimage{
+        width:250px;
+        height: 100px;
+        object-fit: cover;
+        cursor: pointer;
+      
+       
+    }
+   
+   
+  
+}
