@@ -5,6 +5,15 @@ import image2 from '../../../assets/images/image2.jpeg'
 import data from '../../../db.json'
 export const TechBlog = () => {
 
+    const scrollLeft = () => {
+        const scroll = document.getElementById("slider");
+        scroll.scrollLeft = scroll.scrollLeft - 550;
+    };
+
+    const scrollRight = () => {
+        const scroll = document.getElementById("slider");
+        scroll.scrollLeft = scroll.scrollLeft + 550;
+    };
 
     return (
 
@@ -114,13 +123,41 @@ export const TechBlog = () => {
             </div>
 
 
+            {/* 
+            <div style={{ marginBottom: "20px" }}>
+                <div className={style["wrapper"]}>
+                    <MdChevronLeft
+                    size={40}
+                    onClick={scrollLeft}
+                    style={{ color: "black" }}
+                    />
+                    <div className={style["scroll"]} id="slider">
+                    {data.map((productLink) => {
+                        return (
+                        <div>
+                            <iframe
+                            style={{ width: "120px", height: "240px" }}
+                            marginwidth="0"
+                            marginheight="0"
+                            scrolling="no"
+                            frameborder="0"
+                            src={productLink}
+                            ></iframe>
+                        </div>
+                        );
+                    })}
+                    </div>
+                    <MdChevronRight onClick={scrollRight} size={40} />
+                </div>
+            */}
+
 
 
             <div className='container my-5'>
 
                 <div className='row'>
 
-                    <div className={`col-4  ${techBlog.fouratesColums}`} >
+                    <div className={`col-12  ${techBlog.fouratesColums} ${techBlog.scroll} `} id="slider">
 
                         {data.Fourate.map(fouratedata => {
                             return (
@@ -154,10 +191,10 @@ export const TechBlog = () => {
             </div>
 
             <div className="d-grid  gap-1 d-md-flex justify-content-md-end my-3">
-                <button className={` btn btn-primary  ${techBlog.Prevbtn}`} type="button">
+                <button className={` btn btn-primary  ${techBlog.Prevbtn}`} type="button" onClick={scrollLeft}>
                     Prev
                 </button>
-                <button className={` btn btn-primary  ${techBlog.Nextbtn}`} type="button"  >Next</button>
+                <button className={` btn btn-primary  ${techBlog.Nextbtn}`} type="button" onClick={scrollRight} >Next</button>
             </div>
 
             {/*=================================Tech Deals======================= */}
