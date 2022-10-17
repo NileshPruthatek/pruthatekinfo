@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Nunito+Sans:ital,wght@0,200;1,700&family=Poppins:ital,wght@1,200&display=swap');
+
+.MainTitle{
+    font-size: 1rem;
+    margin-left: 150px;
+    font-family: 'Nunito Sans', sans-serif;
+    
+}
+
+.universalSubnavitems{
+	
+    display: inline-block;
+    font-size: 1rem;
+    white-space: nowrap;
+    direction: ltr;
+	margin: 10px;
+    text-decoration: none;
+    color:#141414;
+	
+}
+.universalSubnavitems:hover{
+    color:  #0f8209;
+}
+.ctileListtileBlock {
+    margin-bottom: 30px;
+    position: relative;
+}
+.MoneyCard{
+    width: 400px;
+    height: auto;
+   
+}
+.navdecoration{
+    color: black !important;
+    text-decoration-line: none;
+}
+.cardtext{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.Leftsideimage{
+    
+    width: 300px;
+    height: 220px;
+}
+.howtocardright{
+    width: 550px;
+    height: 220px;
+}
+.Techsmallres{
+    font-size: 1rem;
+    margin-left: 10px;
+}
+.TechUpate{
+    margin-left: 10px;
+}
+/*================================Our Favorite Picks======================*/
+.fouratesColums{
+    display: flex;
+    flex-direction: row;
+
+}
+.TechHeading{
+    font-size: 1.5rem;
+    padding: 10px;
+    margin-left:120px ;
+    border-left: 2px solid #56a646;
+    margin-bottom: 20px;
+}
+.navourfavorite{
+    font-size: 1rem;
+    color: #141414;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.navourfavorite:hover{
+    color: #0f8209;
+    cursor: pointer;
+    border-bottom: 2px solid #0f8209;
+}
+.FourateCard{
+    width: 220px;
+    height: 300px;
+    margin: 10px;
+  
+    border-bottom: 2px solid #0f8209;
+   
+   
+}
+.FourateImage{
+    width: 219px;
+    height: 120px;
+    overflow: hidden;
+}
+.Ourtext{
+    font-size: 0.8rem;
+    margin-top: 25px;
+    
+}
+.Updated{
+    margin-top: 25px;
+}
+.Prevbtn{
+    background-color: #0f8209 !important;
+    
+}
+.Nextbtn{
+    background-color: #0f8209 !important;
+    margin-right: 50px;
+   
+}
+/* Scroll behaviour CSS */
+
+
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;  
+}
+
+.scroll {
+    display: flex;
+    overflow-x: scroll;
+    align-items: center;
+    gap: 2em;
+}
+/*=================================Tech Deals======================= */
+.TechDealsColums{
+    display: flex;
+    flex-direction: row;
+}
+
+.TechDealsCards{
+    width: 250px;
+    height: 450px;
+    margin: 10px
+}
+.TechDealsTitle{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+   
+}
+.TechDealscardContaine{
+    font-size: 0.8rem;
+    
+
+}
+.TechDealRightTile{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    margin-left: 10px;
+
+}
+.TechDealsRightContaine{
+    font-size: 0.9rem;
+    margin-left: 10px;
+}
+.TechDealsRightCards{
+    width: auto;
+    height: 150px;
+    margin: 5px;
+}
+/*===================================Latest =====================================*/
+.latestcard{
+    width: 900px;
+    height: 180px;
+}
+.LatestTitle{
+    font-size: 1.2rem;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+.Latstdesc{
+    font-size: 0.9rem;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+.LatestUpate{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.Latestimage{
+    width: 197px;
+    height: 178px;
+    margin-left: 90px;
+}
+.SeeMorebtn{
+    border: 1px solid #0f8209;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0 10px;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 16px;
+    width: 800px;
+    height: 48px;
+    line-height: 48px;
+    margin-left:140px;
+   
+    
+}
+.SeeMorebtn:hover{
+    color: #fff;
+    fill: #fff;
+    background-color: #0f8209;
+}

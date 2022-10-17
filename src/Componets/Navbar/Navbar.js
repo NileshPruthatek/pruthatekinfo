@@ -21,15 +21,19 @@ export const Navbar = () => {
     </button>
     <div className="collapse navbar-collapse mr-5  " id="navbarSupportedContent">
       <ul className="navbar-nav ml-5 mx-auto ">
+     
         <li className={style.navitem} >
-        
+       
           
           <a className="nav-link active" aria-current="page" href="/Tech">Tech</a>
-          
+         
         </li>
 
         <li className={style.navitem} >
-          <a className="nav-link active" aria-current="page" href="#">Money</a>
+        
+          <a className="nav-link active" aria-current="page" href="/money">Money</a>
+          
+        
         </li>
         <li className={style.navitem}   >
           <a className="nav-link active" aria-current="page" href="#">Home</a>

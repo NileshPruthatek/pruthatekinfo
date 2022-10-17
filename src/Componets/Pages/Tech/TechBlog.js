@@ -1,10 +1,24 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import techBlog from '../Tech/TechBlog.module.css'
 import { NavLink } from 'react-router-dom'
-import image2 from '../../../assets/images/image2.jpeg'
+
 import data from '../../../db.json'
 export const TechBlog = () => {
+    const scrollLeft = () => {
+        const scroll = document.getElementById("slider");
+        scroll.scrollLeft = scroll.scrollLeft - 550;
+    };
 
+    const scrollRight = () => {
+        const scroll = document.getElementById("slider");
+        scroll.scrollLeft = scroll.scrollLeft + 550;
+    };
+
+    
+
+    const [showSeeMore, setShowSeeMore]=useState(false);
+
+    
 
     return (
 
@@ -16,7 +30,7 @@ export const TechBlog = () => {
 
                             <NavLink className={`p-2  ${techBlog.universalSubnavitems}`} to="/Tech">Tech</NavLink>
                             <NavLink className={`p-2  ${techBlog.universalSubnavitems}`} to="#" >Home Entertainment</NavLink>
-                            <NavLink className={` p-2 ${techBlog.universalSubnavitems}`} to="#" >Mobile</NavLink>
+                            <NavLink className={` p-2 ${techBlog.universalSubnavitems}`} to="/mobile" >Mobile</NavLink>
                             <NavLink className={` p-2 ${techBlog.universalSubnavitems}`} to="#" >Computing</NavLink>
                             <NavLink className={` p-2 ${techBlog.universalSubnavitems}`} to="#" >Services & Software</NavLink>
                             <NavLink className={` p-2 ${techBlog.universalSubnavitems}`} to="#" >Gaming</NavLink>
@@ -120,7 +134,7 @@ export const TechBlog = () => {
 
                 <div className='row'>
 
-                    <div className={`col-4  ${techBlog.fouratesColums}`} >
+                    <div className={`col-12  ${techBlog.fouratesColums} ${techBlog.scroll} `} id="slider">
 
                         {data.Fourate.map(fouratedata => {
                             return (
@@ -154,10 +168,10 @@ export const TechBlog = () => {
             </div>
 
             <div className="d-grid  gap-1 d-md-flex justify-content-md-end my-3">
-                <button className={` btn btn-primary  ${techBlog.Prevbtn}`} type="button">
+                <button className={` btn btn-primary  ${techBlog.Prevbtn}`} type="button" onClick={scrollLeft}>
                     Prev
                 </button>
-                <button className={` btn btn-primary  ${techBlog.Nextbtn}`} type="button"  >Next</button>
+                <button className={` btn btn-primary  ${techBlog.Nextbtn}`} type="button" onClick={scrollRight} >Next</button>
             </div>
 
             {/*=================================Tech Deals======================= */}
@@ -200,7 +214,7 @@ export const TechBlog = () => {
 
 
                     </div>
-                    <div className='col-md-6'>
+                    <div className={`col-md-5  ${techBlog.TechDealsRightColums}`}>
                         {data.TechRight.map(techrightdata => {
                             return (
                                 <div key={techrightdata.index}>
@@ -235,7 +249,7 @@ export const TechBlog = () => {
             <div className={techBlog.TechHeading}>
                 Mobaile
 
-                <NavLink to="#" className={techBlog.navourfavorite}>See All</NavLink>
+                <NavLink to="/mobile" className={techBlog.navourfavorite}>See All</NavLink>
 
             </div>
             <div className='container'>
@@ -585,7 +599,7 @@ export const TechBlog = () => {
                 </div>
 
             </div>
-            {/*===========================Services and Software======================== */}
+            {/*===========================Latest======================== */}
 
             <div className={techBlog.TechHeading}>
                 Latest
@@ -610,7 +624,7 @@ export const TechBlog = () => {
                                             </div>
                                             <div className="col-2 ">
 
-                                                <img src={image2} alt="..." className={techBlog.Latestimage} />
+                                                <img src={latestdata.image} alt="..." className={techBlog.Latestimage} />
 
 
                                             </div>
@@ -623,12 +637,74 @@ export const TechBlog = () => {
 
 
                     </div>
-                    <button type="button" className={` btn btn-sucess my-5 ${techBlog.SeeMorebtn}`}>See More</button>
+                        
+                       
+
+
+
+
+                  
                 </div>
 
             </div>
 
+          {showSeeMore &&(
+ <div className='container'>
+ <div className='row'>
+     <div className='col-10'>
+         {data.Latest.map(latestdata => (
+             <div key={latestdata.index}>
+                 <div className={`card mb-3    ${techBlog.latestcard}`} >
+                     <NavLink to="#" className={techBlog.navdecoration}>
+                         <div className="row no-gutters">
+                             <div className="col-8   ">
+                                 <div className="card-body  p-0 pl-3">
+                                     <h5 className={`card-text font-weight-bold  ${techBlog.LatestTitle}`} >{latestdata.title}</h5>
+                                     <p className={`card-text font-weight-bold    ${techBlog.Latstdesc}`} >{latestdata.desc}</p>
 
+                                     <p className={`card-text    ${techBlog.LatestUpate}`} ><small className="text-muted">{latestdata.update}</small></p>
+                                 </div>
+                             </div>
+                             <div className="col-2 ">
+
+                                 <img src={latestdata.image} alt="..." className={techBlog.Latestimage} />
+
+
+                             </div>
+                         </div>
+                     </NavLink>
+                 </div>
+
+             </div>
+         ))}
+
+
+     </div>
+         
+        
+
+
+
+
+   
+ </div>
+
+</div>
+          )}
+
+{/*====================== see more================== */}
+            <button 
+            type="button" 
+            className={` btn btn-sucess my-5 ${techBlog.SeeMorebtn}`}
+            onClick={
+                ()=>{
+                    setShowSeeMore((prevSeeMore)=>setShowSeeMore(!prevSeeMore))
+                }
+            }
+            >
+                {showSeeMore ? "see more": "see More"}
+                
+                </button>
 
         </>
     )

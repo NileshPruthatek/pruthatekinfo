@@ -102,7 +102,30 @@
     margin-right: 50px;
    
 }
+/* Scroll behaviour CSS */
 
+
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;  
+}
+
+.scroll {
+    display: flex;
+    overflow-x: scroll;
+    align-items: center;
+    gap: 2em;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
 /*=================================Tech Deals======================= */
 .TechDealsColums{
     display: flex;
@@ -179,10 +202,10 @@
     cursor: pointer;
     overflow: hidden;
     font-size: 16px;
-    width: 900px;
+    width: 800px;
     height: 48px;
     line-height: 48px;
-    margin-left: 20px;
+    margin-left:140px;
    
     
 }
@@ -223,14 +246,14 @@
         width: 180px;
         height: 200px;
     }
-    /*================================Our Favorite Picks======================*/
-    
-
-.fouratesColums{
+    /*=================================Tech Deals======================= */
+.TechDealsColums{
     display: flex;
     flex-direction: column;
+}/*================================Our Favorite Picks======================*/
     
-}
+
+
 .TechHeading{
     font-size: 1rem;
     padding: 10px;
@@ -261,11 +284,7 @@
    
    
 }
-/*=================================Tech Deals======================= */
-.TechDealsColums{
-    display: flex;
-    flex-direction: column;
-}
+
 
 .TechDealscardContaine{
     font-size: 0.8rem;
@@ -345,11 +364,25 @@
         margin: 5px;
     }
     /*================================Our Favorite Picks======================*/
-    .fouratesColums{
-        display: flex;
-        flex-direction: column;
-        
-    }
+    /* Scroll behaviour CSS */
+
+
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;  
+}
+
+.scroll {
+    display: flex;
+    overflow-x: scroll;
+    align-items: center;
+    gap: 2em;
+}
+
     .FourateCard{
    
         width: 220px;
@@ -360,17 +393,14 @@
        
        
     }
+
     
     .Prevbtn{
         background-color: #0f8209 !important;
         width: 100px;
         margin-left: 105px;
     }
-    .Prevbtn{
-        background-color: #0f8209 !important;
-        width: 100px;
-        margin-left: 105px;
-    }
+    
     .Nextbtn{
         background-color: #0f8209 !important;
         margin-left: 105px;
@@ -427,7 +457,8 @@
 
 }
 .SeeMorebtn{
-    width: 400px;
+    width: 300px;
+    
 }
 
 }
@@ -444,8 +475,85 @@
         color:#141414;
         
     }
+    .Leftsideimage{
     
-   
+        width: 300px;
+        height: 220px;
+    }
+    .howtocardright{
+        width: 450px;
+        height: 220px;
+    }
+    .Techsmallres{
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+    .TechHeading{
+        font-size: 1.5rem;
+        padding: 10px;
+        margin-left:50px ;
+        border-left: 2px solid #56a646;
+        margin-bottom: 20px;
+    }
+    /*================================Our Favorite Picks======================*/
+    /* Scroll behaviour CSS */
+    .Prevbtn{
+        background-color: #0f8209 !important;
+        width: 100px;
+        margin-left: 105px;
+    }
+    
+    .Nextbtn{
+        background-color: #0f8209 !important;
+        margin-left: 105px;
+        width: 100px;
+       
+       
+    }
+     /*=================================Tech Deals======================= */
+.TechDealsColums{
+    display: flex;
+    flex-direction: column;
+}
+.TechDealsCards{
+    width: 250px;
+    height: 450px;
+    margin: 10px;
+    margin-left: 20px;
+
+}
+.TechDealsRightCards{
+    width: auto;
+    height: 150px;
+    margin: 5px;
+}
+  /*===================================Latest =====================================*/
+.latestcard{
+    width: 500px;
+    height: 180px;
+}
+.Latestimage{
+    width: 120px;
+    height: 180px;
+    margin-left: 50px;
+}
+.LatestTitle{
+    font-size: 1rem;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+.Latstdesc{
+    font-size: 0.8rem;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+.SeeMorebtn{
+    width: 300px;
+    
+}   
+
 
 }
 @media (min-width: 750px) and (max-width: 900px) {
@@ -469,6 +577,89 @@
         width: 180px;
         height: 200px;
     }
+
+     /*================================Our Favorite Picks======================*/
+    /* Scroll behaviour CSS */
+
+    .scroll::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .scroll {
+      -ms-overflow-style: none;
+      scrollbar-width: none;  
+    }
+    
+    .scroll {
+        display: flex;
+        overflow-x: scroll;
+        align-items: center;
+        gap: 2em;
+    }
+    .Prevbtn{
+        background-color: #0f8209 !important;
+        width: 100px;
+        margin-left:260px;
+    }
+    
+    .Nextbtn{
+        background-color: #0f8209 !important;
+         width: 100px;
+         margin-left:260px;
+        
+         
+    }
+     /*=================================Tech Deals======================= */
+.TechDealsColums{
+    display: flex;
+    flex-direction: column;
+}
+.TechDealsRightColums{
+    display: flex;
+    flex-direction: column;
+}
+.TechDealsCards{
+    width: 250px;
+    height: 450px;
+    margin: 10px;
+    margin-left: 20px;
+
+}
+.TechDealsRightCards{
+    width: auto;
+    height: 150px;
+    margin: 5px;
+}
+
+    /*===================================Latest =====================================*/
+.latestcard{
+    width: 550px;
+    height: 180px;
+}
+.Latestimage{
+    width: 120px;
+    height: 180px;
+    margin-left: 50px;
+}
+.LatestTitle{
+    font-size: 1rem;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+.Latstdesc{
+    font-size: 0.8rem;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+.SeeMorebtn{
+    width: 250px;
+   
+    
+}
+
+
 }
 @media (min-width: 900px) and (max-width: 1024px) {
     .TechCard{
@@ -491,4 +682,51 @@
         width: 200px;
         height: 200px;
     }
+    
+    /*===================================Latest =====================================*/
+.latestcard{
+    width: 750px;
+    height: 180px;
+}
+.Latestimage{
+    width: 120px;
+    height: 180px;
+    margin-left: 120px;
+}
+.LatestTitle{
+    font-size: 1rem;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+.Latstdesc{
+    font-size: 0.8rem;
+    margin-left: 20px;
+    margin-top: 20px;
+
+}
+.SeeMorebtn{
+    width: 250px;
+   
+    
+}
+/*=================================Tech Deals======================= */
+.TechDealsColums{
+    display: flex;
+    flex-direction: column;
+}
+
+.TechDealsCards{
+    width: 250px;
+    height: 450px;
+    margin: 10px;
+    margin-left: 20px;
+
+}
+.TechDealsRightCards{
+    width: auto;
+    height: 200px;
+    margin: 5px;
+}
+
 }

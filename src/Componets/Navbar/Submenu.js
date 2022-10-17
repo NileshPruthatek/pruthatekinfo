@@ -1,4 +1,6 @@
 import React from 'react'
+
+
 import style from '../Navbar/Navbar.module.css'
 export const Submenu = () => {
   return (
@@ -7,14 +9,20 @@ export const Submenu = () => {
     <div className="row">
     <div className="col-md-6 col-lg-3 mb-3 mb-lg-0">
           <div className="list-group list-group-flush">
+            
                 <li className={style.Title}>Tech
                 </li><li className={style.submenu}>Home Enterainment</li>
-                <li className={style.submenu} >Mobile</li>
+              
+                <li className={style.submenu}  >Mobile</li> 
+              
                 <li className={style.submenu}>Computing</li>
                 <li className={style.submenu}>Services & Software</li>
                 <li className={style.submenu}>Gaming</li>
 
-               
+  
+  
+ 
+
 
                       
             </div>
