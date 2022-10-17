@@ -13,12 +13,7 @@ export const TechBlog = () => {
         const scroll = document.getElementById("slider");
         scroll.scrollLeft = scroll.scrollLeft + 550;
     };
-
-    
-
     const [showSeeMore, setShowSeeMore]=useState(false);
-
-    
 
     return (
 
@@ -127,6 +122,34 @@ export const TechBlog = () => {
 
             </div>
 
+
+            {/* 
+            <div style={{ marginBottom: "20px" }}>
+                <div className={style["wrapper"]}>
+                    <MdChevronLeft
+                    size={40}
+                    onClick={scrollLeft}
+                    style={{ color: "black" }}
+                    />
+                    <div className={style["scroll"]} id="slider">
+                    {data.map((productLink) => {
+                        return (
+                        <div>
+                            <iframe
+                            style={{ width: "120px", height: "240px" }}
+                            marginwidth="0"
+                            marginheight="0"
+                            scrolling="no"
+                            frameborder="0"
+                            src={productLink}
+                            ></iframe>
+                        </div>
+                        );
+                    })}
+                    </div>
+                    <MdChevronRight onClick={scrollRight} size={40} />
+                </div>
+            */}
 
 
 

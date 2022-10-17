@@ -166,6 +166,31 @@
     margin: 5px;
 }
 
+/* Scroll behaviour CSS */
+
+
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;  
+}
+
+.scroll {
+    display: flex;
+    overflow-x: scroll;
+    align-items: center;
+    gap: 2em;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
 /*===================================Latest =====================================*/
 .latestcard{
     width: 900px;
