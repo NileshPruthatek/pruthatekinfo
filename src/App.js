@@ -4,12 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './Componets/Navbar/Navbar';
 
 import {
-  
+
   BrowserRouter as Router,
   Routes,
   Route,
- 
-  
+
+
 } from 'react-router-dom';
 import Homeblog from './Componets/Pages/Homeblog/Homeblog';
 
@@ -20,27 +20,24 @@ import Mobile from './Componets/Pages/Tech/Subcategary/Mobile';
 
 function App() {
   return (
-
-
-    <div className="App">
+    <>
       <Navbar />
-      <Router>
+      <div className="App" style={{ maxWidth: "80%", margin: "0 auto" }}>
+        <Router>
 
-        <Routes>
+          <Routes>
 
-          <Route path="/" element={<Homeblog />} />
-          <Route path="/Tech" element={<TechBlog/>} />
-          <Route path='/money' element={<Moneyblog/>}/>
-          <Route path='/mobile' element={<Mobile/>}/>
-         
-          {/* <Route path="/" element={<Navigate replace to="/" />} />*/}
-        </Routes>
-      </Router>
+            <Route path="/" element={<Homeblog />} />
+            <Route path="/Tech" element={<TechBlog />} />
+            <Route path='/money' element={<Moneyblog />} />
+            <Route path='/mobile' element={<Mobile />} />
+
+            {/* <Route path="/" element={<Navigate replace to="/" />} />*/}
+          </Routes>
+        </Router>
+      </div>
       <Footer />
-    </div>
-
-
-
+    </>
   );
 }
 

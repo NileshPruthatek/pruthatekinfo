@@ -1,4 +1,4 @@
-import React, {  useState } from 'react'
+import React, { useState } from 'react'
 import techBlog from '../Tech/TechBlog.module.css'
 import { NavLink } from 'react-router-dom'
 
@@ -13,7 +13,7 @@ export const TechBlog = () => {
         const scroll = document.getElementById("slider");
         scroll.scrollLeft = scroll.scrollLeft + 550;
     };
-    const [showSeeMore, setShowSeeMore]=useState(false);
+    const [showSeeMore, setShowSeeMore] = useState(false);
 
     return (
 
@@ -308,7 +308,7 @@ export const TechBlog = () => {
 
                     </div>
                     <div className='col-md-6'>
-                        {data.MobaileRight.map(mobailerightdata => {
+                        {data.MobaileRight?.map(mobailerightdata => {
                             return (
                                 <div key={mobailerightdata.index}>
                                     <NavLink to="#" className={techBlog.navdecoration}>
@@ -418,7 +418,7 @@ export const TechBlog = () => {
                 <NavLink to="#" className={techBlog.navourfavorite}>See All</NavLink>
 
             </div>
-            <div className='container'>
+            {/* <div className='container'>
                 <div className='row '>
                     <div className={`col-6  ${techBlog.TechDealsColums}`} >
                         {data.Gaming.map(gamingdata => {
@@ -479,7 +479,7 @@ export const TechBlog = () => {
 
                 </div>
 
-            </div>
+            </div> */}
 
             {/*===========================Home Entertainment======================== */}
 
@@ -492,7 +492,7 @@ export const TechBlog = () => {
             <div className='container'>
                 <div className='row '>
                     <div className={`col-6  ${techBlog.TechDealsColums}`} >
-                        {data.HomeEntertainment.map(homegdata => {
+                        {data.HomeEntertainment?.map(homegdata => {
                             return (
                                 <div key={homegdata.index}>
                                     <NavLink to="#" className={techBlog.navdecoration}>
@@ -522,7 +522,7 @@ export const TechBlog = () => {
 
                     </div>
                     <div className='col-md-6'>
-                        {data.EntertainmentRight.map(entertainmentRightdata => {
+                        {data.EntertainmentRight?.map(entertainmentRightdata => {
                             return (
                                 <div key={entertainmentRightdata.index}>
                                     <NavLink to="#" className={techBlog.navdecoration}>
@@ -563,7 +563,7 @@ export const TechBlog = () => {
             <div className='container'>
                 <div className='row '>
                     <div className={`col-6  ${techBlog.TechDealsColums}`} >
-                        {data.Services.map(servicesdata => {
+                        {data.Services?.map(servicesdata => {
                             return (
                                 <div key={servicesdata.index}>
                                     <NavLink to="#" className={techBlog.navdecoration}>
@@ -593,7 +593,7 @@ export const TechBlog = () => {
 
                     </div>
                     <div className='col-md-6'>
-                        {data.SoftwareRight.map(softwareRightdata => {
+                        {data.SoftwareRight?.map(softwareRightdata => {
                             return (
                                 <div key={softwareRightdata.index}>
                                     <NavLink to="#" className={techBlog.navdecoration}>
@@ -632,7 +632,7 @@ export const TechBlog = () => {
             <div className='container'>
                 <div className='row'>
                     <div className='col-10'>
-                        {data.Latest.map(latestdata => (
+                        {data.Latest?.map(latestdata => (
                             <div key={latestdata.index}>
                                 <div className={`card mb-3    ${techBlog.latestcard}`} >
                                     <NavLink to="#" className={techBlog.navdecoration}>
@@ -660,74 +660,74 @@ export const TechBlog = () => {
 
 
                     </div>
-                        
-                       
 
 
 
 
-                  
+
+
+
                 </div>
 
             </div>
 
-          {showSeeMore &&(
- <div className='container'>
- <div className='row'>
-     <div className='col-10'>
-         {data.Latest.map(latestdata => (
-             <div key={latestdata.index}>
-                 <div className={`card mb-3    ${techBlog.latestcard}`} >
-                     <NavLink to="#" className={techBlog.navdecoration}>
-                         <div className="row no-gutters">
-                             <div className="col-8   ">
-                                 <div className="card-body  p-0 pl-3">
-                                     <h5 className={`card-text font-weight-bold  ${techBlog.LatestTitle}`} >{latestdata.title}</h5>
-                                     <p className={`card-text font-weight-bold    ${techBlog.Latstdesc}`} >{latestdata.desc}</p>
+            {showSeeMore && (
+                <div className='container'>
+                    <div className='row'>
+                        <div className='col-10'>
+                            {data.Latest.map(latestdata => (
+                                <div key={latestdata.index}>
+                                    <div className={`card mb-3    ${techBlog.latestcard}`} >
+                                        <NavLink to="#" className={techBlog.navdecoration}>
+                                            <div className="row no-gutters">
+                                                <div className="col-8   ">
+                                                    <div className="card-body  p-0 pl-3">
+                                                        <h5 className={`card-text font-weight-bold  ${techBlog.LatestTitle}`} >{latestdata.title}</h5>
+                                                        <p className={`card-text font-weight-bold    ${techBlog.Latstdesc}`} >{latestdata.desc}</p>
 
-                                     <p className={`card-text    ${techBlog.LatestUpate}`} ><small className="text-muted">{latestdata.update}</small></p>
-                                 </div>
-                             </div>
-                             <div className="col-2 ">
+                                                        <p className={`card-text    ${techBlog.LatestUpate}`} ><small className="text-muted">{latestdata.update}</small></p>
+                                                    </div>
+                                                </div>
+                                                <div className="col-2 ">
 
-                                 <img src={latestdata.image} alt="..." className={techBlog.Latestimage} />
-
-
-                             </div>
-                         </div>
-                     </NavLink>
-                 </div>
-
-             </div>
-         ))}
+                                                    <img src={latestdata.image} alt="..." className={techBlog.Latestimage} />
 
 
-     </div>
-         
-        
+                                                </div>
+                                            </div>
+                                        </NavLink>
+                                    </div>
+
+                                </div>
+                            ))}
+
+
+                        </div>
 
 
 
 
-   
- </div>
 
-</div>
-          )}
 
-{/*====================== see more================== */}
-            <button 
-            type="button" 
-            className={` btn btn-sucess my-5 ${techBlog.SeeMorebtn}`}
-            onClick={
-                ()=>{
-                    setShowSeeMore((prevSeeMore)=>setShowSeeMore(!prevSeeMore))
+
+                    </div>
+
+                </div>
+            )}
+
+            {/*====================== see more================== */}
+            <button
+                type="button"
+                className={` btn btn-sucess my-5 ${techBlog.SeeMorebtn}`}
+                onClick={
+                    () => {
+                        setShowSeeMore((prevSeeMore) => setShowSeeMore(!prevSeeMore))
+                    }
                 }
-            }
             >
-                {showSeeMore ? "see more": "see More"}
-                
-                </button>
+                {showSeeMore ? "see more" : "see More"}
+
+            </button>
 
         </>
     )

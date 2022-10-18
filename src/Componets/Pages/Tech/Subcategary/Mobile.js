@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import mobile from '../Subcategary/Mobile.module.css'
 import { NavLink } from 'react-router-dom'
 import data from '../../../../db.json'
@@ -14,19 +14,19 @@ export const Mobile = () => {
         scroll.scrollLeft = scroll.scrollLeft + 550;
     };
 
-    const [showSeeMore, setShowSeeMore]=useState(false);
+    const [showSeeMore, setShowSeeMore] = useState(false);
 
-  return (
-    <>
-    <div className={`my-3 ${mobile.MainTitleheading}`}>
-        <h1>Mobile</h1>
-     </div>
-     <div className={`my-3 ${mobile.MobilePara}`}>
-        <p>We deliver the best buying advice, news and how-to content on the coolest tech available.</p>
-     </div>
+    return (
+        <>
+            <div className={`my-3 ${mobile.MainTitleheading}`}>
+                <h1>Mobile</h1>
+            </div>
+            <div className={`my-3 ${mobile.MobilePara}`}>
+                <p>We deliver the best buying advice, news and how-to content on the coolest tech available.</p>
+            </div>
 
 
-     <div className="grid container verticalsubnav next-page-hide py-5">
+            <div className="grid container verticalsubnav next-page-hide py-5">
                 <div className="universalSubnav">
                     <div className="universalSubnav_scrollWrapper">
                         <div className="universalSubnav_items" section="category">
@@ -46,8 +46,8 @@ export const Mobile = () => {
                 </div>
 
             </div>
-{/*===========================Mobaile======================== */}
-{/* 
+            {/*===========================Mobaile======================== */}
+            {/* 
 <div className={mobile.TechHeading}>
                 Mobaile
 
@@ -168,9 +168,9 @@ export const Mobile = () => {
                 <button className={` btn btn-primary  ${mobile.Nextbtn}`} type="button" onClick={scrollRight} >Next</button>
             </div>
 
-{/*===========================Latest======================== */}
+            {/*===========================Latest======================== */}
 
-<div className={mobile.TechHeading}>
+            <div className={mobile.TechHeading}>
                 Latest
 
             </div>
@@ -178,7 +178,7 @@ export const Mobile = () => {
             <div className='container'>
                 <div className='row'>
                     <div className='col-10'>
-                        {data.Latest.map(latestdata => (
+                        {data.Latest?.map(latestdata => (
                             <div key={latestdata.index}>
                                 <div className={`card mb-3    ${mobile.latestcard}`} >
                                     <NavLink to="#" className={mobile.navdecoration}>
@@ -206,76 +206,76 @@ export const Mobile = () => {
 
 
                     </div>
-                        
-                       
 
 
 
 
-                  
+
+
+
                 </div>
 
             </div>
 
-          {showSeeMore &&(
- <div className='container'>
- <div className='row'>
-     <div className='col-10'>
-         {data.Latest.map(latestdata => (
-             <div key={latestdata.index}>
-                 <div className={`card mb-3    ${mobile.latestcard}`} >
-                     <NavLink to="#" className={mobile.navdecoration}>
-                         <div className="row no-gutters">
-                             <div className="col-8   ">
-                                 <div className="card-body  p-0 pl-3">
-                                     <h5 className={`card-text font-weight-bold  ${mobile.LatestTitle}`} >{latestdata.title}</h5>
-                                     <p className={`card-text font-weight-bold    ${mobile.Latstdesc}`} >{latestdata.desc}</p>
+            {showSeeMore && (
+                <div className='container'>
+                    <div className='row'>
+                        <div className='col-10'>
+                            {data.Latest.map(latestdata => (
+                                <div key={latestdata.index}>
+                                    <div className={`card mb-3    ${mobile.latestcard}`} >
+                                        <NavLink to="#" className={mobile.navdecoration}>
+                                            <div className="row no-gutters">
+                                                <div className="col-8   ">
+                                                    <div className="card-body  p-0 pl-3">
+                                                        <h5 className={`card-text font-weight-bold  ${mobile.LatestTitle}`} >{latestdata.title}</h5>
+                                                        <p className={`card-text font-weight-bold    ${mobile.Latstdesc}`} >{latestdata.desc}</p>
 
-                                     <p className={`card-text    ${mobile.LatestUpate}`} ><small className="text-muted">{latestdata.update}</small></p>
-                                 </div>
-                             </div>
-                             <div className="col-2 ">
+                                                        <p className={`card-text    ${mobile.LatestUpate}`} ><small className="text-muted">{latestdata.update}</small></p>
+                                                    </div>
+                                                </div>
+                                                <div className="col-2 ">
 
-                                 <img src={latestdata.image} alt="..." className={mobile.Latestimage} />
-
-
-                             </div>
-                         </div>
-                     </NavLink>
-                 </div>
-
-             </div>
-         ))}
+                                                    <img src={latestdata.image} alt="..." className={mobile.Latestimage} />
 
 
-     </div>
-         
-        
+                                                </div>
+                                            </div>
+                                        </NavLink>
+                                    </div>
+
+                                </div>
+                            ))}
+
+
+                        </div>
 
 
 
 
-   
- </div>
 
-</div>
-          )}
 
-{/*====================== see more================== */}
-            <button 
-            type="button" 
-            className={` btn btn-sucess my-5 ${mobile.SeeMorebtn}`}
-            onClick={
-                ()=>{
-                    setShowSeeMore((prevSeeMore)=>setShowSeeMore(!prevSeeMore))
+
+                    </div>
+
+                </div>
+            )}
+
+            {/*====================== see more================== */}
+            <button
+                type="button"
+                className={` btn btn-sucess my-5 ${mobile.SeeMorebtn}`}
+                onClick={
+                    () => {
+                        setShowSeeMore((prevSeeMore) => setShowSeeMore(!prevSeeMore))
+                    }
                 }
-            }
             >
-                {showSeeMore ? "see more": "see More"}
-                
-                </button>
+                {showSeeMore ? "see more" : "see More"}
 
-    </>
-  )
+            </button>
+
+        </>
+    )
 }
 export default Mobile
