@@ -1,0 +1,18 @@
+.react-player {
+  height: 13vw;
+  width: 22vw;
+  position: sticky;
+  left: 77vw;
+  bottom: 2vw;
+}
+.react-player div iframe {
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+  .react-player {
+    height: 35vw;
+    width: 50vw;
+    left: 47vw;
+  }
+}

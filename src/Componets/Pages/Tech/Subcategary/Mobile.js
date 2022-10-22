@@ -90,7 +90,7 @@ export const Mobile = () => {
                                                 {catBlog.slice(0, 2)?.map((x) => {
                                                     return (
                                                         <div key={x.index}>
-                                                            <NavLink to="#" className={techBlog.navdecoration}>
+                                                            <NavLink to={`/blog?x=${x.uuid}`} className={techBlog.navdecoration}>
                                                                 <div className={`card  ${techBlog.TechDealsCards}`}>
                                                                     <img src={`${process.env.REACT_APP_IMG_BASEURL}/${x?.["thumbnail_img"]}`} className="card-img-top" style={{ minHeight: "165px" }} alt="bestfree" />
                                                                     <div className="card-body p-2">
@@ -110,7 +110,7 @@ export const Mobile = () => {
                                                 {catBlog.slice(2).map((x) => {
                                                     return (
                                                         <div key={x.index}>
-                                                            <NavLink to="#" className={techBlog.navdecoration}>
+                                                            <NavLink to={`/blog?x=${x.uuid}`} className={techBlog.navdecoration}>
                                                                 <div className={`card  ${techBlog.TechDealsRightCards}`}>
                                                                     <div className="card-body  p-0 pl-3">
                                                                         <p className={`card-text font-weight-bold    ${techBlog.TechDealRightTile}`}>{x.title}</p>
@@ -142,7 +142,7 @@ export const Mobile = () => {
                             {pageData?.["favoritePicks"]?.map(x => {
                                 return (
                                     <div key={x.index} className={techBlog.fouratecard}>
-                                        <NavLink to="#" className={techBlog.navdecoration}>
+                                        <NavLink to={`/blog?x=${x.uuid}`} className={techBlog.navdecoration}>
                                             <div className={`card  ${techBlog.FourateCard}`}>
                                                 <img src={`${process.env.REACT_APP_IMG_BASEURL}/${x?.["thumbnail_img"]}`} className={techBlog.FourateImage} alt="bestfree" />
                                                 <div className="card-body">
@@ -177,22 +177,24 @@ export const Mobile = () => {
                     <div className="row">
                         <div className="col-12">
                             {pageData?.["latestBlogs"].map((latestdata) => (
-                                <div key={latestdata.uuid} className={`card mb-3 ${techBlog.latestcard}`}>
-                                    <div className="row w-100 no-gutters">
-                                        <div className="col-9 p-0">
-                                            <div className="card-body  p-0 pl-3">
-                                                <h5 className={`card-text font-weight-bold  ${techBlog.LatestTitle}`}>{latestdata.title}</h5>
+                                <NavLink to={`/blog?x=${latestdata.uuid}`} className={techBlog.navdecoration}>
+                                    <div key={latestdata.uuid} className={`card mb-3 ${techBlog.latestcard}`}>
+                                        <div className="row w-100 no-gutters">
+                                            <div className="col-9 p-0">
+                                                <div className="card-body  p-0 pl-3">
+                                                    <h5 className={`card-text font-weight-bold  ${techBlog.LatestTitle}`}>{latestdata.title}</h5>
 
-                                                <p className={`card-text ${techBlog.LatestUpate}`}>
-                                                    <small className="text-muted">{`Last Updated On : ${latestdata.updated_at}`}</small>
-                                                </p>
+                                                    <p className={`card-text ${techBlog.LatestUpate}`}>
+                                                        <small className="text-muted">{`Last Updated On : ${latestdata.updated_at}`}</small>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="col-3 p-0">
+                                                <img src={`${process.env.REACT_APP_IMG_BASEURL}/${latestdata?.["thumbnail_img"]}`} alt="..." className={`${techBlog.Latestimage} p-1`} />
                                             </div>
                                         </div>
-                                        <div className="col-3 p-0">
-                                            <img src={`${process.env.REACT_APP_IMG_BASEURL}/${latestdata?.["thumbnail_img"]}`} alt="..." className={`${techBlog.Latestimage} p-1`} />
-                                        </div>
                                     </div>
-                                </div>
+                                </NavLink>
                             ))}
                         </div>
                     </div>
