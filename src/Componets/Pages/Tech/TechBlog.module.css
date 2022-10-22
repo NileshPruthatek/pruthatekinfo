@@ -1,757 +1,666 @@
-
-.universalSubnavitems{
-	
-    display: inline-block;
-    font-size: 1rem;
-    white-space: nowrap;
-    direction: ltr;
-	margin: 10px;
-    text-decoration: none;
-    color:#141414;
-	
+.universalSubnavitems {
+  display: inline-block;
+  font-size: 1rem;
+  white-space: nowrap;
+  direction: ltr;
+  margin: 10px;
+  text-decoration: none;
+  color: #141414;
 }
-.universalSubnavitems:hover{
-    color:  #0f8209;
+.universalSubnavitems:hover {
+  color: #0f8209;
 }
 .ctileListtileBlock {
-    margin-bottom: 30px;
-    position: relative;
+  margin-bottom: 30px;
+  position: relative;
 }
-.TechCard{
-    width: 400px;
-    height: auto;
-   
+.TechCard {
+  width: 100%;
+  height: auto;
 }
-.navdecoration{
-    color: black !important;
-    text-decoration-line: none;
+
+.TechImage {
+  width: 100%;
+  height: 312px;
 }
-.cardtext{
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+.navdecoration {
+  color: black !important;
+  text-decoration-line: none;
 }
-.Leftsideimage{
-    
-    width: 300px;
-    height: 220px;
+.cardtext {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
-.howtocardright{
-    width: 550px;
-    height: 220px;
+.Leftsideimage {
+  width: 100%;
+  height: 200px;
 }
-.Techsmallres{
-    font-size: 1rem;
-    margin-left: 10px;
+.howtocardright {
+  width: auto;
+  height: 200px;
 }
-.TechUpate{
-    margin-left: 10px;
+.Techsmallres {
+  font-size: 1rem;
+  margin-left: 10px;
+}
+.TechUpate {
+  margin-left: 10px;
 }
 
 /*================================Our Favorite Picks======================*/
-.fouratesColums{
-    display: flex;
-    flex-direction: row;
+.fouratesColums {
+  display: flex;
+  flex-direction: row;
+}
+.TechHeading {
+  font-size: 1.5rem;
+  padding: 10px;
+  border-left: 2px solid #56a646;
+  margin: 20px 0;
+}
+.navourfavorite {
+  font-size: 1rem;
+  color: #141414;
+  text-decoration: none;
+  margin-left: 10px;
+}
+.navourfavorite:hover {
+  color: #0f8209;
+  cursor: pointer;
+  border-bottom: 2px solid #0f8209;
+}
+.FourateCard {
+  width: 220px;
+  height: 300px;
+  margin: 10px;
 
+  border-bottom: 2px solid #0f8209;
 }
-.TechHeading{
-    font-size: 1.5rem;
-    padding: 10px;
-    margin-left:120px ;
-    border-left: 2px solid #56a646;
-    margin-bottom: 20px;
+.FourateImage {
+  width: 219px;
+  height: 120px;
+  overflow: hidden;
 }
-.navourfavorite{
-    font-size: 1rem;
-    color: #141414;
-    text-decoration: none;
-    margin-left: 10px;
+.Ourtext {
+  font-size: 0.8rem;
+  margin-top: 25px;
 }
-.navourfavorite:hover{
-    color: #0f8209;
-    cursor: pointer;
-    border-bottom: 2px solid #0f8209;
+.Updated {
+  margin-top: 25px;
 }
-.FourateCard{
-    width: 220px;
-    height: 300px;
-    margin: 10px;
-  
-    border-bottom: 2px solid #0f8209;
-   
-   
+.Prevbtn {
+  background-color: #0f8209 !important;
 }
-.FourateImage{
-    width: 219px;
-    height: 120px;
-    overflow: hidden;
-}
-.Ourtext{
-    font-size: 0.8rem;
-    margin-top: 25px;
-    
-}
-.Updated{
-    margin-top: 25px;
-}
-.Prevbtn{
-    background-color: #0f8209 !important;
-    
-}
-.Nextbtn{
-    background-color: #0f8209 !important;
-    margin-right: 50px;
-   
+.Nextbtn {
+  background-color: #0f8209 !important;
 }
 /* Scroll behaviour CSS */
 
-
 .scroll::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .scroll {
   -ms-overflow-style: none;
-  scrollbar-width: none;  
+  scrollbar-width: none;
 }
 
 .scroll {
-    display: flex;
-    overflow-x: scroll;
-    align-items: center;
-    gap: 2em;
+  display: flex;
+  overflow-x: scroll;
+  align-items: center;
+  gap: 2em;
 }
 
 .wrapper {
-    display: flex;
-    align-items: center;
-    gap: 2em;
+  display: flex;
+  align-items: center;
+  gap: 2em;
 }
 /*=================================Tech Deals======================= */
-.TechDealsColums{
-    display: flex;
-    flex-direction: row;
+.TechDealsColums {
+  display: flex;
+  flex-direction: row;
+  gap: 2.3em;
 }
 
-.TechDealsCards{
-    width: 250px;
-    height: 450px;
-    margin: 10px
+.TechDealsCards {
+  width: 250px;
+  margin: 10px;
 }
-.TechDealsTitle{
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 25px;
-   
+.TechDealsTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 25px;
 }
-.TechDealscardContaine{
-    font-size: 0.8rem;
-    
-
+.TechDealscardContaine {
+  font-size: 0.8rem;
 }
-.TechDealRightTile{
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 25px;
-    margin-top: 25px;
-    margin-left: 10px;
-
+.TechDealRightTile {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  margin-left: 10px;
 }
-.TechDealsRightContaine{
-    font-size: 0.9rem;
-    margin-left: 10px;
+.TechDealsRightContaine {
+  font-size: 0.9rem;
+  margin-left: 10px;
 }
-.TechDealsRightCards{
-    width: auto;
-    height: 150px;
-    margin: 5px;
+.TechDealsRightCards {
+  width: auto;
+  height: 150px;
+  margin: 5px;
 }
 
 /* Scroll behaviour CSS */
 
-
 .scroll::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .scroll {
   -ms-overflow-style: none;
-  scrollbar-width: none;  
+  scrollbar-width: none;
 }
 
 .scroll {
-    display: flex;
-    overflow-x: scroll;
-    align-items: center;
-    gap: 2em;
+  display: flex;
+  overflow-x: scroll;
+  align-items: center;
+  gap: 2em;
 }
 
 .wrapper {
-    display: flex;
-    align-items: center;
-    gap: 2em;
+  display: flex;
+  align-items: center;
+  gap: 2em;
 }
 
 /*===================================Latest =====================================*/
-.latestcard{
-    width: 900px;
-    height: 180px;
+.latestcard {
+  width: 80%;
+  height: 180px;
 }
-.LatestTitle{
-    font-size: 1.2rem;
-    margin-left: 20px;
-    margin-top: 20px;
-
+.LatestTitle {
+  font-size: 1.2rem;
+  margin-left: 20px;
+  margin-top: 20px;
 }
-.Latstdesc{
-    font-size: 0.9rem;
-    margin-left: 20px;
-    margin-top: 20px;
-
+.Latstdesc {
+  font-size: 0.9rem;
+  margin-left: 20px;
+  margin-top: 20px;
 }
-.LatestUpate{
-    margin-left: 20px;
-    margin-top: 20px;
+.LatestUpate {
+  margin-left: 20px;
+  margin-top: 20px;
 }
-.Latestimage{
-    width: 197px;
-    height: 178px;
-    margin-left: 90px;
+.Latestimage {
+  width: 100%;
+  height: 178px;
 }
-.SeeMorebtn{
-    border: 1px solid #0f8209;
-    border-radius: 0.25rem;
-    font-weight: bold;
-    text-align: center;
-    box-sizing: border-box;
-    padding: 0 10px;
-    cursor: pointer;
-    overflow: hidden;
-    font-size: 16px;
-    width: 800px;
-    height: 48px;
-    line-height: 48px;
-    margin-left:140px;
-   
-    
+.SeeMorebtn {
+  border: 1px solid #0f8209;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0 10px;
+  cursor: pointer;
+  overflow: hidden;
+  font-size: 16px;
+  width: 800px;
+  height: 48px;
+  line-height: 48px;
+  margin-left: 140px;
 }
-.SeeMorebtn:hover{
-    color: #fff;
-    fill: #fff;
-    background-color: #0f8209;
+.SeeMorebtn:hover {
+  color: #fff;
+  fill: #fff;
+  background-color: #0f8209;
 }
 /*==================================Responsive ===================================*/
 @media (min-width: 320px) and (max-width: 420px) {
-    .universalSubnavitems{
-	
-        display: inline-block;
-        font-size: 0.8rem;
-        white-space: nowrap;
-        direction: ltr;
-        margin: 5px;
-        text-decoration: none;
-        color:#141414;
-        
-    }
-    .TechCard{
-        width: 350px;
-        height: auto;
-       
-        margin-left: 20px;
-    }
-    .TechImage{
-        width: 345px;
-        height: auto;
-    }
-    .howtocardright{
-        width: 350px;
-        height: 200px;
-    }
-    .Leftsideimage{
-    
-        width: 180px;
-        height: 200px;
-    }
-    /*=================================Tech Deals======================= */
-.TechDealsColums{
+  .universalSubnavitems {
+    display: inline-block;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    direction: ltr;
+    margin: 5px;
+    text-decoration: none;
+    color: #141414;
+  }
+  .TechCard {
+    width: 350px;
+    height: auto;
+
+    margin-left: 20px;
+  }
+  .TechImage {
+    width: 345px;
+    height: auto;
+  }
+  .howtocardright {
+    width: 350px;
+    height: 200px;
+  }
+  .Leftsideimage {
+    width: 180px;
+    height: 200px;
+  }
+  /*=================================Tech Deals======================= */
+  .TechDealsColums {
     display: flex;
     flex-direction: column;
-}/*================================Our Favorite Picks======================*/
-    
+  } /*================================Our Favorite Picks======================*/
 
-
-.TechHeading{
+  .TechHeading {
     font-size: 1rem;
     padding: 10px;
-    margin-left:30px ;
     border-left: 2px solid #56a646;
-    margin-bottom: 20px;
-}
-.FourateCard{
-   
+    margin: 20px 0;
+  }
+  .FourateCard {
     width: 220px;
     height: 300px;
     margin: 10px;
-    margin-left:30px ;
+    margin-left: 30px;
     border-bottom: 2px solid #0f8209;
-   
-   
-}
+  }
 
-.Prevbtn{
+  .Prevbtn {
     background-color: #0f8209 !important;
     width: 100px;
     margin-left: 105px;
-}
-.Nextbtn{
+  }
+  .Nextbtn {
     background-color: #0f8209 !important;
     margin-left: 105px;
     width: 100px;
-   
-   
-}
+  }
 
-
-.TechDealscardContaine{
+  .TechDealscardContaine {
     font-size: 0.8rem;
-
-}
-.TechDealRightTile{
+  }
+  .TechDealRightTile {
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 10px;
     margin-top: 10px;
-
-}
-.TechDealsRightCards{
+  }
+  .TechDealsRightCards {
     width: auto;
     height: 150px;
     margin: 5px;
-}
+  }
 
-/*===================================Latest =====================================*/
-.latestcard{
-    width: 420px;
+  /*===================================Latest =====================================*/
+  .latestcard {
+    width: 80%;
     height: 210px;
-}
-.Latestimage{
+  }
+  .Latestimage {
     width: 120px;
     height: 210px;
     margin-left: 0px;
-}
-.LatestTitle{
+  }
+  .LatestTitle {
     font-size: 1rem;
     margin-left: 20px;
     margin-top: 20px;
-
-}
-.Latstdesc{
+  }
+  .Latstdesc {
     font-size: 0.8rem;
     margin-left: 20px;
     margin-top: 20px;
-
-}
-
+  }
 }
 @media (min-width: 420px) and (max-width: 600px) {
-    .universalSubnavitems{
-	
-        display: inline-block;
-        font-size: 0.8rem;
-        white-space: nowrap;
-        direction: ltr;
-        margin: 10px;
-        text-decoration: none;
-        color:#141414;
-        
-    }
-    .TechCard{
-        width: 350px;
-        height: auto;
-       
-        margin-left: 20px;
-    }
-    .TechImage{
-        width: 345px;
-        height: auto;
-    }
-    .howtocardright{
-        width: 350px;
-        height: 200px;
-    }
-    .Leftsideimage{
-    
-        width: 180px;
-        height: 200px;
-    }
-    .TechDealsRightCards{
-        width: auto;
-        height: 400px;
-        margin: 5px;
-    }
-    /*================================Our Favorite Picks======================*/
-    /* Scroll behaviour CSS */
+  .universalSubnavitems {
+    display: inline-block;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    direction: ltr;
+    margin: 10px;
+    text-decoration: none;
+    color: #141414;
+  }
+  .TechCard {
+    width: 350px;
+    height: auto;
 
+    margin-left: 20px;
+  }
+  .TechImage {
+    width: 345px;
+    height: auto;
+  }
+  .howtocardright {
+    width: 350px;
+    height: 200px;
+  }
+  .Leftsideimage {
+    width: 180px;
+    height: 200px;
+  }
+  .TechDealsRightCards {
+    width: auto;
+    height: 400px;
+    margin: 5px;
+  }
+  /*================================Our Favorite Picks======================*/
+  /* Scroll behaviour CSS */
 
-.scroll::-webkit-scrollbar {
+  .scroll::-webkit-scrollbar {
     display: none;
-}
+  }
 
-.scroll {
-  -ms-overflow-style: none;
-  scrollbar-width: none;  
-}
+  .scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 
-.scroll {
+  .scroll {
     display: flex;
     overflow-x: scroll;
     align-items: center;
     gap: 2em;
-}
+  }
 
-    .FourateCard{
-   
-        width: 220px;
-        height: 300px;
-        margin: 10px;
-        margin-left:30px ;
-        border-bottom: 2px solid #0f8209;
-       
-       
-    }
+  .FourateCard {
+    width: 220px;
+    height: 300px;
+    margin: 10px;
+    margin-left: 30px;
+    border-bottom: 2px solid #0f8209;
+  }
 
-    
-    .Prevbtn{
-        background-color: #0f8209 !important;
-        width: 100px;
-        margin-left: 105px;
-    }
-    
-    .Nextbtn{
-        background-color: #0f8209 !important;
-        margin-left: 105px;
-        width: 100px;
-       
-       
-    }
+  .Prevbtn {
+    background-color: #0f8209 !important;
+    width: 100px;
+    margin-left: 105px;
+  }
 
+  .Nextbtn {
+    background-color: #0f8209 !important;
+    margin-left: 105px;
+    width: 100px;
+  }
 
-    .TechHeading{
-        font-size: 1rem;
-        padding: 10px;
-        margin-left:30px ;
-        border-left: 2px solid #56a646;
-        margin-bottom: 20px;
-    }
-    /*=================================Tech Deals======================= */
-.TechDealsColums{
+  .TechHeading {
+    font-size: 1rem;
+    padding: 10px;
+    border-left: 2px solid #56a646;
+    margin: 20px 0;
+  }
+  /*=================================Tech Deals======================= */
+  .TechDealsColums {
     display: flex;
     flex-direction: column;
-}
-.TechDealsCards{
+  }
+  .TechDealsCards {
     width: 250px;
     height: 450px;
     margin: 10px;
     margin-left: 20px;
-
-}
-.TechDealsRightCards{
+  }
+  .TechDealsRightCards {
     width: auto;
     height: 150px;
     margin: 5px;
-}
-/*===================================Latest =====================================*/
-.latestcard{
-    width: 420px;
+  }
+  /*===================================Latest =====================================*/
+  .latestcard {
+    width: 80%;
     height: 210px;
-}
-.Latestimage{
+  }
+  .Latestimage {
     width: 120px;
     height: 210px;
     margin-left: 0px;
-}
-.LatestTitle{
+  }
+  .LatestTitle {
     font-size: 1rem;
     margin-left: 20px;
     margin-top: 20px;
-
-}
-.Latstdesc{
+  }
+  .Latstdesc {
     font-size: 0.8rem;
     margin-left: 20px;
     margin-top: 20px;
-
-}
-.SeeMorebtn{
+  }
+  .SeeMorebtn {
     width: 300px;
-    
-}
-
+  }
 }
 @media (min-width: 600px) and (max-width: 750px) {
+  .universalSubnavitems {
+    display: inline-block;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    direction: ltr;
+    margin: 10px;
+    text-decoration: none;
+    color: #141414;
+  }
+  .Leftsideimage {
+    width: 300px;
+    height: 220px;
+  }
+  .howtocardright {
+    width: 450px;
+    height: 220px;
+  }
+  .Techsmallres {
+    font-size: 1rem;
+    margin-left: 10px;
+  }
+  .TechHeading {
+    font-size: 1.5rem;
+    padding: 10px;
+    border-left: 2px solid #56a646;
+    margin: 20px 0;
+  }
+  /*================================Our Favorite Picks======================*/
+  /* Scroll behaviour CSS */
+  .Prevbtn {
+    background-color: #0f8209 !important;
+    width: 100px;
+    margin-left: 105px;
+  }
 
-    .universalSubnavitems{
-	
-        display: inline-block;
-        font-size: 0.8rem;
-        white-space: nowrap;
-        direction: ltr;
-        margin: 10px;
-        text-decoration: none;
-        color:#141414;
-        
-    }
-    .Leftsideimage{
-    
-        width: 300px;
-        height: 220px;
-    }
-    .howtocardright{
-        width: 450px;
-        height: 220px;
-    }
-    .Techsmallres{
-        font-size: 1rem;
-        margin-left: 10px;
-    }
-    .TechHeading{
-        font-size: 1.5rem;
-        padding: 10px;
-        margin-left:50px ;
-        border-left: 2px solid #56a646;
-        margin-bottom: 20px;
-    }
-    /*================================Our Favorite Picks======================*/
-    /* Scroll behaviour CSS */
-    .Prevbtn{
-        background-color: #0f8209 !important;
-        width: 100px;
-        margin-left: 105px;
-    }
-    
-    .Nextbtn{
-        background-color: #0f8209 !important;
-        margin-left: 105px;
-        width: 100px;
-       
-       
-    }
-     /*=================================Tech Deals======================= */
-.TechDealsColums{
+  .Nextbtn {
+    background-color: #0f8209 !important;
+    margin-left: 105px;
+    width: 100px;
+  }
+  /*=================================Tech Deals======================= */
+  .TechDealsColums {
     display: flex;
     flex-direction: column;
-}
-.TechDealsCards{
+  }
+  .TechDealsCards {
     width: 250px;
     height: 450px;
     margin: 10px;
     margin-left: 20px;
-
-}
-.TechDealsRightCards{
+  }
+  .TechDealsRightCards {
     width: auto;
     height: 150px;
     margin: 5px;
-}
+  }
   /*===================================Latest =====================================*/
-.latestcard{
-    width: 500px;
+  .latestcard {
+    width: 80%;
     height: 180px;
-}
-.Latestimage{
+  }
+  .Latestimage {
     width: 120px;
     height: 180px;
-    margin-left: 50px;
-}
-.LatestTitle{
+  }
+  .LatestTitle {
     font-size: 1rem;
     margin-left: 20px;
     margin-top: 20px;
-
-}
-.Latstdesc{
+  }
+  .Latstdesc {
     font-size: 0.8rem;
     margin-left: 20px;
     margin-top: 20px;
-
-}
-.SeeMorebtn{
+  }
+  .SeeMorebtn {
     width: 300px;
-    
-}   
-
-
+  }
 }
 @media (min-width: 750px) and (max-width: 900px) {
+  .TechCard {
+    width: 350px;
+    height: auto;
+  }
+  .TechImage {
+    width: 345px;
+    height: 312px;
+  }
+  .howtocardright {
+    width: 350px;
+    height: 200px;
+  }
+  .Leftsideimage {
+    width: 180px;
+    height: 200px;
+  }
 
-    .TechCard{
-        width: 350px;
-        height: auto;
-       
-        
-    }
-    .TechImage{
-        width: 345px;
-        height: auto;
-    }
-    .howtocardright{
-        width: 350px;
-        height: 200px;
-    }
-    .Leftsideimage{
-    
-        width: 180px;
-        height: 200px;
-    }
+  /*================================Our Favorite Picks======================*/
+  /* Scroll behaviour CSS */
 
-     /*================================Our Favorite Picks======================*/
-    /* Scroll behaviour CSS */
+  .scroll::-webkit-scrollbar {
+    display: none;
+  }
 
-    .scroll::-webkit-scrollbar {
-        display: none;
-    }
-    
-    .scroll {
-      -ms-overflow-style: none;
-      scrollbar-width: none;  
-    }
-    
-    .scroll {
-        display: flex;
-        overflow-x: scroll;
-        align-items: center;
-        gap: 2em;
-    }
-    .Prevbtn{
-        background-color: #0f8209 !important;
-        width: 100px;
-        margin-left:260px;
-    }
-    
-    .Nextbtn{
-        background-color: #0f8209 !important;
-         width: 100px;
-         margin-left:260px;
-        
-         
-    }
-     /*=================================Tech Deals======================= */
-.TechDealsColums{
+  .scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scroll {
+    display: flex;
+    overflow-x: scroll;
+    align-items: center;
+    gap: 2em;
+  }
+  .Prevbtn {
+    background-color: #0f8209 !important;
+    width: 100px;
+    margin-left: 260px;
+  }
+
+  .Nextbtn {
+    background-color: #0f8209 !important;
+    width: 100px;
+    margin-left: 260px;
+  }
+  /*=================================Tech Deals======================= */
+  .TechDealsColums {
     display: flex;
     flex-direction: column;
-}
-.TechDealsRightColums{
+  }
+  .TechDealsRightColums {
     display: flex;
     flex-direction: column;
-}
-.TechDealsCards{
+  }
+  .TechDealsCards {
     width: 250px;
     height: 450px;
     margin: 10px;
     margin-left: 20px;
-
-}
-.TechDealsRightCards{
+  }
+  .TechDealsRightCards {
     width: auto;
     height: 150px;
     margin: 5px;
-}
+  }
 
-    /*===================================Latest =====================================*/
-.latestcard{
-    width: 550px;
+  /*===================================Latest =====================================*/
+  .latestcard {
+    width: 80%;
     height: 180px;
-}
-.Latestimage{
+  }
+  .Latestimage {
     width: 120px;
     height: 180px;
-    margin-left: 50px;
-}
-.LatestTitle{
+  }
+  .LatestTitle {
     font-size: 1rem;
     margin-left: 20px;
     margin-top: 20px;
-
-}
-.Latstdesc{
+  }
+  .Latstdesc {
     font-size: 0.8rem;
     margin-left: 20px;
     margin-top: 20px;
-
-}
-.SeeMorebtn{
+  }
+  .SeeMorebtn {
     width: 250px;
-   
-    
-}
-
-
+  }
 }
 @media (min-width: 900px) and (max-width: 1024px) {
-    .TechCard{
-        width: 300px;
-        height: auto;
-       
-       
-    }
-    .TechImage{
-        width: 300px;
-        height: auto;
-    }
-    .howtocardright{
-        width: 400px;
-        height: 200px;
-        margin-left: 20px;
-    }
-    .Leftsideimage{
-    
-        width: 200px;
-        height: 200px;
-    }
-    
-    /*===================================Latest =====================================*/
-.latestcard{
-    width: 750px;
+  .TechCard {
+    width: 300px;
+    height: auto;
+  }
+  .TechImage {
+    width: 100%;
+    max-height: 312px;
+  }
+  .howtocardright {
+    width: 400px;
+    height: 200px;
+    margin-left: 20px;
+  }
+  .Leftsideimage {
+    width: 200px;
+    height: 200px;
+  }
+
+  /*===================================Latest =====================================*/
+  .latestcard {
+    width: 80%;
     height: 180px;
-}
-.Latestimage{
+  }
+  .Latestimage {
     width: 120px;
     height: 180px;
-    margin-left: 120px;
-}
-.LatestTitle{
+  }
+  .LatestTitle {
     font-size: 1rem;
     margin-left: 20px;
     margin-top: 20px;
-
-}
-.Latstdesc{
+  }
+  .Latstdesc {
     font-size: 0.8rem;
     margin-left: 20px;
     margin-top: 20px;
-
-}
-.SeeMorebtn{
+  }
+  .SeeMorebtn {
     width: 250px;
-   
-    
-}
-/*=================================Tech Deals======================= */
-.TechDealsColums{
+  }
+  /*=================================Tech Deals======================= */
+  .TechDealsColums {
     display: flex;
     flex-direction: column;
-}
+  }
 
-.TechDealsCards{
+  .TechDealsCards {
     width: 250px;
     height: 450px;
     margin: 10px;
     margin-left: 20px;
-
-}
-.TechDealsRightCards{
+  }
+  .TechDealsRightCards {
     width: auto;
     height: 200px;
     margin: 5px;
-}
-
+  }
 }

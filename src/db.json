@@ -150,189 +150,172 @@
   ],
   "ComputingRight": [
     {
-      "SoftwareRight":[
-          {
-              "id": 1,
-            
-              "title": "  Best Streaming Service of 2022: Netflix, HBO Max, Disney Plus and More",
-              "description":" Best Streaming Service of 2022: Netflix, HBO Max, Disney Plus and More"
-              
-          },
-          {
-              "id": 2,
-            
-              "title": "Netflix's Most Popular Shows and Movies, Ranked (According to Netflix)",
-              "description":" Netflix publishes weekly charts of its most watched series and films, hoping you'll find something new to watch. We track the all-timers."
-              
-          },
-          {
-              "id": 3,
-            
-              "title": " Best Live TV Streaming Service for Cord Cutting in 2022",
-              "description":" Are you looking to cut cable but want to keep live sports, news and originals? YouTube TV, Hulu Plus Live TV or Sling TV could be the services for you."
-              
-          }
-      ],
-      "Latest":[
-          {
-              "id":1,
-              "image": "image/image24.jpeg",
-              "title":"The iPhone 14 Plus Is a Big, Bold Purple Behemoth",
-              "desc":"Apple's newest phone is an iPhone 14, but bigger.",
-              "update":"N.R.P-Last updated: February 12,2021"
-          },{
-              "id":2,
-              "image": "image/image24.jpeg",
-              "title":"Google Pixel 7 vs. Apple iPhone 14 vs. Samsung Galaxy S22: The $200 Difference",
-              "desc":"The Pixel 7 is keeping its $599 price, and that might be a big selling point against the more expensive Galaxy S22 and iPhone 14.",
-              "update":"N.R.P-Last updated: February 12,2021"
-          }
-          ,{
-              "id":3,
-              "image": "image/image24.jpeg",
-              "title":"Streaming Services in October: You May Want to Cancel These",
-              "desc":"Netflix and other services can be cut midmonth if you run out of stuff to watch.",
-              "update":"N.R.P-Last updated: February 12,2021"
-          }
-          ,{
-              "id":4,
-              "image": "image/image24.jpeg",
-              "title":"Google Apologizes for Home Mini Speaker Reportedly Reading N-Word Aloud",
-              "desc":"Netflix and other services can be cut midmonth if you run out of stuff to watch.",
-              "update":"N.R.P-Last updated: February 12,2021"
-          }
-          ,{
-              "id":5,
-              "image": "image/image24.jpeg",
-              "title":"All the Times Google Threw Shade at Apple During the Pixel 7 Event",
-              "desc":"The Google event was basically a subtweet at Apple.",
-              "update":"N.R.P-Last updated: February 12,2021"
-          }
-          
-      
+      "SoftwareRight": [
+        {
+          "id": 1,
 
-              
-      ],
-      "Banking":[
-          {
-              "id": 1,
-              "image": "image/image7.jpeg",
-              "title": "  Best High-Yield Savings Accounts for October 2022",
-              "description":" High-yield savings account rates are now earning over 2% APYs.",
-              "update": "N.R.P-Last updated: February 12,2021"
-          },
-          {
-              "id": 2,
-              "image": "image/image24.jpeg",
-              "title": " Best CD Rates for October 2022",
-              "description":"High-yield savings account rates are now earning over 2% APYs.",
-              "update": "N.R.P-Last updated: February 12,2021"
-          }
+          "title": "  Best Streaming Service of 2022: Netflix, HBO Max, Disney Plus and More",
+          "description": " Best Streaming Service of 2022: Netflix, HBO Max, Disney Plus and More"
+        },
+        {
+          "id": 2,
 
-      ],
-      "BankingRight":[
-          {
-              "id": 1,
-            
-              "title": " Robinhood App's $20 Million Data Breach Settlement: Who Is Eligible for Money?",
-              "description":" CD rates continue to rise, as Fed hikes propel banks upward. Let's see how your savings can work harder to keep up with inflation."
-              
-          },
-          {
-              "id": 2,
-            
-              "title": "Stop Zelle Scams Before Thieves Get Anywhere Near Your Money",
-              "description":"Instantaneous transactions make peer-to-peer payment system Zelle ripe for fraud."
-              
-          },
-          {
-              "id": 3,
-            
-              "title": "Cash Stuffing: 6 Tips for Running a Cash-Only Budget",
-              "description":" I can get behind this TikTok financial fad."
-              
-          }
-      ],
-      "Investing":[
-          {
-              "id": 1,
-              "image": "image/image7.jpeg",
-              "title": "  I Bonds' Record 9.62% Rate Expires Soon, and Buying Them Still Isn't Quick",
-              "description":" With a little patience, you can get almost 10% back on your money for the next six months.",
-              "update": "N.R.P-Last updated: February 12,2021"
-          },
-          {
-              "id": 2,
-              "image": "image/image24.jpeg",
-              "title": " FIRE Hype: Want to Retire Early? Not So Fast",
-              "description":"Commentary: Got FIRE FOMO? Read this before plotting your next money move.",
-              "update": "N.R.P-Last updated: February 12,2021"
-          }
+          "title": "Netflix's Most Popular Shows and Movies, Ranked (According to Netflix)",
+          "description": " Netflix publishes weekly charts of its most watched series and films, hoping you'll find something new to watch. We track the all-timers."
+        },
+        {
+          "id": 3,
 
+          "title": " Best Live TV Streaming Service for Cord Cutting in 2022",
+          "description": " Are you looking to cut cable but want to keep live sports, news and originals? YouTube TV, Hulu Plus Live TV or Sling TV could be the services for you."
+        }
       ],
-      "InvestingRight":[
-          {
-              "id": 1,
-            
-              "title": " Grandparents Can Use 529 College Saver Plans for Grandkids Without Hurting Financial Aid",
-              "description":"Tax-free 529 plans are a strong option for education savings, and they're about to get better for grandparents."
-              
-          },
-          {
-              "id": 2,
-            
-              "title": "How Does Inflation Impact the Stock Market? Investing Advice for When Stocks Tumble",
-              "description":"Five investment experts offer their advice for surviving an uncertain stock market."
-              
-          },
-          {
-              "id": 3,
-            
-              "title": "Best Robo-Advisors for Investing for September 2022",
-              "description":"Free up your time and invest in the future by letting robo-advisors invest for you."
-              
-          }
+      "Latest": [
+        {
+          "id": 1,
+          "image": "image/image24.jpeg",
+          "title": "The iPhone 14 Plus Is a Big, Bold Purple Behemoth",
+          "desc": "Apple's newest phone is an iPhone 14, but bigger.",
+          "update": "N.R.P-Last updated: February 12,2021"
+        },
+        {
+          "id": 2,
+          "image": "image/image24.jpeg",
+          "title": "Google Pixel 7 vs. Apple iPhone 14 vs. Samsung Galaxy S22: The $200 Difference",
+          "desc": "The Pixel 7 is keeping its $599 price, and that might be a big selling point against the more expensive Galaxy S22 and iPhone 14.",
+          "update": "N.R.P-Last updated: February 12,2021"
+        },
+        {
+          "id": 3,
+          "image": "image/image24.jpeg",
+          "title": "Streaming Services in October: You May Want to Cancel These",
+          "desc": "Netflix and other services can be cut midmonth if you run out of stuff to watch.",
+          "update": "N.R.P-Last updated: February 12,2021"
+        },
+        {
+          "id": 4,
+          "image": "image/image24.jpeg",
+          "title": "Google Apologizes for Home Mini Speaker Reportedly Reading N-Word Aloud",
+          "desc": "Netflix and other services can be cut midmonth if you run out of stuff to watch.",
+          "update": "N.R.P-Last updated: February 12,2021"
+        },
+        {
+          "id": 5,
+          "image": "image/image24.jpeg",
+          "title": "All the Times Google Threw Shade at Apple During the Pixel 7 Event",
+          "desc": "The Google event was basically a subtweet at Apple.",
+          "update": "N.R.P-Last updated: February 12,2021"
+        }
+      ],
+      "Banking": [
+        {
+          "id": 1,
+          "image": "image/image7.jpeg",
+          "title": "  Best High-Yield Savings Accounts for October 2022",
+          "description": " High-yield savings account rates are now earning over 2% APYs.",
+          "update": "N.R.P-Last updated: February 12,2021"
+        },
+        {
+          "id": 2,
+          "image": "image/image24.jpeg",
+          "title": " Best CD Rates for October 2022",
+          "description": "High-yield savings account rates are now earning over 2% APYs.",
+          "update": "N.R.P-Last updated: February 12,2021"
+        }
+      ],
+      "BankingRight": [
+        {
+          "id": 1,
+
+          "title": " Robinhood App's $20 Million Data Breach Settlement: Who Is Eligible for Money?",
+          "description": " CD rates continue to rise, as Fed hikes propel banks upward. Let's see how your savings can work harder to keep up with inflation."
+        },
+        {
+          "id": 2,
+
+          "title": "Stop Zelle Scams Before Thieves Get Anywhere Near Your Money",
+          "description": "Instantaneous transactions make peer-to-peer payment system Zelle ripe for fraud."
+        },
+        {
+          "id": 3,
+
+          "title": "Cash Stuffing: 6 Tips for Running a Cash-Only Budget",
+          "description": " I can get behind this TikTok financial fad."
+        }
+      ],
+      "Investing": [
+        {
+          "id": 1,
+          "image": "image/image7.jpeg",
+          "title": "  I Bonds' Record 9.62% Rate Expires Soon, and Buying Them Still Isn't Quick",
+          "description": " With a little patience, you can get almost 10% back on your money for the next six months.",
+          "update": "N.R.P-Last updated: February 12,2021"
+        },
+        {
+          "id": 2,
+          "image": "image/image24.jpeg",
+          "title": " FIRE Hype: Want to Retire Early? Not So Fast",
+          "description": "Commentary: Got FIRE FOMO? Read this before plotting your next money move.",
+          "update": "N.R.P-Last updated: February 12,2021"
+        }
+      ],
+      "InvestingRight": [
+        {
+          "id": 1,
+
+          "title": " Grandparents Can Use 529 College Saver Plans for Grandkids Without Hurting Financial Aid",
+          "description": "Tax-free 529 plans are a strong option for education savings, and they're about to get better for grandparents."
+        },
+        {
+          "id": 2,
+
+          "title": "How Does Inflation Impact the Stock Market? Investing Advice for When Stocks Tumble",
+          "description": "Five investment experts offer their advice for surviving an uncertain stock market."
+        },
+        {
+          "id": 3,
+
+          "title": "Best Robo-Advisors for Investing for September 2022",
+          "description": "Free up your time and invest in the future by letting robo-advisors invest for you."
+        }
       ],
 
-      "Taxes":[
-          {
-              "id": 1,
-              "image": "image/image7.jpeg",
-              "title": "  State Stimulus Checks 2022: These States Are Mailing out Payments This Week",
-              "description":"Find out if your state is issuing a tax rebate in October.",
-              "update": "N.R.P-Last updated: February 12,2021"
-          },
-          {
-              "id": 2,
-              "image": "image/image24.jpeg",
-              "title": " California Inflation Relief Payments Start Arriving Today. Everything You Need to Know",
-              "description":"About 23 million Californians will receive one-time tax refunds of as much as $1,050.",
-              "update": "N.R.P-Last updated: February 12,2021"
-          }
-
+      "Taxes": [
+        {
+          "id": 1,
+          "image": "image/image7.jpeg",
+          "title": "  State Stimulus Checks 2022: These States Are Mailing out Payments This Week",
+          "description": "Find out if your state is issuing a tax rebate in October.",
+          "update": "N.R.P-Last updated: February 12,2021"
+        },
+        {
+          "id": 2,
+          "image": "image/image24.jpeg",
+          "title": " California Inflation Relief Payments Start Arriving Today. Everything You Need to Know",
+          "description": "About 23 million Californians will receive one-time tax refunds of as much as $1,050.",
+          "update": "N.R.P-Last updated: February 12,2021"
+        }
       ],
-      "TaxesRight":[
-          {
-              "id": 1,
-            
-              "title": " Child Tax Credit 2022: How Much Money Could You Get From Your State?",
-              "description":"Find out if your state is planning to send out child tax credit money or offer deductions, and if you're eligible."
-              
-          },
-          {
-              "id": 2,
-            
-              "title": " Student Loans: Here's Who May Pay Taxes on Forgiven Student Debt",
-              "description":"Where you live will impact whether you pay taxes on canceled student loans."
-              
-          },
-          {
-              "id": 3,
-            
-              "title": "Payments Are Due Today. Who Needs to File, How to Submit and More",
-              "description":"Sept. 15 is the deadline to file estimated taxes this quarter."
-              
-          }
+      "TaxesRight": [
+        {
+          "id": 1,
+
+          "title": " Child Tax Credit 2022: How Much Money Could You Get From Your State?",
+          "description": "Find out if your state is planning to send out child tax credit money or offer deductions, and if you're eligible."
+        },
+        {
+          "id": 2,
+
+          "title": " Student Loans: Here's Who May Pay Taxes on Forgiven Student Debt",
+          "description": "Where you live will impact whether you pay taxes on canceled student loans."
+        },
+        {
+          "id": 3,
+
+          "title": "Payments Are Due Today. Who Needs to File, How to Submit and More",
+          "description": "Sept. 15 is the deadline to file estimated taxes this quarter."
+        }
       ]
-    }]
+    }
+  ]
 }

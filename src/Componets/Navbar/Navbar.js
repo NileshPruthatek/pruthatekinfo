@@ -39,7 +39,7 @@ export const Navbar = () => {
               {categoryData?.map(({ name, uuid }) => {
                 return (
                   <li className={style.navitem}>
-                    <Link className="nav-link active" style={{ cursor: "pointer" }} to={`${name}?x=${uuid}`}>{name}</Link>
+                    <Link className="nav-link active" style={{ cursor: "pointer" }} to={`${name.replace(" ", "-").toLowerCase()}?x=${uuid}`}>{name}</Link>
                   </li>
                 )
               })}
