@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import mobile from '../Subcategary/Mobile.module.css'
-import techBlog from '../../Tech/TechBlog.module.css'
+import subCategory from '../Subcategary/SubCategory.module.css'
+import techBlog from '../TopCategory.module.css'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import data from '../../../../db.json'
 import Wrapper from '../../../Wrapper'
@@ -8,7 +8,7 @@ import useQuery from '../../../../customer-hook/useQuery'
 import axios from 'axios'
 
 
-export const Mobile = () => {
+const SubCategory = () => {
     const location = useLocation();
     const [loading, setLoading] = useState(true)
     const [catArray, setCatArray] = useState([]);
@@ -163,17 +163,17 @@ export const Mobile = () => {
 
 
                 <div className="d-grid  gap-1 d-md-flex justify-content-md-end my-3">
-                    <button className={` btn btn-primary  ${mobile.Prevbtn}`} type="button" onClick={scrollLeft}>
+                    <button className={` btn btn-primary  ${subCategory.Prevbtn}`} type="button" onClick={scrollLeft}>
                         Prev
                     </button>
-                    <button className={` btn btn-primary  ${mobile.Nextbtn}`} type="button" onClick={scrollRight} >Next</button>
+                    <button className={` btn btn-primary  ${subCategory.Nextbtn}`} type="button" onClick={scrollRight} >Next</button>
                 </div>
 
                 {/*===========================Latest========================*/}
 
                 <div className={techBlog.TechHeading}>Latest</div>
 
-                <div className="container">
+                <div className="container mb-5">
                     <div className="row">
                         <div className="col-12">
                             {pageData?.["latestBlogs"].map((latestdata) => (
@@ -206,20 +206,20 @@ export const Mobile = () => {
                             <div className='col-10'>
                                 {data.Latest.map(latestdata => (
                                     <div key={latestdata.index}>
-                                        <div className={`card mb-3    ${mobile.latestcard}`} >
-                                            <NavLink to="#" className={mobile.navdecoration}>
+                                        <div className={`card mb-3    ${subCategory.latestcard}`} >
+                                            <NavLink to="#" className={subCategory.navdecoration}>
                                                 <div className="row no-gutters">
                                                     <div className="col-8   ">
                                                         <div className="card-body  p-0 pl-3">
-                                                            <h5 className={`card-text font-weight-bold  ${mobile.LatestTitle}`} >{latestdata.title}</h5>
-                                                            <p className={`card-text font-weight-bold    ${mobile.Latstdesc}`} >{latestdata.desc}</p>
+                                                            <h5 className={`card-text font-weight-bold  ${subCategory.LatestTitle}`} >{latestdata.title}</h5>
+                                                            <p className={`card-text font-weight-bold    ${subCategory.Latstdesc}`} >{latestdata.desc}</p>
 
-                                                            <p className={`card-text    ${mobile.LatestUpate}`} ><small className="text-muted">{latestdata.update}</small></p>
+                                                            <p className={`card-text    ${subCategory.LatestUpate}`} ><small className="text-muted">{latestdata.update}</small></p>
                                                         </div>
                                                     </div>
                                                     <div className="col-2 ">
 
-                                                        <img src={latestdata.image} alt="..." className={mobile.Latestimage} />
+                                                        <img src={latestdata.image} alt="..." className={subCategory.Latestimage} />
 
 
                                                     </div>
@@ -245,9 +245,9 @@ export const Mobile = () => {
                 )}
 
                 {/*====================== see more================== */}
-                <button
+                {/* <button
                     type="button"
-                    className={` btn btn-sucess my-5 ${mobile.SeeMorebtn}`}
+                    className={` btn btn-sucess my-5 ${subCategory.SeeMorebtn}`}
                     onClick={
                         () => {
                             setShowSeeMore((prevSeeMore) => setShowSeeMore(!prevSeeMore))
@@ -256,9 +256,9 @@ export const Mobile = () => {
                 >
                     {showSeeMore ? "see more" : "see More"}
 
-                </button>
+                </button> */}
             </>}
         </Wrapper>
     )
 }
-export default Mobile
+export default SubCategory

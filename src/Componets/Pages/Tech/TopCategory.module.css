@@ -37,7 +37,6 @@
 }
 .howtocardright {
   width: auto;
-  height: 200px;
 }
 .Techsmallres {
   font-size: 1rem;
@@ -616,7 +615,6 @@
   }
   .howtocardright {
     width: 400px;
-    height: 200px;
     margin-left: 20px;
   }
   .Leftsideimage {

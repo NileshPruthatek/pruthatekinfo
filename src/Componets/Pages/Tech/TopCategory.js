@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import techBlog from "../Tech/TechBlog.module.css";
+import topCategory from "../Tech/TopCategory.module.css";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import data from "../../../db.json";
 import Wrapper from "../../Wrapper";
@@ -7,11 +7,12 @@ import useQuery from "../../../customer-hook/useQuery";
 import axios from 'axios'
 import TopCat from "../TopCat/TopCat";
 
-export const TechBlog = () => {
+export const TopCategory = () => {
     const location = useLocation();
     const [loading, setLoading] = useState(true)
     const [catArray, setCatArray] = useState([]);
     const [pageData, setPageData] = useState()
+    const [isEmpty, setIsEmpty] = useState(false)
     const query = useQuery()
 
     useEffect(() => {
@@ -29,11 +30,12 @@ export const TechBlog = () => {
         setLoading(true)
         axios.get(`${process.env.REACT_APP_IMG_BASEURL}/api/categoryPage?x=${query.get('x')}`).then((res) => {
             setPageData(res.data.info)
+            setIsEmpty(!(!!Object.keys(res.data.info).filter((eachKey) => res.data.info[eachKey].length > 0).length))
             setLoading(false)
         }).catch((err) => {
             setLoading(false)
         })
-    }, [])
+    }, [location])
 
 
 
@@ -46,7 +48,7 @@ export const TechBlog = () => {
                             <div className="universalSubnav_items" section="category">
                                 {catArray?.map((cat) => {
                                     return (
-                                        <Link className={`p-2  ${techBlog.universalSubnavitems}`} style={{ cursor: "pointer" }} to={`${cat.isMain ? `/${cat.name.replace(" ", "-").toLowerCase()}?x=${cat.uuid}` : `/${location.pathname.replace("/", "").replace(" ", "-").toLowerCase()}/${cat.name.replace(" ", "-").toLowerCase()}?x=${query.get("x")}&y=${cat.uuid}`}`} >
+                                        <Link className={`p-2  ${topCategory.universalSubnavitems}`} style={{ cursor: "pointer" }} to={`${cat.isMain ? `/${cat.name.replace(" ", "-").toLowerCase()}?x=${cat.uuid}` : `/${location.pathname.replace("/", "").replace(" ", "-").toLowerCase()}/${cat.name.replace(" ", "-").toLowerCase()}?x=${query.get("x")}&y=${cat.uuid}`}`} >
                                             <span style={{ textTransform: "capitalize" }}>{cat.name}</span>
                                         </Link>
                                     );
@@ -56,11 +58,11 @@ export const TechBlog = () => {
                     </div>
                 </div>
 
-                <TopCat pageData={pageData} />
+                {isEmpty ? <h2 className="text-center my-5">Blogs Comming Soon!</h2> : <TopCat pageData={pageData} />}
 
             </>}
 
         </Wrapper>
     );
 };
-export default TechBlog;
+export default TopCategory;

@@ -1,4 +1,4 @@
-import React , {  useState }from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import moneyblog from '../Money/Moneyblog.module.css'
 import data from '../../../db.json'
@@ -13,7 +13,7 @@ export const Moneyblog = () => {
         const scroll = document.getElementById("slider");
         scroll.scrollLeft = scroll.scrollLeft + 550;
     };
-    const [showSeeMore, setShowSeeMore]=useState(false);
+    const [showSeeMore, setShowSeeMore] = useState(false);
 
 
     return (
@@ -302,7 +302,7 @@ export const Moneyblog = () => {
                         })}
 
                     </div>
-             </div>
+                </div>
 
             </div>
 
@@ -372,10 +372,10 @@ export const Moneyblog = () => {
 
             </div>
 
- {/*=========================== Insurance======================== */}
+            {/*=========================== Insurance======================== */}
 
- <div className={moneyblog.TechHeading}>
-            Insurance
+            <div className={moneyblog.TechHeading}>
+                Insurance
 
                 <NavLink to="#" className={moneyblog.navourfavorite}>See All</NavLink>
 
@@ -438,11 +438,11 @@ export const Moneyblog = () => {
 
             </div>
 
-            
+
             {/*===========================Loans======================== */}
 
             <div className={moneyblog.TechHeading}>
-            Loans
+                Loans
 
                 <NavLink to="#" className={moneyblog.navourfavorite}>See All</NavLink>
 
@@ -509,9 +509,9 @@ export const Moneyblog = () => {
                 </div>
 
             </div>
- {/*===========================Cryptocurrency======================== */}
+            {/*===========================Cryptocurrency======================== */}
 
- <div className={moneyblog.TechHeading}>
+            <div className={moneyblog.TechHeading}>
                 Cryptocurrency
 
                 <NavLink to="#" className={moneyblog.navourfavorite}>See All</NavLink>
@@ -582,7 +582,7 @@ export const Moneyblog = () => {
 
             {/*===========================Banking======================== */}
 
- <div className={moneyblog.TechHeading}>
+            <div className={moneyblog.TechHeading}>
                 Banking
 
                 <NavLink to="#" className={moneyblog.navourfavorite}>See All</NavLink>
@@ -642,10 +642,10 @@ export const Moneyblog = () => {
                 </div>
 
             </div>
- {/*===========================Investing======================== */}
+            {/*===========================Investing======================== */}
 
- <div className={moneyblog.TechHeading}>
-            Investing
+            <div className={moneyblog.TechHeading}>
+                Investing
 
                 <NavLink to="#" className={moneyblog.navourfavorite}>See All</NavLink>
 
@@ -710,7 +710,7 @@ export const Moneyblog = () => {
 
             {/*===========================Taxes======================== */}
 
- <div className={moneyblog.TechHeading}>
+            <div className={moneyblog.TechHeading}>
                 Taxes
 
                 <NavLink to="#" className={moneyblog.navourfavorite}>See All</NavLink>
@@ -781,7 +781,7 @@ export const Moneyblog = () => {
 
             </div>
 
-            <div className='container'>
+            <div className='container mb-5'>
                 <div className='row'>
                     <div className='col-10'>
                         {data.Latest.map(latestdata => (
@@ -812,63 +812,63 @@ export const Moneyblog = () => {
 
 
                     </div>
-                        
-                       
 
 
 
 
-                  
+
+
+
                 </div>
 
             </div>
 
-          {showSeeMore &&(
- <div className='container'>
- <div className='row'>
-     <div className='col-10'>
-         {data.Latest.map(latestdata => (
-             <div key={latestdata.index}>
-                 <div className={`card mb-3    ${moneyblog.latestcard}`} >
-                     <NavLink to="#" className={moneyblog.navdecoration}>
-                         <div className="row no-gutters">
-                             <div className="col-8   ">
-                                 <div className="card-body  p-0 pl-3">
-                                     <h5 className={`card-text font-weight-bold  ${moneyblog.LatestTitle}`} >{latestdata.title}</h5>
-                                     <p className={`card-text font-weight-bold    ${moneyblog.Latstdesc}`} >{latestdata.desc}</p>
+            {showSeeMore && (
+                <div className='container'>
+                    <div className='row'>
+                        <div className='col-10'>
+                            {data.Latest.map(latestdata => (
+                                <div key={latestdata.index}>
+                                    <div className={`card mb-3    ${moneyblog.latestcard}`} >
+                                        <NavLink to="#" className={moneyblog.navdecoration}>
+                                            <div className="row no-gutters">
+                                                <div className="col-8   ">
+                                                    <div className="card-body  p-0 pl-3">
+                                                        <h5 className={`card-text font-weight-bold  ${moneyblog.LatestTitle}`} >{latestdata.title}</h5>
+                                                        <p className={`card-text font-weight-bold    ${moneyblog.Latstdesc}`} >{latestdata.desc}</p>
 
-                                     <p className={`card-text    ${moneyblog.LatestUpate}`} ><small className="text-muted">{latestdata.update}</small></p>
-                                 </div>
-                             </div>
-                             <div className="col-2 ">
+                                                        <p className={`card-text    ${moneyblog.LatestUpate}`} ><small className="text-muted">{latestdata.update}</small></p>
+                                                    </div>
+                                                </div>
+                                                <div className="col-2 ">
 
-                                 <img src={latestdata.image} alt="..." className={moneyblog.Latestimage} />
-
-
-                             </div>
-                         </div>
-                     </NavLink>
-                 </div>
-
-             </div>
-         ))}
+                                                    <img src={latestdata.image} alt="..." className={moneyblog.Latestimage} />
 
 
-     </div>
-         
-        
+                                                </div>
+                                            </div>
+                                        </NavLink>
+                                    </div>
+
+                                </div>
+                            ))}
+
+
+                        </div>
 
 
 
 
-   
- </div>
 
-</div>
-          )}
 
-{/*====================== see more================== */}
-            <button 
+
+                    </div>
+
+                </div>
+            )}
+
+            {/*====================== see more================== */}
+            {/* <button 
             type="button" 
             className={` btn btn-sucess my-5 ${moneyblog.SeeMorebtn}`}
             onClick={
@@ -879,7 +879,7 @@ export const Moneyblog = () => {
             >
                 {showSeeMore ? "see more": "see More"}
                 
-                </button>
+                </button> */}
 
 
 

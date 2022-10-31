@@ -11,9 +11,8 @@ import {
 import Homeblog from './Componets/Pages/Homeblog/Homeblog';
 
 import Footer from './Componets/Footer/Footer';
-import TechBlog from './Componets/Pages/Tech/TechBlog';
-import Moneyblog from './Componets/Pages/Money/Moneyblog';
-import Mobile from './Componets/Pages/Tech/Subcategary/Mobile';
+import TopCategory from './Componets/Pages/Tech/TopCategory';
+import SubCategory from './Componets/Pages/Tech/Subcategary/SubCategory';
 import DetailedBlog from './Componets/Pages/detailedblog/DetailedBlog';
 
 function App() {
@@ -24,8 +23,8 @@ function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Homeblog />} />
-            <Route path="/:catName" element={<TechBlog />} />
-            <Route path="/:mainCatName/:subCatName" element={<Mobile />} />
+            <Route path="/:catName" element={<TopCategory />} />
+            <Route path="/:mainCatName/:subCatName" element={<SubCategory />} />
             <Route path="/blog" element={<DetailedBlog />} />
             {/* <Route path='/money' element={<Moneyblog />} /> */}
             {/* <Route path='/mobile' element={<Mobile />} />
