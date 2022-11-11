@@ -1,95 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Nunito+Sans:ital,wght@0,200;1,700&family=Poppins:ital,wght@1,200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Nunito+Sans:ital,wght@0,200;1,700&family=Poppins:ital,wght@1,200&display=swap");
 
-.logoimage{
-    width:350px;
+.nav {
+  padding: 0px 1em;
+  width: 80%;
+}
+
+.logoimage {
+  width: 250px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.navitem {
+  font-size: 1rem;
+  letter-spacing: 0.2px;
+  margin: 0 auto;
+  display: block;
+  line-height: 50px;
+}
+
+@media screen and (min-width: 93.5em) {
+  .myclass {
+    display: none !important;
+  }
+  .listitems {
+    display: flex !important;
+    flex-basis: auto;
+  }
+  .smallScreenListItems {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 101.3125em) {
+  .logoimage {
+    width: 350px;
     height: 100px;
     object-fit: cover;
     cursor: pointer;
-}
-.navitem{
-    font-size: 1.2rem;
+  }
+  .navitem {
+    font-size: 1rem;
     letter-spacing: 0.2px;
     margin: 8px;
     display: block;
     height: 64px;
     line-height: 64px;
-}
-.navitem:hover{
+  }
+  .navitem:hover {
     text-underline-offset: 2px;
     text-decoration: underline;
     text-decoration-color: #0f8209;
-}
+  }
 
-.Title{
-    
+  .Title {
     font-size: 1.3rem;
     letter-spacing: 0.2px;
     margin-left: -10px;
-    font-family: 'Nunito Sans', sans-serif;
-   
-}
-.submenu {
-  
+    font-family: "Nunito Sans", sans-serif;
+  }
+  .submenu {
     font-size: 0.9rem;
-     margin: -10px;
-     font-family: 'Nunito Sans', sans-serif;
-     font-weight: 700;
-
-  
-}
-.Title:hover{
+    margin: -10px;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+  }
+  .Title:hover {
     text-underline-offset: 2px;
     text-decoration: underline;
     text-decoration-color: #0f8209;
-   
-  
-}
-.submenu:hover{
+  }
+  .submenu:hover {
     text-underline-offset: 2px;
     text-decoration: underline;
     text-decoration-color: #0f8209;
-}
+  }
 
-.headingtitle{
+  .headingtitle {
     flex: 1;
     white-space: nowrap;
     color: #0f8209;
     margin-bottom: 0;
     font-size: 1.2rem;
-    font-family: Sentinel,serif;
+    font-family: Sentinel, serif;
     font-weight: 600;
-    letter-spacing: -.032em;
+    letter-spacing: -0.032em;
     word-spacing: 0.15em;
     margin-left: 20px;
-}
-@media (min-width: 375px) and (max-width: 667px) {
-    .logoimage{
-        width:250px;
-        height: 100px;
-        object-fit: cover;
-        cursor: pointer;
-        
-    }
-    .navitem{
-        font-size: 1rem;
-        letter-spacing: 0.2px;
-        margin: 0px;
-        display: block;
-        height: 64px;
-        line-height: 50px;
-    }
-
-}
-@media (min-width: 600px) and (max-width: 700px) {
-    .logoimage{
-        width:250px;
-        height: 100px;
-        object-fit: cover;
-        cursor: pointer;
-      
-       
-    }
-   
-   
-  
+  }
 }

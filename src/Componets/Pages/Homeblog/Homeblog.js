@@ -398,7 +398,7 @@ export const Homeblog = () => {
               </NavLink>
 
             </div>
-            <div className="col-md-4  ">
+            <div className="col-md-4">
               <NavLink to="#" className={homecss.navdecoration}>
                 <div className={`card     ${homecss.CardKnowlage}`}>
                   <img src={image9} className={homecss.knowlebigimage} alt="..." />
