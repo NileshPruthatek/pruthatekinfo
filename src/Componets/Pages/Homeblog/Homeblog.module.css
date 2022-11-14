@@ -1,3 +1,4 @@
+/* New CSS */
 * {
   margin: 0;
   padding: 0;
@@ -6,105 +7,117 @@
   /*font-family: 'Arimo', sans-serif; */
   /* font-family: 'Lato', sans-serif; */
 }
-.navdecoration {
-  color: black !important;
-  text-decoration-line: none;
-}
-.cardimgtop {
-  width: 440px;
-  height: auto;
-}
 
 .myCard {
-  width: 440px;
-  height: 440px;
+  margin: 0 auto;
+  width: 80%;
   box-shadow: 0 10px 10px rgba(126, 117, 117, 0.08), 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.cardimgtop {
+  width: 100%;
+  max-height: 300px;
 }
 
 .cardtext {
   font-size: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
 }
 
 .heading {
-  padding: 10px;
-  margin-left: 120px;
+  padding: 0.5em 0 0.6em 0.6em;
   border-left: 2px solid #56a646;
-  margin-bottom: 20px;
+}
+
+.fourcard {
+  width: 100%;
+}
+
+.cardImage {
+  width: 100%;
+}
+
+.CardTitle {
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+.rightsideimage {
+  min-height: 96.45px;
+}
+
+.howtitlesmallres {
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  padding: 0px 1em;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.howtitlesmallupdated {
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  padding: 0px 1em;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 0.9em;
+}
+
+.knowleSmallimage {
+  width: 40%;
+}
+
+.howlargetitle {
+  font-size: medium;
+}
+
+@media screen and (min-width: 80em) {
+  .howlargetitle {
+    font-size: 1.5rem;
+  }
+}
+
+/* Old CSS */
+
+.navdecoration {
+  color: black !important;
+  text-decoration-line: none;
 }
 
 /*================four card==========================*/
-.fourcard {
-  width: 250px;
-  height: auto;
-}
-.cardImage {
-  width: 250px;
-  height: auto;
-}
-.CardTitle {
-  font-size: 1rem;
-}
+
 .Update {
   font-size: 0.8rem;
   margin-top: 30px;
 }
 
 /*========================HOW-TO GUIDES===============================*/
-.rightsideimage {
-  width: 100%;
-  height: 140px;
-}
 .howtocard {
   height: 615px;
-}
-.howtocardright {
-  width: 100%;
 }
 .bigimage {
   width: 450px;
 }
-.howlargetitle {
-  font-size: 1.5rem;
-}
 .howtitlesmall {
   font-size: 15px;
-}
-.howtitlesmallres {
-  font-size: 20px;
-  padding: 0.3em 0.5em;
 }
 .howupdate {
   font-size: 15px;
   padding: 0 0.5em;
 }
 /*=================================Knowlage Base=========================*/
-.CardKnowlage {
-  width: 100%;
-  height: 394px;
-}
-.knowlebigimage {
-  width: 100%;
-  height: 234px;
-}
 
 .heading4 {
   display: flex;
   justify-content: center;
-  font-size: 25px;
-
+  font-size: calc(1.3rem + 0.4vw);
   border-bottom: 1px solid #56a646;
-  padding: 25px;
+  padding: 1.1em;
 }
-.knowlegesmalltitle {
-  font-size: 15px;
-  padding: 0.6em 1em;
-}
-
-.knowleSmallimage {
-  width: 140px;
-  height: 140px;
-}
-
 .businesssmalltitle {
   font-size: 15px;
   margin-left: 25px;
@@ -127,37 +140,13 @@
 
 /*==================================Responsive ===================================*/
 @media (min-width: 320px) and (max-width: 420px) {
-  .cardimgtop {
-    width: 245px;
-    height: auto;
-  }
-  .myCard {
-    width: 250px !important;
-    height: auto;
-    margin-left: 50px;
-    margin-bottom: 20px;
-  }
   .myCard2 {
     width: 250px !important;
     height: auto;
     margin-left: 50px;
   }
-  .cardtext {
-    font-size: 0.8rem;
-  }
 
-  .heading {
-    padding: 10px;
-    margin-left: 60px;
-    border-left: 2px solid #56a646;
-    margin-bottom: 20px;
-  }
   /*========================four card css=================*/
-  .fourcard {
-    width: 255px;
-    height: auto;
-    margin-left: 50px;
-  }
   /*===========================HOW-TO GUIDES============================== */
   .howtocard {
     width: 250px;
@@ -172,21 +161,6 @@
   .howlargetitle {
     font-size: 1rem;
   }
-  .howtocardright {
-    width: 250px;
-    height: 330px;
-    margin-left: 50px;
-  }
-  .rightsideimage {
-    width: 250px;
-    height: auto;
-  }
-  .howtitlesmallres {
-    margin-top: 180px;
-    font-size: 0.9rem;
-    display: block;
-    margin-left: -80px;
-  }
   .howupdate {
     font-size: 15px;
     display: block;
@@ -194,36 +168,6 @@
   }
 
   /*=================================Knowlage Base=========================*/
-  .CardKnowlage {
-    width: 300px;
-    height: 394px;
-    margin-left: 40px;
-    margin-bottom: 20px;
-  }
-  .knowlebigimage {
-    width: 300px;
-    height: 234px;
-  }
-  .knowlegesmalltitle {
-    font-size: 15px;
-    margin-left: 25px;
-  }
-  .CardSmall {
-    width: 250px;
-    height: 330px;
-    margin-left: 50px;
-  }
-
-  .knowleSmallimage {
-    width: 250px;
-    height: auto;
-  }
-  .knowlegesmalltitle {
-    margin-top: 180px;
-    font-size: 0.9rem;
-    display: block;
-    margin-left: -50px;
-  }
   .knowupdate {
     font-size: 15px;
     display: block;
@@ -242,38 +186,12 @@
 }
 
 @media (min-width: 420px) and (max-width: 600px) {
-  .cardimgtop {
-    width: 300px;
-    height: auto;
-  }
-  .myCard {
-    width: 300px !important;
-    height: auto;
-    margin-left: 50px;
-    margin-bottom: 20px;
-  }
   .myCard2 {
     width: 300px !important;
     height: auto;
     margin-left: 50px;
   }
-  .cardtext {
-    font-size: 0.8rem;
-  }
 
-  .heading {
-    padding: 10px;
-    margin-left: 60px;
-    border-left: 2px solid #56a646;
-    margin-bottom: 20px;
-  }
-
-  /*========================four card css=================*/
-  .fourcard {
-    width: 255px;
-    height: auto;
-    margin-left: 50px;
-  }
   /*===========================HOW-TO GUIDES============================== */
   .howtocard {
     width: 280px;
@@ -284,23 +202,6 @@
   .bigimage {
     width: 280px;
     height: auto;
-  }
-  .howtocardright {
-    width: 280px;
-    height: auto;
-    margin-left: 50px;
-  }
-
-  .rightsideimage {
-    width: 280px;
-    height: auto;
-  }
-  .howtitlesmallres {
-    margin-top: 200px;
-    font-size: 0.9rem;
-    display: block;
-    justify-content: center;
-    margin-left: -100px;
   }
   .howtitlesmall {
     display: block;
@@ -313,36 +214,7 @@
     margin-left: -100px;
   }
   /*=================================Knowlage Base=========================*/
-  .CardKnowlage {
-    width: 350px;
-    height: 394px;
-    margin-left: 50px;
-    margin-bottom: 20px;
-  }
-  .knowlebigimage {
-    width: 350px;
-    height: 234px;
-  }
-  .knowlegesmalltitle {
-    font-size: 15px;
-    margin-left: 25px;
-  }
-  .CardSmall {
-    width: 240px;
-    height: 300px;
-    margin-left: 50px;
-  }
 
-  .knowleSmallimage {
-    width: 240px;
-    height: 140px;
-  }
-  .knowlegesmalltitle {
-    margin-top: 180px;
-    font-size: 0.9rem;
-    display: block;
-    margin-left: -80px;
-  }
   .knowupdate {
     font-size: 15px;
     display: block;
@@ -358,39 +230,13 @@
   }
 }
 @media (min-width: 600px) and (max-width: 750px) {
-  .cardimgtop {
-    width: 340px;
-    height: auto;
-  }
-  .myCard {
-    width: 340px !important;
-    height: auto;
-    margin-left: 50px;
-    margin-bottom: 20px;
-  }
   .myCard2 {
     width: 340px !important;
     height: auto;
     margin-left: 50px;
   }
-  .cardtext {
-    font-size: 0.8rem;
-  }
 
-  .heading {
-    padding: 10px;
-    margin-left: 60px;
-    border-left: 2px solid #56a646;
-    margin-bottom: 20px;
-  }
   /*======================================BUSINES======================== */
-
-  /*========================four card css=================*/
-  .fourcard {
-    width: 255px;
-    height: auto;
-    margin-left: 50px;
-  }
 
   /*===========================HOW-TO GUIDES============================== */
   .howtocard {
@@ -404,36 +250,7 @@
   }
 
   /*=================================Knowlage Base=========================*/
-  .CardKnowlage {
-    width: 350px;
-    height: 394px;
-    margin-left: 50px;
-    margin-bottom: 20px;
-  }
-  .knowlebigimage {
-    width: 350px;
-    height: 234px;
-  }
-  .CardSmall {
-    display: flex;
-    flex-direction: column;
-  }
-  .CardSmall {
-    width: 240px;
-    height: 300px;
-    margin-left: 50px;
-  }
 
-  .knowleSmallimage {
-    width: 240px;
-    height: 140px;
-  }
-  .knowlegesmalltitle {
-    margin-top: 180px;
-    font-size: 0.9rem;
-    display: block;
-    margin-left: -80px;
-  }
   .knowupdate {
     font-size: 15px;
     display: block;
@@ -449,34 +266,8 @@
   }
 }
 @media (min-width: 750px) and (max-width: 900px) {
-  .cardimgtop {
-    width: 280px;
-    height: auto;
-  }
-  .myCard {
-    width: 280px !important;
-    height: auto;
-    margin-left: 50px;
-    margin-bottom: 20px;
-  }
   .myCard2 {
     width: 280px !important;
-    height: auto;
-    margin-left: 50px;
-  }
-  .cardtext {
-    font-size: 0.8rem;
-  }
-
-  .heading {
-    padding: 10px;
-    margin-left: 60px;
-    border-left: 2px solid #56a646;
-    margin-bottom: 20px;
-  }
-  /*========================four card css=================*/
-  .fourcard {
-    width: 255px;
     height: auto;
     margin-left: 50px;
   }
@@ -497,29 +288,6 @@
   }
 
   /*=================================Knowlage Base=========================*/
-  .CardKnowlage {
-    width: 200px;
-    height: 394px;
-  }
-  .knowlebigimage {
-    width: 200px;
-    height: 234px;
-  }
-  .CardSmall {
-    width: 240px;
-    height: 300px;
-  }
-
-  .knowleSmallimage {
-    width: 240px;
-    height: 140px;
-  }
-  .knowlegesmalltitle {
-    margin-top: 180px;
-    font-size: 0.9rem;
-    display: block;
-    margin-left: -80px;
-  }
   .knowupdate {
     font-size: 15px;
     display: block;
@@ -545,37 +313,12 @@
 }
 
 @media (min-width: 900px) and (max-width: 1024px) {
-  .cardimgtop {
-    width: 280px;
-    height: auto;
-  }
-  .myCard {
-    width: 280px !important;
-    height: auto;
-    margin-left: 50px;
-    margin-bottom: 20px;
-  }
   .myCard2 {
     width: 280px !important;
     height: auto;
     margin-left: 50px;
   }
-  .cardtext {
-    font-size: 0.8rem;
-  }
 
-  .heading {
-    padding: 10px;
-    margin-left: 60px;
-    border-left: 2px solid #56a646;
-    margin-bottom: 20px;
-  }
-  /*========================four card css=================*/
-  .fourcard {
-    width: 255px;
-    height: auto;
-    margin-left: 50px;
-  }
   /*===========================HOW-TO GUIDES============================== */
   .howtocard {
     width: 280px;
@@ -587,29 +330,6 @@
     height: auto;
   }
   /*=================================Knowlage Base=========================*/
-  .CardKnowlage {
-    width: 100%;
-    height: 394px;
-  }
-  .knowlebigimage {
-    width: 100%;
-    height: 234px;
-  }
-  .CardSmall {
-    width: 180px;
-    height: 350px;
-  }
-
-  .knowleSmallimage {
-    width: 180px;
-    height: 140px;
-  }
-  .knowlegesmalltitle {
-    margin-top: 180px;
-    font-size: 0.9rem;
-    display: block;
-    margin-left: -50px;
-  }
   .knowupdate {
     font-size: 14px;
     display: block;
@@ -635,37 +355,12 @@
   }
 }
 @media (min-width: 1024px) and (max-width: 1200px) {
-  .cardimgtop {
-    width: 280px;
-    height: auto;
-  }
-  .myCard {
-    width: 280px !important;
-    height: auto;
-    margin-left: 50px;
-    margin-bottom: 20px;
-  }
   .myCard2 {
     width: 280px !important;
     height: auto;
     margin-left: 50px;
   }
-  .cardtext {
-    font-size: 0.8rem;
-  }
 
-  .heading {
-    padding: 10px;
-    margin-left: 60px;
-    border-left: 2px solid #56a646;
-    margin-bottom: 20px;
-  }
-  /*========================four card css=================*/
-  .fourcard {
-    width: 255px;
-    height: auto;
-    margin-left: 50px;
-  }
   /*===========================HOW-TO GUIDES============================== */
   .howtocard {
     width: 280px;
@@ -675,29 +370,6 @@
   .bigimage {
     width: 280px;
     height: auto;
-  }
-  /*=================================Knowlage Base=========================*/
-  .CardKnowlage {
-    width: 100%;
-    height: 394px;
-  }
-  .knowlebigimage {
-    width: 100%;
-    height: 234px;
-  }
-  .CardSmall {
-    width: 350px;
-    height: 130px;
-  }
-
-  .knowlegesmalltitle {
-    font-size: 15px;
-    margin-left: 25px;
-  }
-
-  .knowleSmallimage {
-    width: 100px;
-    height: 130px;
   }
 
   /*======================================BUSINES======================== */

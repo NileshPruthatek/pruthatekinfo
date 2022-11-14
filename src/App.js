@@ -21,7 +21,7 @@ function App() {
         <Router>
           <Navbar />
           <Routes>
-            {/* <Route path="/" element={<Homeblog />} /> */}
+            <Route path="/" element={<Homeblog />} />
             <Route path="/:catName" element={<TopCategory />} />
             <Route path="/:mainCatName/:subCatName" element={<SubCategory />} />
             <Route path="/blog" element={<DetailedBlog />} />
