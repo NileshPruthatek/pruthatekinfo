@@ -32,12 +32,6 @@
 }
 
 @media screen and (min-width: 101.3125em) {
-  .logoimage {
-    width: 350px;
-    height: 100px;
-    object-fit: cover;
-    cursor: pointer;
-  }
   .navitem {
     font-size: 1rem;
     letter-spacing: 0.2px;
@@ -86,5 +80,13 @@
     letter-spacing: -0.032em;
     word-spacing: 0.15em;
     margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 1705px) {
+  .logoimage {
+    width: calc(250px + 2vw);
+    object-fit: cover;
+    cursor: pointer;
   }
 }

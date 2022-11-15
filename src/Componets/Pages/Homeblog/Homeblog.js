@@ -18,7 +18,7 @@ export const Homeblog = () => {
     <Wrapper>
       <>
         <div className={`container my-5  ${homecss.cardindex}`}>
-          <div className="row justify-content-center">
+          <div className="row justify-content-center px-5">
             <div className="col-md-6 mb-4 mb-md-0">
               <NavLink to="#" className={homecss.navdecoration}>
                 <div className={`card  ${homecss.myCard}`}  >
@@ -51,7 +51,7 @@ export const Homeblog = () => {
         </div>
 
         <div className={`container my-5`}>
-          <div className="row justify-content-center">
+          <div className="row justify-content-center px-5">
             <div className="col-md-6">
               <NavLink to="#" className={homecss.navdecoration}>
                 <div className={`card  ${homecss.myCard}`}  >
@@ -408,7 +408,7 @@ export const Homeblog = () => {
         </div>
 
         <div className={`container my-5  ${homecss.cardindex}`}>
-          <div className="row justify-content-center">
+          <div className="row justify-content-center px-5">
             <div className="col-md-6">
               <NavLink to="#" className={homecss.navdecoration}>
                 <div className={`card  ${homecss.myCard}`}  >
