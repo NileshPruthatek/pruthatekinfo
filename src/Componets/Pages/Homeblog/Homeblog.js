@@ -18,10 +18,10 @@ export const Homeblog = () => {
     <Wrapper>
       <>
         <div className={`container my-5  ${homecss.cardindex}`}>
-          <div className="row justify-content-center px-5">
+          <div className="row justify-content-center px-lg-5">
             <div className="col-md-6 mb-4 mb-md-0">
               <NavLink to="#" className={homecss.navdecoration}>
-                <div className={`card  ${homecss.myCard}`}  >
+                <div className={`border border-1 mx-0 w-100 ${homecss.myCard}`}>
                   <img src={image2} className={homecss.cardimgtop} alt="img1" />
                   <div className="card-body d-flex flex-column gap-2">
                     <p className={`card-text font-weight-bold  ${homecss.cardtext}`} >9 Best Free  Wordpress  Hosting  Services That  Does't  Suck Does't  Suck  Does't  Suck Does't  Suck Does't  Suck Does't  Suck </p>
@@ -33,7 +33,7 @@ export const Homeblog = () => {
 
             <div className="col-md-6">
               <NavLink to="#" className={homecss.navdecoration}>
-                <div className={`card  ${homecss.myCard}`}  >
+                <div className={`border border-1 mx-0 w-100 ${homecss.myCard}`}  >
                   <img src={image3} className={homecss.cardimgtop} alt="img1" />
                   <div className="card-body d-flex flex-column gap-2">
                     <p className={`card-text font-weight-bold  ${homecss.cardtext}`} >Fix Wifi Connected  But No Internet  Access on Windows</p>
@@ -50,14 +50,14 @@ export const Homeblog = () => {
           <h5>Top List</h5>
         </div>
 
-        <div className={`container my-5`}>
-          <div className="row justify-content-center px-5">
-            <div className="col-md-6">
+        <div className={`container my-5  ${homecss.cardindex}`}>
+          <div className="row justify-content-center px-lg-5">
+            <div className="col-md-6 mb-4 mb-md-0">
               <NavLink to="#" className={homecss.navdecoration}>
-                <div className={`card  ${homecss.myCard}`}  >
+                <div className={`border border-1 mx-0 w-100 ${homecss.myCard}`}>
                   <img src={image2} className={homecss.cardimgtop} alt="img1" />
                   <div className="card-body d-flex flex-column gap-2">
-                    <p className={`card-text font-weight-bold  ${homecss.cardtext}`} >9 Best Free  Wordpress  Hosting  Services That  Does't  Suck </p>
+                    <p className={`card-text font-weight-bold  ${homecss.cardtext}`} >9 Best Free  Wordpress  Hosting  Services That  Does't  Suck Does't  Suck  Does't  Suck Does't  Suck Does't  Suck Does't  Suck </p>
                     <p className="card-text"><small class="text-muted">Nilesh Padhiyar - Last updated: February 2,2021</small></p>
                   </div>
                 </div>
@@ -66,7 +66,7 @@ export const Homeblog = () => {
 
             <div className="col-md-6">
               <NavLink to="#" className={homecss.navdecoration}>
-                <div className={`card  ${homecss.myCard}`}  >
+                <div className={`border border-1 mx-0 w-100 ${homecss.myCard}`}  >
                   <img src={image3} className={homecss.cardimgtop} alt="img1" />
                   <div className="card-body d-flex flex-column gap-2">
                     <p className={`card-text font-weight-bold  ${homecss.cardtext}`} >Fix Wifi Connected  But No Internet  Access on Windows</p>
@@ -151,21 +151,21 @@ export const Homeblog = () => {
                     <h5 className={`card-text font-weight-bold ${homecss.howlargetitle}`} >Fix Wifi Connected But No internet Access on Window</h5>
                   </div>
                   <div className="card-info p-3">
-                    <p className="ml-3" style={{ fontSize: "15px" }}>Mehul patel: Last Updated: january 30,2021</p>
-                    <p className="ml-3" style={{ fontSize: "15px" }}>A lot of us are now working remodly , and  connectively plays a key
+                    <p className="ml-3">Mehul patel: Last Updated: january 30,2021</p>
+                    <p className="ml-3">A lot of us are now working remodly , and  connectively plays a key
                       rolw in that Benging Connected to the internet is just another</p>
                   </div>
                 </NavLink>
               </div>
             </div>
             <div className="col-md-6 px-md-2 px-lg-5 p-0 d-flex flex-column justify-content-between">
-              <div className={`card h-auto mb-2 mh-25`} >
+              <div className={`border border-1 h-auto mb-2 mh-25`} >
                 <NavLink to="#" className={`${homecss.navdecoration} d-block`}>
-                  <div className="row no-gutters">
+                  <div className="row no-gutters mx-0">
                     <div className="col-4 p-0">
-                      <img src={image7} alt="..." className={`${homecss.rightsideimage} img-fluid`} />
+                      <img src={image7} alt="..." className={`${homecss.rightsideimage} img-fluid h-100`} />
                     </div>
-                    <div className="col-8 p-0">
+                    <div className="col-8 p-0 py-1">
                       <div className="card-body p-0">
                         <p className={`card-text font-weight-bold ${homecss.howtitlesmallres}`} >How to use Whatsapp Web ? Every thing You Need to Know</p>
                         <p className={`card-text ${homecss.howtitlesmallupdated} `} ><small className="text-muted">Last updated: january 15,2021</small></p>
@@ -174,13 +174,13 @@ export const Homeblog = () => {
                   </div>
                 </NavLink>
               </div>
-              <div className={`card h-auto mb-2 mh-25`} >
+              <div className={`border border-1 h-auto mb-2 mh-25`} >
                 <NavLink to="#" className={`${homecss.navdecoration} d-block`}>
-                  <div className="row no-gutters">
+                  <div className="row no-gutters mx-0">
                     <div className="col-4 p-0  image1 ">
-                      <img src={image9} alt="..." className={`${homecss.rightsideimage} img-fluid`} />
+                      <img src={image9} alt="..." className={`${homecss.rightsideimage} img-fluid h-100`} />
                     </div>
-                    <div className="col-8 p-0">
+                    <div className="col-8 p-0 py-1">
                       <div className="card-body p-0">
                         <p className={`card-text font-weight-bold  ${homecss.howtitlesmallres}`} >How to Remove Microsoft Account From Windows 10 PC</p>
                         <p className={`card-text ${homecss.howtitlesmallupdated}`}><small className="text-muted">Last updated: january 15,2021</small></p>
@@ -189,13 +189,13 @@ export const Homeblog = () => {
                   </div>
                 </NavLink>
               </div>
-              <div className={`card h-auto mb-2 mh-25`} >
+              <div className={`border border-1 h-auto mb-2 mh-25`} >
                 <NavLink to="#" className={homecss.navdecoration}>
-                  <div className="row no-gutters">
+                  <div className="row no-gutters mx-0">
                     <div className="col-4 p-0 image1 ">
-                      <img src={image5} alt="..." className={`${homecss.rightsideimage} img-fluid`} />
+                      <img src={image5} alt="..." className={`${homecss.rightsideimage} img-fluid h-100`} />
                     </div>
-                    <div className="col-8 p-0">
+                    <div className="col-8 p-0 py-1">
                       <div className="card-body p-0">
                         <p className={`card-text font-weight-bold ${homecss.howtitlesmallres}`} >How to Open HEIC  Files on Windows</p>
                         <p className={`card-text ${homecss.howtitlesmallupdated} `} ><small className="text-muted">Last updated: january 15,2021</small></p>
@@ -204,13 +204,13 @@ export const Homeblog = () => {
                   </div>
                 </NavLink>
               </div>
-              <div className={`card h-auto mb-5 mb-md-0 mh-25`} >
+              <div className={`border border-1 h-auto mb-5 mb-md-0 mh-25`} >
                 <NavLink to="#" className={homecss.navdecoration}>
-                  <div className="row no-gutters">
+                  <div className="row no-gutters mx-0">
                     <div className="col-4 p-0  image1 ">
-                      <img src={image4} alt="..." className={`${homecss.rightsideimage} img-fluid`} />
+                      <img src={image4} alt="..." className={`${homecss.rightsideimage} img-fluid h-100`} />
                     </div>
-                    <div className="col-8 p-0">
+                    <div className="col-8 p-0 py-1">
                       <div className="card-body p-0">
                         <p className={`card-text font-weight-bold    ${homecss.howtitlesmallres}`} >Best Pokemon Go Hacks, Cheats, Tips, and Tricks</p>
                         <p className={`card-text ${homecss.howtitlesmallupdated} `} ><small className="text-muted">Last updated: january 15,2021</small></p>
@@ -231,28 +231,28 @@ export const Homeblog = () => {
         <div className="container my-5">
           <div className={`row justify-content-between`}>
             <div className="col-md-6 h-100 mb-5 mb-md-0">
-              <div className={`card px-md-4 border-0`}>
+              <div className={`px-md-4 border`}>
                 <NavLink to="#" className={`${homecss.navdecoration} border`}>
-                  <img src={image7} className={`${homecss.bigimage} h-50`} style={{ width: "100%" }} alt="..." />
+                  <img src={image7} className={`${homecss.bigimage} h-50 w-100`} alt="..." />
                   <div className="card-body p-3">
                     <h5 className={`card-text font-weight-bold ${homecss.howlargetitle}`} >Fix Wifi Connected But No internet Access on Window</h5>
                   </div>
                   <div className="card-info p-3">
-                    <p className="ml-3" style={{ fontSize: "15px" }}>Mehul patel: Last Updated: january 30,2021</p>
-                    <p className="ml-3" style={{ fontSize: "15px" }}>A lot of us are now working remodly , and  connectively plays a key
+                    <p className="ml-3">Mehul patel: Last Updated: january 30,2021</p>
+                    <p className="ml-3">A lot of us are now working remodly , and  connectively plays a key
                       rolw in that Benging Connected to the internet is just another</p>
                   </div>
                 </NavLink>
               </div>
             </div>
             <div className="col-md-6 px-md-2 px-lg-5 p-0 d-flex flex-column justify-content-between">
-              <div className={`card h-auto mb-2 mh-25`} >
+              <div className={`border border-1 h-auto mb-2 mh-25`} >
                 <NavLink to="#" className={`${homecss.navdecoration} d-block`}>
-                  <div className="row no-gutters">
+                  <div className="row no-gutters mx-0">
                     <div className="col-4 p-0">
-                      <img src={image7} alt="..." className={`${homecss.rightsideimage} img-fluid`} />
+                      <img src={image7} alt="..." className={`${homecss.rightsideimage} img-fluid h-100`} />
                     </div>
-                    <div className="col-8 p-0">
+                    <div className="col-8 p-0 py-1">
                       <div className="card-body p-0">
                         <p className={`card-text font-weight-bold ${homecss.howtitlesmallres}`} >How to use Whatsapp Web ? Every thing You Need to Know</p>
                         <p className={`card-text ${homecss.howtitlesmallupdated} `} ><small className="text-muted">Last updated: january 15,2021</small></p>
@@ -261,13 +261,13 @@ export const Homeblog = () => {
                   </div>
                 </NavLink>
               </div>
-              <div className={`card h-auto mb-2 mh-25`} >
+              <div className={`border border-1 h-auto mb-2 mh-25`} >
                 <NavLink to="#" className={`${homecss.navdecoration} d-block`}>
-                  <div className="row no-gutters">
+                  <div className="row no-gutters mx-0">
                     <div className="col-4 p-0  image1 ">
-                      <img src={image9} alt="..." className={`${homecss.rightsideimage} img-fluid`} />
+                      <img src={image9} alt="..." className={`${homecss.rightsideimage} img-fluid h-100`} />
                     </div>
-                    <div className="col-8 p-0">
+                    <div className="col-8 p-0 py-1">
                       <div className="card-body p-0">
                         <p className={`card-text font-weight-bold  ${homecss.howtitlesmallres}`} >How to Remove Microsoft Account From Windows 10 PC</p>
                         <p className={`card-text ${homecss.howtitlesmallupdated}`}><small className="text-muted">Last updated: january 15,2021</small></p>
@@ -276,13 +276,13 @@ export const Homeblog = () => {
                   </div>
                 </NavLink>
               </div>
-              <div className={`card h-auto mb-2 mh-25`} >
+              <div className={`border border-1 h-auto mb-2 mh-25`} >
                 <NavLink to="#" className={homecss.navdecoration}>
-                  <div className="row no-gutters">
+                  <div className="row no-gutters mx-0">
                     <div className="col-4 p-0 image1 ">
-                      <img src={image5} alt="..." className={`${homecss.rightsideimage} img-fluid`} />
+                      <img src={image5} alt="..." className={`${homecss.rightsideimage} img-fluid h-100`} />
                     </div>
-                    <div className="col-8 p-0">
+                    <div className="col-8 p-0 py-1">
                       <div className="card-body p-0">
                         <p className={`card-text font-weight-bold ${homecss.howtitlesmallres}`} >How to Open HEIC  Files on Windows</p>
                         <p className={`card-text ${homecss.howtitlesmallupdated} `} ><small className="text-muted">Last updated: january 15,2021</small></p>
@@ -291,13 +291,13 @@ export const Homeblog = () => {
                   </div>
                 </NavLink>
               </div>
-              <div className={`card h-auto mb-5 mb-md-0 mh-25`} >
+              <div className={`border border-1 h-auto mb-5 mb-md-0 mh-25`} >
                 <NavLink to="#" className={homecss.navdecoration}>
-                  <div className="row no-gutters">
+                  <div className="row no-gutters mx-0">
                     <div className="col-4 p-0  image1 ">
-                      <img src={image4} alt="..." className={`${homecss.rightsideimage} img-fluid`} />
+                      <img src={image4} alt="..." className={`${homecss.rightsideimage} img-fluid h-100`} />
                     </div>
-                    <div className="col-8 p-0">
+                    <div className="col-8 p-0 py-1">
                       <div className="card-body p-0">
                         <p className={`card-text font-weight-bold    ${homecss.howtitlesmallres}`} >Best Pokemon Go Hacks, Cheats, Tips, and Tricks</p>
                         <p className={`card-text ${homecss.howtitlesmallupdated} `} ><small className="text-muted">Last updated: january 15,2021</small></p>
@@ -408,10 +408,10 @@ export const Homeblog = () => {
         </div>
 
         <div className={`container my-5  ${homecss.cardindex}`}>
-          <div className="row justify-content-center px-5">
-            <div className="col-md-6">
+          <div className="row justify-content-center px-lg-5">
+            <div className="col-md-6 mb-3">
               <NavLink to="#" className={homecss.navdecoration}>
-                <div className={`card  ${homecss.myCard}`}  >
+                <div className={`border border-1 w-100 ${homecss.myCard}`}  >
                   <img src={image2} className={homecss.cardimgtop} alt="img1" />
                   <div className="card-body d-flex flex-column gap-2">
                     <p className={`card-text font-weight-bold  ${homecss.cardtext}`} >9 Best Free  Wordpress  Hosting  Services That  Does't  Suck Does't  Suck  Does't  Suck Does't  Suck Does't  Suck Does't  Suck </p>
@@ -423,7 +423,7 @@ export const Homeblog = () => {
 
             <div className="col-md-6">
               <NavLink to="#" className={homecss.navdecoration}>
-                <div className={`card  ${homecss.myCard}`}  >
+                <div className={`card w-100 ${homecss.myCard}`}  >
                   <img src={image3} className={homecss.cardimgtop} alt="img1" />
                   <div className="card-body d-flex flex-column gap-2">
                     <p className={`card-text font-weight-bold  ${homecss.cardtext}`} >Fix Wifi Connected  But No Internet  Access on Windows</p>

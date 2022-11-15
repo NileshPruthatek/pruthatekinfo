@@ -20,48 +20,40 @@ const TopCat = ({ pageData }) => {
 
     return (
         <>
-            <div className="container">
-                <div className="row justify-content-between align-items-around">
-                    <div className="col-md-5 mb-3 p-0">
+
+            <div className="container my-5">
+                <div className={`row justify-content-between`}>
+                    <div className="col-md-6 h-100 mb-5 mb-md-0">
                         {pageData?.["topBlogs"]?.slice(0, 1)?.map((blog) => {
                             return (
-                                <div className={`card mb-3 ${techBlog.howtocardright}`}>
-                                    <NavLink to={`/blog?x=${blog?.uuid}`} className={techBlog.navdecoration}>
-                                        <div className={`card  ${techBlog.TechCard}`}>
-                                            <img
-                                                src={`${process.env.REACT_APP_IMG_BASEURL}/${blog["thumbnail_img"]}`}
-                                                className={techBlog.TechImage} alt="bestfree" />
-                                            <div className="card-body">
-                                                <h5 className={`card-text text-capitalize font-weight-bold  ${techBlog.cardtext}`}>{blog?.title} </h5>
-
-                                                <p className="card-text">
-                                                    <small class="text-muted">{`Last Updated On : ${blog?.["updated_at"]}`}</small>
-                                                </p>
-                                            </div>
+                                <div className={`card px-md-4 border-0`}>
+                                    <NavLink to={`/blog?x=${blog?.uuid}`} className={`${techBlog.navdecoration} border`}>
+                                        <img src={`${process.env.REACT_APP_IMG_BASEURL}/${blog["thumbnail_img"]}`} className={`h-50 w-100`} style={{ width: "100%" }} alt="..." />
+                                        <div className="card-body p-3">
+                                            <h5 className={`card-text font-weight-bold ${techBlog.howlargetitle}`} >{blog?.title}</h5>
+                                        </div>
+                                        <div className="card-info p-3">
+                                            <p className="ml-3" style={{ fontSize: "15px" }}>{`Last Updated On : ${blog?.["updated_at"]}`}</p>
                                         </div>
                                     </NavLink>
                                 </div>
                             )
                         })}
                     </div>
-                    <div className="col-md-1 p-0"></div>
-                    <div className="col-md-6 d-flex flex-column justify-content-between p-0">
+                    <div className="col-md-6 px-md-2 px-lg-5 p-0 d-flex flex-column justify-content-between">
                         {pageData?.["topBlogs"]?.slice(1, 3)?.map((blog) => {
                             return (
-                                <div className={`card mb-3 ${techBlog.howtocardright}`}>
-                                    <NavLink to={`/blog?x=${blog.uuid}`} className={techBlog.navdecoration}>
-                                        <div className="row no-gutters">
-                                            <div className="col-8 p-0">
-                                                <div className="card-body p-3">
-                                                    <p className={`card-text font-weight-bold ${techBlog.Techsmallres}`}>{blog.title}</p>
-
-                                                    <p className={`card-text ${techBlog.TechUpate}`}>
-                                                        <small className="text-muted">{`Last Updated On : ${blog["updated_at"]}`}</small>
-                                                    </p>
+                                <div className={`card mb-4 mb-md-0`} style={{ minHeight: "40%" }} >
+                                    <NavLink to={`/blog?x=${blog.uuid}`} className={`${techBlog.navdecoration} d-block h-100`}>
+                                        <div className="row no-gutters h-100">
+                                            <div className="col-7 pl-4 pr-2 py-2">
+                                                <div className="card-body p-0">
+                                                    <p className={`card-text font-weight-bold px-2 ${techBlog.howtitlesmallres}`} >{blog.title}</p>
+                                                    <p className={`card-text px-2 ${techBlog.howtitlesmallupdated} `} ><small className="text-muted">{`${blog["updated_at"]}`}</small></p>
                                                 </div>
                                             </div>
-                                            <div className="col-4">
-                                                <img src={`${process.env.REACT_APP_IMG_BASEURL}/${blog?.["thumbnail_img"]}`} alt="..." className={`${techBlog.Leftsideimage} py-1`} />
+                                            <div className="col-5 p-0 h-100">
+                                                <img className={`img-fluid h-100`} src={`${process.env.REACT_APP_IMG_BASEURL}/${blog?.["thumbnail_img"]}`} />
                                             </div>
                                         </div>
                                     </NavLink>
@@ -129,36 +121,39 @@ const TopCat = ({ pageData }) => {
                             </NavLink>
                         </div>
 
-                        <div className="container">
-                            <div className="row">
-                                <div className={`col-6 p-0 ${techBlog.TechDealsColums}`}>
-                                    {category["blogs"].slice(0, 2)?.map((x) => {
-                                        return (
-                                            <div key={x.index}>
-                                                <NavLink to={`/blog?x=${x.uuid}`} className={techBlog.navdecoration}>
-                                                    <div className={`card  ${techBlog.TechDealsCards}`}>
-                                                        <img src={`${process.env.REACT_APP_IMG_BASEURL}/${x?.["thumbnail_img"]}`} className="card-img-top" style={{ minHeight: "165px" }} alt="bestfree" />
-                                                        <div className="card-body p-2">
-                                                            <h5 className={`card-text font-weight-bold  ${techBlog.TechDealsTitle}`}>{x.title}</h5>
-
-                                                            <p className="card-text">
-                                                                <small className="text-muted">{`Last Updated On : ${x.updated_at}`}</small>
-                                                            </p>
+                        <div className="container mt-5">
+                            <div className="row row-cols-1 row-cols-md-1 row-cols-lg-1 row-cols-lg-2">
+                                <div className={`col w-sm-100 p-0 d-flex mb-md-4 mb-lg-0`}>
+                                    <div className='row row-cols-1 row-cols-md-2 mx-auto'>
+                                        {category["blogs"].slice(0, 2)?.map((x) => {
+                                            return (
+                                                <div key={x.index} className="col mb-4">
+                                                    <NavLink to={`/blog?x=${x.uuid}`} className={techBlog.navdecoration}>
+                                                        <div className={`card`}>
+                                                            <img src={`${process.env.REACT_APP_IMG_BASEURL}/${x["thumbnail_img"]}`} className={`h-50 w-100`} style={{ width: "100%" }} alt="..." />
+                                                            <div className="card-body p-0">
+                                                                <div className="card-body p-sm-4 p-3">
+                                                                    <h5 className={`card-text font-weight-bold mb-4 ${techBlog.howlargetitle}`} >{x.title}</h5>
+                                                                    <p className={`card-text font-weight-bold ${techBlog.howtitlesmallupdated} m-0`} > {`${x?.["updated_at"]}`}</p>
+                                                                </div>
+                                                                {/* <div className=`}>
+                                                                </div> */}
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </NavLink>
-                                            </div>
-                                        );
-                                    })}
+                                                    </NavLink>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
                                 </div>
-                                <div className={`col-md-6 p-0  ${techBlog.TechDealsRightColums}`}>
+                                <div className={`col px-lg-3 w-md-100 d-flex flex-column justify-content-between`}>
                                     {category["blogs"].slice(2).map((x) => {
                                         return (
                                             <div key={x.index}>
                                                 <NavLink to={`/blog?x=${x.uuid}`} className={techBlog.navdecoration}>
-                                                    <div className={`card  ${techBlog.TechDealsRightCards}`}>
-                                                        <div className="card-body  p-0 pl-3">
-                                                            <p className={`card-text font-weight-bold    ${techBlog.TechDealRightTile}`}>{x.title}</p>
+                                                    <div className={`${techBlog.TechDealsRightCards}`}>
+                                                        <div className="p-2 border border-1 rounded-2">
+                                                            <p className={`font-weight-bold m-0 ${techBlog.TechDealRightTile}`}>{x.title}</p>
                                                         </div>
                                                     </div>
                                                 </NavLink>
@@ -172,79 +167,28 @@ const TopCat = ({ pageData }) => {
                 )
             })}
 
-
-            {/* ===========================Mobaile========================
-
-                <div className={techBlog.TechHeading}>
-                    Mobaile
-                    <NavLink to="/mobile" className={techBlog.navourfavorite}>
-                        See All
-                    </NavLink>
-                </div>
-                <div className="container">
-                    <div className="row ">
-                        <div className={`col-6 p-0 ${techBlog.TechDealsColums}`}>
-                            {data.Mobaile.map((mobailedata) => {
-                                return (
-                                    <div key={mobailedata.index}>
-                                        <NavLink to="#" className={techBlog.navdecoration}>
-                                            <div className={`card  ${techBlog.TechDealsCards}`}>
-                                                <img src={mobailedata.image} class="card-img-top" alt="bestfree" />
-                                                <div className="card-body">
-                                                    <h5 className={`card-text font-weight-bold  ${techBlog.TechDealsTitle}`}>{mobailedata.title}</h5>
-
-                                                    <p className={`card-contain  ${techBlog.TechDealscardContaine}`}>{mobailedata.description}</p>
-                                                    <p className="card-text">
-                                                        <small className="text-muted">{mobailedata.update}</small>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </NavLink>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                        <div className="col-md-6">
-                            {data.MobaileRight?.map((mobailerightdata) => {
-                                return (
-                                    <div key={mobailerightdata.index}>
-                                        <NavLink to="#" className={techBlog.navdecoration}>
-                                            <div className={`card  ${techBlog.TechDealsRightCards}`}>
-                                                <div className="card-body  p-0 pl-3">
-                                                    <p className={`card-text font-weight-bold    ${techBlog.TechDealRightTile}`}>{mobailerightdata.title}</p>
-                                                    <p className={`card-contain  ${techBlog.TechDealsRightContaine}`}>{mobailerightdata.description}</p>
-                                                </div>
-                                            </div>
-                                        </NavLink>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
-                </div> */}
-
             {/*===========================Latest======================== */}
 
             <div className={techBlog.TechHeading}>Latest</div>
 
-            <div className="container mb-5">
+            <div className="container my-5">
                 <div className="row">
-                    <div className="col-12">
+                    <div className="col-12 col-md-9">
                         {pageData?.["latestBlogs"].map((latestdata) => (
                             <NavLink to={`/blog?x=${latestdata.uuid}`} className={techBlog.navdecoration}>
-                                <div key={latestdata.uuid} className={`card mb-3 ${techBlog.latestcard}`}>
-                                    <div className="row w-100 no-gutters">
+                                <div key={latestdata.uuid} className={`mb-4 border border-1`} style={{ height: "18vh" }}>
+                                    <div className="row w-100 no-gutters m-0 h-100">
                                         <div className="col-9 p-0">
-                                            <div className="card-body  p-0 pl-3">
-                                                <h5 className={`card-text font-weight-bold  ${techBlog.LatestTitle}`}>{latestdata.title}</h5>
+                                            <div className="card-body p-2">
+                                                <h5 className={`card-text font-weight-bold ${techBlog.howtitlesmallres}`}>{latestdata.title}</h5>
 
-                                                <p className={`card-text ${techBlog.LatestUpate}`}>
-                                                    <small className="text-muted">{`Last Updated On : ${latestdata.updated_at}`}</small>
+                                                <p className={`card-text pl-5 ${techBlog.howtitlesmallupdated}`}>
+                                                    <small className="text-muted">{`${latestdata.updated_at}`}</small>
                                                 </p>
                                             </div>
                                         </div>
-                                        <div className="col-3 p-0">
-                                            <img src={`${process.env.REACT_APP_IMG_BASEURL}/${latestdata?.["thumbnail_img"]}`} alt="..." className={`${techBlog.Latestimage} p-1`} />
+                                        <div className="col-3 p-0 h-100">
+                                            <img src={`${process.env.REACT_APP_IMG_BASEURL}/${latestdata?.["thumbnail_img"]}`} alt="..." className={`w-100 h-100`} />
                                         </div>
                                     </div>
                                 </div>
