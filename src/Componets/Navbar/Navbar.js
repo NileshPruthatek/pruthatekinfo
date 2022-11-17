@@ -46,14 +46,14 @@ export const Navbar = () => {
                 {categoryData?.map(({ name, uuid }) => {
                   return (
                     <li className={style.navitem}>
-                      <Link className="nav-link active" style={{ cursor: "pointer" }} to={`${name.replace(" ", "-").toLowerCase()}?x=${uuid}`}>{name}</Link>
+                      <Link className="nav-link active fw-bold" style={{ cursor: "pointer" }} to={`${name.replace(" ", "-").toLowerCase()}?x=${uuid}`}>{name}</Link>
                     </li>
                   )
                 })}
 
                 <li className={style.navitem}>
                   <a
-                    className="nav-link dropdown-toggle"
+                    className="nav-link dropdown-toggle fw-bold"
                     href="#"
                     id="navbarDropdown"
                     role="button"
@@ -62,7 +62,7 @@ export const Navbar = () => {
                   >
                     More
                   </a>
-                  <ul className={`dropdown-menu w-100 z-index-n1  position-absolute   ${style.dropdwonbutton}`} aria-labelledby="navbarDropdown">
+                  <ul className={`dropdown-menu w-100  z-index-n1  position-absolute   ${style.dropdwonbutton}`} aria-labelledby="navbarDropdown">
                     {/*==================== sub menu componets============================== */}
                     <Submenu categoryData={categoryData} />
                   </ul>
@@ -76,7 +76,7 @@ export const Navbar = () => {
               {categoryData?.map(({ name, uuid }) => {
                 return (
                   <li className={style.navitem}>
-                    <Link className="nav-link active" style={{ cursor: "pointer" }} to={`${name.replace(" ", "-").toLowerCase()}?x=${uuid}`}>{name}</Link>
+                    <Link className="nav-link active fw-bold" style={{ cursor: "pointer" }} to={`${name.replace(" ", "-").toLowerCase()}?x=${uuid}`}>{name}</Link>
                   </li>
                 )
               })}
@@ -92,7 +92,7 @@ export const Navbar = () => {
                 >
                   More
                 </a>
-                <ul className={`dropdown-menu w-100 z-index-n1  position-absolute   ${style.dropdwonbutton}`} aria-labelledby="navbarDropdown">
+                <ul className={`dropdown-menu w-100 z-index-n1 position-absolute   ${style.dropdwonbutton}`} aria-labelledby="navbarDropdown">
                   {/*==================== sub menu componets============================== */}
                   <Submenu categoryData={categoryData} />
                 </ul>
