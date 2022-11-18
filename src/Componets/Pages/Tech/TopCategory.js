@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import topCategory from "../Tech/TopCategory.module.css";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
-import data from "../../../db.json";
 import Wrapper from "../../Wrapper";
 import useQuery from "../../../customer-hook/useQuery";
 import axios from 'axios'
 import TopCat from "../TopCat/TopCat";
+import { Helmet } from 'react-helmet';
+
 
 export const TopCategory = () => {
     const location = useLocation();
@@ -42,6 +43,9 @@ export const TopCategory = () => {
     return (
         <Wrapper>
             {!loading && <>
+                <Helmet>
+                    <title>PRUTHATEK BLOGS | TECH</title>
+                </Helmet>
                 <div className="grid container verticalsubnav p-0 next-page-hide py-5">
                     <div className="universalSubnav">
                         <div className="universalSubnav_scrollWrapper">
@@ -57,9 +61,7 @@ export const TopCategory = () => {
                         </div>
                     </div>
                 </div>
-
                 {isEmpty ? <h2 className="text-center my-5">Blogs Comming Soon!</h2> : <TopCat pageData={pageData} />}
-
             </>}
 
         </Wrapper>

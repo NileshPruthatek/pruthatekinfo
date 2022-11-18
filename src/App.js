@@ -26,9 +26,9 @@ function App() {
             <Route path="/:mainCatName/:subCatName" element={<SubCategory />} />
             <Route path="/blog" element={<DetailedBlog />} />
           </Routes>
+          <Footer />
         </Router>
       </div>
-      <Footer />
     </>
   );
 }

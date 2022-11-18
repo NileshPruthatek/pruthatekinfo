@@ -14,11 +14,13 @@ export const Footer = () => {
           <div className="row">
             <div className="col-md-6 col-lg-3 mb-3 d-flex align-items-center">
               <div className="footerlogo">
-                <img
-                  src={footerLogo}
-                  alt="logo"
-                  className={footerstyle.logoimage}
-                />
+                <Link to="/">
+                  <img
+                    src={footerLogo}
+                    alt="logo"
+                    className={footerstyle.logoimage}
+                  />
+                </Link>
               </div>
             </div>
             <div

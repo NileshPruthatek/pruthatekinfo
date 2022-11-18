@@ -66,48 +66,50 @@ const TopCat = ({ pageData }) => {
 
             {/*===========================Our Favourite======================== */}
 
-            <div className={techBlog.TechHeading}>
-                Our Favorite Picks
-                <NavLink to="#" className={techBlog.navourfavorite}>
-                    All best
-                </NavLink>
-            </div>
+            {pageData?.["favoritePicks"].length > 0 && <>
+                <div className={techBlog.TechHeading}>
+                    Our Favorite Picks
+                    <NavLink to="#" className={techBlog.navourfavorite}>
+                        All best
+                    </NavLink>
+                </div>
 
-            <div className="container my-5">
-                <div className="row">
-                    <div className={`col-12 p-0 ${techBlog.fouratesColums} ${techBlog.scroll} `} id="slider">
-                        {pageData?.["favoritePicks"]?.map(x => {
-                            return (
-                                <div key={x.index} className={techBlog.fouratecard}>
-                                    <NavLink to={`/blog?x=${x.uuid}`} className={techBlog.navdecoration}>
-                                        <div className={`card  ${techBlog.FourateCard}`}>
-                                            <img src={`${process.env.REACT_APP_IMG_BASEURL}/${x?.["thumbnail_img"]}`} className={techBlog.FourateImage} alt="bestfree" />
-                                            <div className="card-body">
-                                                <h5 className={`card-text font-weight-bold text-capitalize ${techBlog.Ourtext}`}>{x.title} </h5>
+                <div className="container my-5">
+                    <div className="row">
+                        <div className={`col-12 p-0 ${techBlog.fouratesColums} ${techBlog.scroll} `} id="slider">
+                            {pageData?.["favoritePicks"]?.map(x => {
+                                return (
+                                    <div key={x.index} className={techBlog.fouratecard}>
+                                        <NavLink to={`/blog?x=${x.uuid}`} className={techBlog.navdecoration}>
+                                            <div className={`card  ${techBlog.FourateCard}`}>
+                                                <img src={`${process.env.REACT_APP_IMG_BASEURL}/${x?.["thumbnail_img"]}`} className={techBlog.FourateImage} alt="bestfree" />
+                                                <div className="card-body">
+                                                    <h5 className={`card-text font-weight-bold text-capitalize ${techBlog.Ourtext}`}>{x.title} </h5>
 
-                                                <p className={`  ${techBlog.Updated}`}>
-                                                    <small class="text-muted"> {`${x?.["user"]?.["username"]} Last Updated On : ${x["updated_at"]}`}</small>
-                                                </p>
+                                                    <p className={`  ${techBlog.Updated}`}>
+                                                        <small class="text-muted"> {`${x?.["user"]?.["username"]} Last Updated On : ${x["updated_at"]}`}</small>
+                                                    </p>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </NavLink>
-                                </div>
-                            )
-                        })}
+                                        </NavLink>
+                                    </div>
+                                )
+                            })}
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div className="container">
-                <div className="w-100 gap-1 d-md-flex justify-content-md-end my-3">
-                    <button className={` btn btn-primary  ${techBlog.Prevbtn}`} type="button" onClick={scrollLeft}>
-                        Prev
-                    </button>
-                    <button className={` btn btn-primary  ${techBlog.Nextbtn}`} type="button" onClick={scrollRight}>
-                        Next
-                    </button>
+                <div className="container">
+                    <div className="w-100 gap-1 d-md-flex justify-content-md-end my-3">
+                        <button className={` btn btn-primary  ${techBlog.Prevbtn}`} type="button" onClick={scrollLeft}>
+                            Prev
+                        </button>
+                        <button className={` btn btn-primary  ${techBlog.Nextbtn}`} type="button" onClick={scrollRight}>
+                            Next
+                        </button>
+                    </div>
                 </div>
-            </div>
+            </>}
 
             {/*=================================Tech Deals======================= */}
             {pageData?.["catWiseTopFiveBlogs"]?.map(category => {
@@ -136,8 +138,6 @@ const TopCat = ({ pageData }) => {
                                                                     <h5 className={`card-text font-weight-bold mb-4 ${techBlog.howlargetitle}`} >{x.title}</h5>
                                                                     <p className={`card-text font-weight-bold ${techBlog.howtitlesmallupdated} m-0`} > {`${x?.["updated_at"]}`}</p>
                                                                 </div>
-                                                                {/* <div className=`}>
-                                                                </div> */}
                                                             </div>
                                                         </div>
                                                     </NavLink>

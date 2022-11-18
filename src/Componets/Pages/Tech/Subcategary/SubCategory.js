@@ -14,6 +14,8 @@ const SubCategory = () => {
     const [catArray, setCatArray] = useState([]);
     const [pageData, setPageData] = useState()
     const [currentCatName, setCurrentCatName] = useState("")
+    const [isEmpty, setIsEmpty] = useState(false)
+
     const query = useQuery()
 
     useEffect(() => {
@@ -35,6 +37,7 @@ const SubCategory = () => {
         setLoading(true)
         axios.get(`${process.env.REACT_APP_IMG_BASEURL}/api/categoryPage?x=${query.get('y')}`).then((res) => {
             setPageData(res.data.info)
+            setIsEmpty(!(!!Object.keys(res.data.info).filter((eachKey) => res.data.info[eachKey].length > 0).length))
             setLoading(false)
         }).catch((err) => {
             setLoading(false)
@@ -53,9 +56,11 @@ const SubCategory = () => {
 
     const [showSeeMore, setShowSeeMore] = useState(false);
 
+    console.log(pageData?.["catWiseTopFiveBlogs"])
+
     return (
         <Wrapper>
-            {!loading && <>
+            {!loading && !isEmpty ? <>
 
                 <div className={`my-3 container`}>
                     <h1>{currentCatName}</h1>
@@ -68,7 +73,7 @@ const SubCategory = () => {
                             <div className="universalSubnav_items" section="category">
                                 {catArray?.map((cat) => {
                                     return (
-                                        <Link className={`p-2  ${techBlog.universalSubnavitems}`} style={{ cursor: "pointer" }} to={cat.route} >
+                                        <Link className={`p-2 ${techBlog.universalSubnavitems}`} style={{ cursor: "pointer" }} to={cat.route} >
                                             <span style={{ textTransform: "capitalize" }}>{cat.name}</span>
                                         </Link>
                                     );
@@ -78,42 +83,44 @@ const SubCategory = () => {
                     </div>
                 </div>
 
-                {/*===========================Our Favourite======================== */}
                 {pageData?.["catWiseTopFiveBlogs"]?.map(catBlog => {
                     return (
                         <>
                             {
-                                catBlog.length > 0 ? (<>
-                                    <div className="container">
-                                        <div className="row">
-                                            <div className={`col-6 p-0 ${techBlog.TechDealsColums}`}>
-                                                {catBlog.slice(0, 2)?.map((x) => {
-                                                    return (
-                                                        <div key={x.index}>
-                                                            <NavLink to={`/blog?x=${x.uuid}`} className={techBlog.navdecoration}>
-                                                                <div className={`card  ${techBlog.TechDealsCards}`}>
-                                                                    <img src={`${process.env.REACT_APP_IMG_BASEURL}/${x?.["thumbnail_img"]}`} className="card-img-top" style={{ minHeight: "165px" }} alt="bestfree" />
-                                                                    <div className="card-body p-2">
-                                                                        <h5 className={`card-text font-weight-bold  ${techBlog.TechDealsTitle}`}>{x.title}</h5>
-
-                                                                        <p className="card-text">
-                                                                            <small className="text-muted">{`Last Updated On : ${x.updated_at}`}</small>
-                                                                        </p>
+                                catBlog["blogs"].length > 0 ? (<>
+                                    <div className="container mt-5">
+                                        <div className="row row-cols-1 row-cols-md-1 row-cols-lg-1 row-cols-lg-2">
+                                            <div className={`col w-sm-100 p-0 d-flex mb-md-4 mb-lg-0`}>
+                                                <div className='row row-cols-1 row-cols-md-2 mx-auto'>
+                                                    {catBlog["blogs"].slice(0, 2)?.map((x) => {
+                                                        return (
+                                                            <div key={x.index} className="col mb-4">
+                                                                <NavLink to={`/blog?x=${x.uuid}`} className={techBlog.navdecoration}>
+                                                                    <div className={`card`}>
+                                                                        <img src={`${process.env.REACT_APP_IMG_BASEURL}/${x["thumbnail_img"]}`} className={`h-50 w-100`} style={{ width: "100%" }} alt="..." />
+                                                                        <div className="card-body p-0">
+                                                                            <div className="card-body p-sm-4 p-3">
+                                                                                <h5 className={`card-text font-weight-bold mb-4 ${techBlog.howlargetitle}`} >{x.title}</h5>
+                                                                                <p className={`card-text font-weight-bold ${techBlog.howtitlesmallupdated} m-0`} > {`${x?.["updated_at"]}`}</p>
+                                                                            </div>
+                                                                            {/* <div className=`}>
+                                                                </div> */}
+                                                                        </div>
                                                                     </div>
-                                                                </div>
-                                                            </NavLink>
-                                                        </div>
-                                                    );
-                                                })}
+                                                                </NavLink>
+                                                            </div>
+                                                        );
+                                                    })}
+                                                </div>
                                             </div>
-                                            <div className={`col-md-6 p-0  ${techBlog.TechDealsRightColums}`}>
-                                                {catBlog.slice(2).map((x) => {
+                                            <div className={`col px-lg-3 w-md-100 d-flex flex-column justify-content-between`}>
+                                                {catBlog["blogs"].slice(2).map((x) => {
                                                     return (
                                                         <div key={x.index}>
                                                             <NavLink to={`/blog?x=${x.uuid}`} className={techBlog.navdecoration}>
-                                                                <div className={`card  ${techBlog.TechDealsRightCards}`}>
-                                                                    <div className="card-body  p-0 pl-3">
-                                                                        <p className={`card-text font-weight-bold    ${techBlog.TechDealRightTile}`}>{x.title}</p>
+                                                                <div className={`${techBlog.TechDealsRightCards}`}>
+                                                                    <div className="p-2 border border-1 rounded-2">
+                                                                        <p className={`font-weight-bold m-0 ${techBlog.TechDealRightTile}`}>{x.title}</p>
                                                                     </div>
                                                                 </div>
                                                             </NavLink>
@@ -129,68 +136,72 @@ const SubCategory = () => {
                     )
                 })}
 
-                <div className={techBlog.TechHeading}>
-                    Our Favorite Picks
-                    <NavLink to="#" className={techBlog.navourfavorite}>
-                        All best
-                    </NavLink>
-                </div>
+                {/*=========================== Our Favourite ======================== */}
+                {pageData?.["favoritePicks"].length > 0 && <>
+                    <div className={techBlog.TechHeading}>
+                        Our Favorite Picks
+                        <NavLink to="#" className={techBlog.navourfavorite}>
+                            All best
+                        </NavLink>
+                    </div>
 
-                <div className="container my-5">
-                    <div className="row">
-                        <div className={`col-12 p-0 ${techBlog.fouratesColums} ${techBlog.scroll} `} id="slider">
-                            {pageData?.["favoritePicks"]?.map(x => {
-                                return (
-                                    <div key={x.index} className={techBlog.fouratecard}>
-                                        <NavLink to={`/blog?x=${x.uuid}`} className={techBlog.navdecoration}>
-                                            <div className={`card  ${techBlog.FourateCard}`}>
-                                                <img src={`${process.env.REACT_APP_IMG_BASEURL}/${x?.["thumbnail_img"]}`} className={techBlog.FourateImage} alt="bestfree" />
-                                                <div className="card-body">
-                                                    <h5 className={`card-text font-weight-bold text-capitalize ${techBlog.Ourtext}`}>{x.title} </h5>
+                    <div className="container my-5">
+                        <div className="row">
+                            <div className={`col-12 p-0 ${techBlog.fouratesColums} ${techBlog.scroll} `} id="slider">
+                                {pageData?.["favoritePicks"]?.map(x => {
+                                    return (
+                                        <div key={x.index} className={techBlog.fouratecard}>
+                                            <NavLink to={`/blog?x=${x.uuid}`} className={techBlog.navdecoration}>
+                                                <div className={`card  ${techBlog.FourateCard}`}>
+                                                    <img src={`${process.env.REACT_APP_IMG_BASEURL}/${x?.["thumbnail_img"]}`} className={techBlog.FourateImage} alt="bestfree" />
+                                                    <div className="card-body">
+                                                        <h5 className={`card-text font-weight-bold text-capitalize ${techBlog.Ourtext}`}>{x.title} </h5>
 
-                                                    <p className={`  ${techBlog.Updated}`}>
-                                                        <small class="text-muted"> {`${x?.["user"]?.["username"]} Last Updated On : ${x["updated_at"]}`}</small>
-                                                    </p>
+                                                        <p className={`  ${techBlog.Updated}`}>
+                                                            <small class="text-muted"> {`${x?.["user"]?.["username"]} Last Updated On : ${x["updated_at"]}`}</small>
+                                                        </p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </NavLink>
-                                    </div>
-                                )
-                            })}
+                                            </NavLink>
+                                        </div>
+                                    )
+                                })}
+                            </div>
                         </div>
                     </div>
-                </div>
 
 
-                <div className="d-grid  gap-1 d-md-flex justify-content-md-end my-3">
-                    <button className={` btn btn-primary  ${subCategory.Prevbtn}`} type="button" onClick={scrollLeft}>
-                        Prev
-                    </button>
-                    <button className={` btn btn-primary  ${subCategory.Nextbtn}`} type="button" onClick={scrollRight} >Next</button>
-                </div>
+                    <div className="d-grid  gap-1 d-md-flex justify-content-md-end my-3">
+                        <button className={` btn btn-primary  ${subCategory.Prevbtn}`} type="button" onClick={scrollLeft}>
+                            Prev
+                        </button>
+                        <button className={` btn btn-primary  ${subCategory.Nextbtn}`} type="button" onClick={scrollRight} >Next</button>
+                    </div>
+                </>}
+
 
                 {/*===========================Latest========================*/}
 
                 <div className={techBlog.TechHeading}>Latest</div>
 
-                <div className="container mb-5">
+                <div className="container my-5">
                     <div className="row">
-                        <div className="col-12">
+                        <div className="col-12 col-md-9">
                             {pageData?.["latestBlogs"].map((latestdata) => (
                                 <NavLink to={`/blog?x=${latestdata.uuid}`} className={techBlog.navdecoration}>
-                                    <div key={latestdata.uuid} className={`card mb-3 ${techBlog.latestcard}`}>
-                                        <div className="row w-100 no-gutters">
+                                    <div key={latestdata.uuid} className={`mb-4 border border-1`} style={{ height: "18vh" }}>
+                                        <div className="row w-100 no-gutters m-0 h-100">
                                             <div className="col-9 p-0">
-                                                <div className="card-body  p-0 pl-3">
-                                                    <h5 className={`card-text font-weight-bold  ${techBlog.LatestTitle}`}>{latestdata.title}</h5>
+                                                <div className="card-body p-2">
+                                                    <h5 className={`card-text font-weight-bold ${techBlog.howtitlesmallres}`}>{latestdata.title}</h5>
 
-                                                    <p className={`card-text ${techBlog.LatestUpate}`}>
-                                                        <small className="text-muted">{`Last Updated On : ${latestdata.updated_at}`}</small>
+                                                    <p className={`card-text pl-5 ${techBlog.howtitlesmallupdated}`}>
+                                                        <small className="text-muted">{`${latestdata.updated_at}`}</small>
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div className="col-3 p-0">
-                                                <img src={`${process.env.REACT_APP_IMG_BASEURL}/${latestdata?.["thumbnail_img"]}`} alt="..." className={`${techBlog.Latestimage} p-1`} />
+                                            <div className="col-3 p-0 h-100">
+                                                <img src={`${process.env.REACT_APP_IMG_BASEURL}/${latestdata?.["thumbnail_img"]}`} alt="..." className={`w-100 h-100`} />
                                             </div>
                                         </div>
                                     </div>
@@ -199,6 +210,7 @@ const SubCategory = () => {
                         </div>
                     </div>
                 </div>
+
 
                 {showSeeMore && (
                     <div className='container'>
@@ -257,7 +269,7 @@ const SubCategory = () => {
                     {showSeeMore ? "see more" : "see More"}
 
                 </button> */}
-            </>}
+            </> : <h2 className="text-center my-5">Blogs Comming Soon!</h2>}
         </Wrapper>
     )
 }

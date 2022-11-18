@@ -9,11 +9,15 @@ import image9 from "../../../assets/images/image9.jpeg";
 import image3 from "../../../assets/images/image3.jpeg";
 import image5 from "../../../assets/images/image5.jpeg";
 import Wrapper from "../../Wrapper";
+import { Helmet } from 'react-helmet';
 
 export const Homeblog = () => {
   return (
     <Wrapper>
       <>
+        <Helmet>
+          <title>PRUTHATEK BLOGS | BEST BLOGS ON VARIETY OF TOPICS</title>
+        </Helmet>
         <div className={`container mt-5  ${homecss.cardindex}`}>
           <div className="row justify-content-center px-lg-5">
             <div className="col-md-6 mb-4 mb-md-0 p-lg-5">
