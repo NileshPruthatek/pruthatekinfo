@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import style from "../Navbar/Navbar.module.css";
 export const Submenu = ({ categoryData }) => {
@@ -9,9 +10,9 @@ export const Submenu = ({ categoryData }) => {
           return (
             <div className="mb-3 mb-lg-0">
               <div className="list-group list-group-flush">
-                <li className={`${style.Title} fw-bold`}>{category.name}</li>
+                <li className={`${style.Title} fw-bold`}><Link to={`/${category.slug}`} className="text-decoration-none text-dark">{category.name}</Link></li>
                 {category?.sub_category?.map((subCat) => {
-                  return <li className={style.submenu}>{subCat.name}</li>;
+                  return <li className={style.submenu}><Link to={`/${category.slug}/${subCat.slug}`} className="text-decoration-none text-dark">{subCat.name}</Link></li>;
                 })}
               </div>
             </div>
@@ -23,9 +24,9 @@ export const Submenu = ({ categoryData }) => {
           return (
             <div className="mb-3 mb-lg-0">
               <div className="list-group list-group-flush">
-                <li className={`${style.Title} fw-bold`}>{category.name}</li>
+                <li className={`${style.Title} fw-bold`}><Link to={`/${category.slug}`} className="text-decoration-none text-dark">{category.name}</Link></li>
                 {category?.sub_category?.map((subCat) => {
-                  return <li className={style.submenu}>{subCat.name}</li>;
+                  return <li className={style.submenu}><Link to={`/${category.slug}/${subCat.slug}`} className="text-decoration-none text-dark">{subCat.name}</Link></li>;
                 })}
               </div>
             </div>
