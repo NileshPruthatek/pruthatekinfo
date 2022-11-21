@@ -24,8 +24,8 @@ const DetailedBlog = () => {
         setLoading(false);
       })
       .catch((err) => {
-        console.log(err.message, "Blocks fetching error");
         setLoading(false);
+        navigate("/error");
       });
   }, []);
 
