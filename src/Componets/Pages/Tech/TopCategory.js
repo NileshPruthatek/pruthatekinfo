@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import topCategory from "../Tech/TopCategory.module.css";
-import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import Wrapper from "../../Wrapper";
 import useQuery from "../../../customer-hook/useQuery";
 import axios from 'axios'
@@ -14,31 +14,40 @@ export const TopCategory = () => {
     const [catArray, setCatArray] = useState([]);
     const [pageData, setPageData] = useState()
     const [isEmpty, setIsEmpty] = useState(false)
+    const navigate = useNavigate()
     const query = useQuery()
+    let { catName } = useParams()
 
-    useEffect(() => {
-        setLoading(true)
-        axios.get(`${process.env.REACT_APP_IMG_BASEURL}/api/allCategories?parent=${query.get('x')}`).then((res) => {
-            const mainCat = { name: location.pathname.replace("/", ""), uuid: query.get("x"), isMain: true }
-            setCatArray([mainCat, ...res.data.info.map(x => { return { ...x, isMain: false } })])
-            setLoading(false)
-        }).catch((err) => {
-            setLoading(false)
+    const getAllCategories = async () => {
+        return axios.get(`${process.env.REACT_APP_IMG_BASEURL}/api/allCategories?parent=${catName}`).then((res) => {
+            setCatArray([...res.data.info.map(x => {
+                if (x.slug === catName) return { ...x, isMain: true }
+                return { ...x, isMain: false }
+            })])
         })
-    }, [location])
+    }
 
-    useEffect(() => {
-        setLoading(true)
-        axios.get(`${process.env.REACT_APP_IMG_BASEURL}/api/categoryPage?x=${query.get('x')}`).then((res) => {
+    const getCurrentPageData = async () => {
+        return axios.get(`${process.env.REACT_APP_IMG_BASEURL}/api/categoryPage?x=${catName}`).then((res) => {
             setPageData(res.data.info)
             setIsEmpty(!(!!Object.keys(res.data.info).filter((eachKey) => res.data.info[eachKey].length > 0).length))
-            setLoading(false)
-        }).catch((err) => {
-            setLoading(false)
         })
+    }
+
+    useEffect(() => {
+        (async () => {
+            if (catName) {
+                try {
+                    setLoading(true)
+                    await Promise.all([getAllCategories(), getCurrentPageData()])
+                    setLoading(false)
+                } catch (error) {
+                    setLoading(false)
+                    navigate("/error")
+                }
+            }
+        })()
     }, [location])
-
-
 
     return (
         <Wrapper>
@@ -52,7 +61,7 @@ export const TopCategory = () => {
                             <div className="universalSubnav_items" section="category">
                                 {catArray?.map((cat) => {
                                     return (
-                                        <Link className={`p-2  ${topCategory.universalSubnavitems}`} style={{ cursor: "pointer" }} to={`${cat.isMain ? `/${cat.name.replace(" ", "-").toLowerCase()}?x=${cat.uuid}` : `/${location.pathname.replace("/", "").replace(" ", "-").toLowerCase()}/${cat.name.replace(" ", "-").toLowerCase()}?x=${query.get("x")}&y=${cat.uuid}`}`} >
+                                        <Link className={`p-2  ${topCategory.universalSubnavitems}`} style={{ cursor: "pointer" }} to={`${cat.isMain ? `/${cat.slug.replace(" ", "-").toLowerCase()}` : `/${location.pathname.replace("/", "").replace(" ", "-").toLowerCase()}/${cat.slug.replace(" ", "-").toLowerCase()}`}`} >
                                             <span style={{ textTransform: "capitalize" }}>{cat.name}</span>
                                         </Link>
                                     );

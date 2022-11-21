@@ -13,6 +13,7 @@ import Footer from './Componets/Footer/Footer';
 import TopCategory from './Componets/Pages/Tech/TopCategory';
 import SubCategory from './Componets/Pages/Tech/Subcategary/SubCategory';
 import DetailedBlog from './Componets/Pages/detailedblog/DetailedBlog';
+import Error from './Componets/Pages/error/Error';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/:catName" element={<TopCategory />} />
             <Route path="/:mainCatName/:subCatName" element={<SubCategory />} />
             <Route path="/blog" element={<DetailedBlog />} />
+            <Route path="/error" element={<Error />} />
           </Routes>
           <Footer />
         </Router>

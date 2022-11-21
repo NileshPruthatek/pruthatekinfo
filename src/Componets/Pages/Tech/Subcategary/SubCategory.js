@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import subCategory from '../Subcategary/SubCategory.module.css'
 import techBlog from '../TopCategory.module.css'
-import { Link, NavLink, useLocation } from 'react-router-dom'
+import { Link, NavLink, useLocation, useNavigate, useParams } from 'react-router-dom'
 import data from '../../../../db.json'
 import Wrapper from '../../../Wrapper'
 import useQuery from '../../../../customer-hook/useQuery'
@@ -15,33 +15,47 @@ const SubCategory = () => {
     const [pageData, setPageData] = useState()
     const [currentCatName, setCurrentCatName] = useState("")
     const [isEmpty, setIsEmpty] = useState(false)
+    const navigate = useNavigate()
 
-    const query = useQuery()
+    const { mainCatName, subCatName } = useParams()
 
-    useEffect(() => {
-        setLoading(true)
-        axios.get(`${process.env.REACT_APP_IMG_BASEURL}/api/allCategories?parent=null`).then((res) => {
-            const currentMainCat = res.data.info?.find(x => x.uuid === query.get("x"))
-            const mainCat = { name: currentMainCat.name, uuid: currentMainCat.uuid, isMain: true, route: `/${currentMainCat.name.replace(" ", "-").toLowerCase()}?x=${currentMainCat.uuid}` }
+    const getAllCategories = async () => {
+        return axios.get(`${process.env.REACT_APP_IMG_BASEURL}/api/allCategories?parent=null`).then((res) => {
+            const currentMainCat = res.data.info?.find(x => x.slug === mainCatName)
+            const mainCat = {
+                name: currentMainCat.name, uuid: currentMainCat.uuid, isMain: true, route: `/${currentMainCat.slug}`
+            }
             setCatArray([mainCat, ...currentMainCat.sub_category?.map(x => {
-                if (x.uuid === query.get("y")) setCurrentCatName(x.name)
-                return { ...x, isMain: false, route: `/${currentMainCat.name.replace(" ", "-").toLowerCase()}/${x.name.replace(" ", "-").toLowerCase()}?x=${currentMainCat.uuid}&y=${x.uuid}` }
+                if (x.slug === subCatName) setCurrentCatName(x.name)
+                return {
+                    ...x, isMain: false, route: `/${currentMainCat.slug}/${x.slug}`
+                }
             })])
-            setLoading(false)
-        }).catch((err) => {
-            setLoading(false)
         })
-    }, [location])
+    }
 
-    useEffect(() => {
-        setLoading(true)
-        axios.get(`${process.env.REACT_APP_IMG_BASEURL}/api/categoryPage?x=${query.get('y')}`).then((res) => {
+    const getCurrentPageData = async () => {
+        return axios.get(`${process.env.REACT_APP_IMG_BASEURL}/api/categoryPage?x=${subCatName}`).then((res) => {
             setPageData(res.data.info)
             setIsEmpty(!(!!Object.keys(res.data.info).filter((eachKey) => res.data.info[eachKey].length > 0).length))
-            setLoading(false)
-        }).catch((err) => {
-            setLoading(false)
         })
+    }
+
+    useEffect(() => {
+        (async () => {
+            if (mainCatName && subCatName) {
+                try {
+                    setLoading(true)
+                    await Promise.all([getAllCategories(), getCurrentPageData()])
+                    setLoading(false)
+                } catch (error) {
+                    setLoading(false)
+                    navigate("/error")
+                }
+            }
+        })()
+
+
     }, [location])
 
     const scrollLeft = () => {
@@ -55,8 +69,6 @@ const SubCategory = () => {
     };
 
     const [showSeeMore, setShowSeeMore] = useState(false);
-
-    console.log(pageData?.["catWiseTopFiveBlogs"])
 
     return (
         <Wrapper>

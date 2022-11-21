@@ -43,10 +43,10 @@ export const Navbar = () => {
             </button>
             <div className={`collapse justify-content-end ${style.listitems}`} id="navbarSupportedContent">
               <ul className="navbar-nav">
-                {categoryData?.map(({ name, uuid }) => {
+                {categoryData?.map(({ name, uuid, slug }) => {
                   return (
                     <li className={style.navitem}>
-                      <Link className="nav-link active fw-bold" style={{ cursor: "pointer" }} to={`${name.replace(" ", "-").toLowerCase()}?x=${uuid}`}>{name}</Link>
+                      <Link className="nav-link active fw-bold" style={{ cursor: "pointer" }} to={`${slug.replace(" ", "-").toLowerCase()}`}>{name}</Link>
                     </li>
                   )
                 })}
@@ -73,10 +73,10 @@ export const Navbar = () => {
           {/* The below div will only show up in small screen when toggle is active. */}
           <div className={`${style.smallScreenListItems} d-none`} id="smallScreenList">
             <ul className="navbar-nav">
-              {categoryData?.map(({ name, uuid }) => {
+              {categoryData?.map(({ name, uuid, slug }) => {
                 return (
                   <li className={style.navitem}>
-                    <Link className="nav-link active fw-bold" style={{ cursor: "pointer" }} to={`${name.replace(" ", "-").toLowerCase()}?x=${uuid}`}>{name}</Link>
+                    <Link className="nav-link active fw-bold" style={{ cursor: "pointer" }} to={`${slug.replace(" ", "-").toLowerCase()}`}>{name}</Link>
                   </li>
                 )
               })}
