@@ -14,6 +14,7 @@ export const TopCategory = () => {
     const [catArray, setCatArray] = useState([]);
     const [pageData, setPageData] = useState()
     const [isEmpty, setIsEmpty] = useState(false)
+    const [currentTopCat, setCurrentTopCat] = useState(null)
     const navigate = useNavigate()
     const query = useQuery()
     let { catName } = useParams()
@@ -21,7 +22,10 @@ export const TopCategory = () => {
     const getAllCategories = async () => {
         return axios.get(`${process.env.REACT_APP_IMG_BASEURL}/api/allCategories?parent=${catName}`).then((res) => {
             setCatArray([...res.data.info.map(x => {
-                if (x.slug === catName) return { ...x, isMain: true }
+                if (x.slug === catName) {
+                    setCurrentTopCat(x.name)
+                    return { ...x, isMain: true }
+                }
                 return { ...x, isMain: false }
             })])
         })
@@ -53,7 +57,7 @@ export const TopCategory = () => {
         <Wrapper>
             {!loading && <>
                 <Helmet>
-                    <title>PRUTHATEK BLOGS | TECH</title>
+                    <title>{`${currentTopCat} - Pruthatek Blogs`}</title>
                 </Helmet>
                 <div className="grid container verticalsubnav p-0 next-page-hide py-5">
                     <div className="universalSubnav">
@@ -62,7 +66,8 @@ export const TopCategory = () => {
                                 {catArray?.map((cat) => {
                                     return (
                                         <Link className={`p-2  ${topCategory.universalSubnavitems}`} style={{ cursor: "pointer" }} to={`${cat.isMain ? `/${cat.slug.replace(" ", "-").toLowerCase()}` : `/${location.pathname.replace("/", "").replace(" ", "-").toLowerCase()}/${cat.slug.replace(" ", "-").toLowerCase()}`}`} >
-                                            <span style={{ textTransform: "capitalize" }}>{cat.name}</span>
+
+                                            {cat.name === currentTopCat ? <span style={{ textTransform: "capitalize" }} className="fw-bold">{cat.name}</span> : <span style={{ textTransform: "capitalize" }}>{cat.name}</span>}
                                         </Link>
                                     );
                                 })}
@@ -70,7 +75,7 @@ export const TopCategory = () => {
                         </div>
                     </div>
                 </div>
-                {isEmpty ? <h2 className="text-center my-5">Blogs Comming Soon!</h2> : <TopCat pageData={pageData} />}
+                {isEmpty ? <h2 className="text-center my-5 vh-100">Blogs Comming Soon!</h2> : <TopCat pageData={pageData} />}
             </>}
 
         </Wrapper>
