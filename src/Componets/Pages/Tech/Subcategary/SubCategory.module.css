@@ -23,6 +23,32 @@
   text-decoration-line: none;
 }
 
+.categoryWiseBlogImage {
+  height: 200px;
+  object-fit: contain;
+}
+
+.latestImage {
+  height: 100px;
+  object-fit: contain;
+}
+
+@media screen and (min-width: 80em) {
+  .TechDealRightTile {
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    padding: 0px 1.5em;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 1.5em;
+  }
+
+  .latestImage {
+    height: 200px;
+    object-fit: contain;
+  }
+}
+
 /*=================================Tech Deals======================= */
 
 .navourfavorite {
@@ -110,7 +136,7 @@
 .FourateImage {
   width: 219px;
   height: 120px;
-  overflow: hidden;
+  object-fit: contain;
 }
 .Ourtext {
   font-size: 0.8rem;
@@ -120,10 +146,10 @@
   margin-top: 25px;
 }
 .Prevbtn {
-  background-color: #1861AA !important;
+  background-color: #1861aa !important;
 }
 .Nextbtn {
-  background-color: #1861AA !important;
+  background-color: #1861aa !important;
   margin-right: 50px;
 }
 /* Scroll behaviour CSS */

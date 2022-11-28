@@ -1,11 +1,24 @@
 /* New CSS */
 
 .howlargetitle {
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   font-size: medium;
+}
+
+.topImage {
+  max-height: 300px;
+  object-fit: contain;
 }
 
 @media screen and (min-width: 80em) {
   .howlargetitle {
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     font-size: 1.5rem;
   }
 }
@@ -38,6 +51,22 @@
   font-size: 1.3em;
 }
 
+.FourateImage {
+  width: 219px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.categoryWiseBlogImage {
+  height: 200px;
+  object-fit: contain;
+}
+
+.latestImage {
+  height: 100px;
+  object-fit: contain;
+}
+
 @media screen and (min-width: 80em) {
   .TechDealRightTile {
     -webkit-line-clamp: 3;
@@ -46,6 +75,11 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     font-size: 1.5em;
+  }
+
+  .latestImage {
+    height: 200px;
+    object-fit: contain;
   }
 }
 
@@ -123,11 +157,6 @@
 
   border-bottom: 2px solid #0f8209;
 }
-.FourateImage {
-  width: 219px;
-  height: 120px;
-  overflow: hidden;
-}
 .Ourtext {
   font-size: 0.8rem;
   margin-top: 25px;
@@ -136,10 +165,10 @@
   margin-top: 25px;
 }
 .Prevbtn {
-  background-color: #1861AA !important;
+  background-color: #1861aa !important;
 }
 .Nextbtn {
-  background-color: #1861AA !important;
+  background-color: #1861aa !important;
 }
 /* Scroll behaviour CSS */
 

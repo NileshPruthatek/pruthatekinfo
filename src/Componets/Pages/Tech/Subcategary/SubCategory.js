@@ -6,6 +6,7 @@ import data from '../../../../db.json'
 import Wrapper from '../../../Wrapper'
 import { Helmet } from 'react-helmet';
 import axios from 'axios'
+import moment from 'moment'
 
 
 const SubCategory = () => {
@@ -108,14 +109,12 @@ const SubCategory = () => {
                                                                 <div key={x.index} className="col mb-4">
                                                                     <NavLink to={`/blog?x=${x.uuid}`} className={techBlog.navdecoration}>
                                                                         <div className={`card`}>
-                                                                            <img src={`${process.env.REACT_APP_IMG_BASEURL}/${x["thumbnail_img"]}`} className={`h-50 w-100`} style={{ width: "100%" }} alt="..." />
+                                                                            <img src={`${process.env.REACT_APP_IMG_BASEURL}/${x["thumbnail_img"]}`} className={`w-100 ${techBlog.categoryWiseBlogImage}`} alt="..." />
                                                                             <div className="card-body p-0">
                                                                                 <div className="card-body p-sm-4 p-3">
                                                                                     <h5 className={`card-text font-weight-bold mb-4 ${techBlog.howlargetitle}`} >{x.title}</h5>
-                                                                                    <p className={`card-text font-weight-bold ${techBlog.howtitlesmallupdated} m-0`} > {`${x?.["updated_at"]}`}</p>
+                                                                                    <p className={`card-text font-weight-bold ${techBlog.howtitlesmallupdated} m-0`} > {`${moment(x?.["updated_at"]).format("DD MMM, YYYY")}`}</p>
                                                                                 </div>
-                                                                                {/* <div className=`}>
-                                                                </div> */}
                                                                             </div>
                                                                         </div>
                                                                     </NavLink>
@@ -169,7 +168,10 @@ const SubCategory = () => {
                                                             <h5 className={`card-text font-weight-bold text-capitalize ${techBlog.Ourtext}`}>{x.title} </h5>
 
                                                             <p className={`  ${techBlog.Updated}`}>
-                                                                <small class="text-muted"> {`${x?.["user"]?.["username"]} Last Updated On : ${x["updated_at"]}`}</small>
+                                                                {/* <small class="text-muted"> {`${x?.["user"]?.["username"]} Last Updated On : ${x["updated_at"]}`}</small> */}
+
+                                                                <small> {`${x?.["user"]?.["username"]}`}</small> <br></br>
+                                                                <small class="text-muted">{`Updated On : ${moment(x["updated_at"]).format("DD MMM, YYYY")}`}</small>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -200,19 +202,19 @@ const SubCategory = () => {
                             <div className="col-12 col-md-9">
                                 {pageData?.["latestBlogs"].map((latestdata) => (
                                     <NavLink to={`/blog?x=${latestdata.uuid}`} className={techBlog.navdecoration}>
-                                        <div key={latestdata.uuid} className={`mb-4 border border-1`} style={{ height: "18vh" }}>
-                                            <div className="row w-100 no-gutters m-0 h-100">
+                                        <div key={latestdata.uuid} className={`mb-4 border border-1`}>
+                                            <div className="row w-100 no-gutters m-0">
                                                 <div className="col-9 p-0">
                                                     <div className="card-body p-2">
                                                         <h5 className={`card-text font-weight-bold ${techBlog.howtitlesmallres}`}>{latestdata.title}</h5>
 
                                                         <p className={`card-text pl-5 ${techBlog.howtitlesmallupdated}`}>
-                                                            <small className="text-muted">{`${latestdata.updated_at}`}</small>
+                                                            <small className="text-muted">{`${moment(latestdata.updated_at).format("DD MMM, YYYY")}`}</small>
                                                         </p>
                                                     </div>
                                                 </div>
                                                 <div className="col-3 p-0 h-100">
-                                                    <img src={`${process.env.REACT_APP_IMG_BASEURL}/${latestdata?.["thumbnail_img"]}`} alt="..." className={`w-100 h-100`} />
+                                                    <img src={`${process.env.REACT_APP_IMG_BASEURL}/${latestdata?.["thumbnail_img"]}`} alt="..." className={`w-100 ${techBlog.latestImage}`} />
                                                 </div>
                                             </div>
                                         </div>
