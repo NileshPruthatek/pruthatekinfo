@@ -64,6 +64,7 @@ export const TopCategory = () => {
                         <div className="universalSubnav_scrollWrapper">
                             <div className="universalSubnav_items" section="category">
                                 {catArray?.map((cat) => {
+                                    console.log(cat.slug)
                                     return (
                                         <Link className={`p-2  ${topCategory.universalSubnavitems}`} style={{ cursor: "pointer" }} to={`${cat.isMain ? `/${cat.slug.replace(" ", "-").toLowerCase()}` : `/${location.pathname.replace("/", "").replace(" ", "-").toLowerCase()}/${cat.slug.replace(" ", "-").toLowerCase()}`}`} >
 

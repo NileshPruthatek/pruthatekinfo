@@ -69,6 +69,8 @@
 
 .knowleSmallimage {
   width: 40%;
+  object-fit: cover;
+  /* height: 100px; */
 }
 
 .howlargetitle {
