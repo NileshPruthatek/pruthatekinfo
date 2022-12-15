@@ -31,7 +31,7 @@ export const Navbar = () => {
     <>
       {!loading &&
         <>
-          <nav className={`navbar navbar-expand-lg justify-content-between navbar-light mx-auto ${style.nav}`}>
+          {/* <nav className={`navbar navbar-expand-lg justify-content-between navbar-light mx-auto ${style.nav}`}>
             <Link to="/"><img src={Logo} alt="logo" className={style.logoimage} /></Link>
             <button
               onClick={showSmallScreenList}
@@ -63,14 +63,14 @@ export const Navbar = () => {
                     More
                   </a>
                   <ul className={`dropdown-menu w-100  z-index-n1  position-absolute   ${style.dropdwonbutton}`} aria-labelledby="navbarDropdown">
-                    {/*==================== sub menu componets============================== */}
+                    ==================== sub menu componets==============================
                     <Submenu categoryData={categoryData} />
                   </ul>
                 </li>
               </ul>
             </div>
           </nav>
-          {/* The below div will only show up in small screen when toggle is active. */}
+          The below div will only show up in small screen when toggle is active.
           <div className={`${style.smallScreenListItems} d-none`} id="smallScreenList">
             <ul className="navbar-nav">
               {categoryData?.map(({ name, uuid, slug }) => {
@@ -93,12 +93,55 @@ export const Navbar = () => {
                   More
                 </a>
                 <ul className={`dropdown-menu w-100 z-index-n1 position-absolute   ${style.dropdwonbutton}`} aria-labelledby="navbarDropdown">
-                  {/*==================== sub menu componets============================== */}
+                  ==================== sub menu componets==============================
                   <Submenu categoryData={categoryData} />
                 </ul>
               </li>
             </ul>
-          </div>
+          </div> */}
+
+
+          <nav className="navbar navbar-expand-lg navbar-light justify-content-between">
+            <Link to="/"><img src={Logo} alt="logo" className={style.logoimage} /></Link>
+            <button
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              className="navbar-toggler"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" style={{ flexGrow: "0" }} id="navbarNav">
+              <ul className="navbar-nav">
+                {categoryData?.map(({ name, uuid, slug }) => {
+                  return (
+                    <li className={style.navitem}>
+                      <Link className="nav-link active fw-bold" style={{ cursor: "pointer" }} to={`${slug.replace(" ", "-").toLowerCase()}`}>{name}</Link>
+                    </li>
+                  )
+                })}
+                <li className={style.navitem}>
+                  <a
+                    className="nav-link dropdown-toggle fw-bold"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    More
+                  </a>
+                  <ul className={`dropdown-menu w-100  z-index-n1  position-absolute   ${style.dropdwonbutton}`} aria-labelledby="navbarDropdown">
+                    {/* ==================== sub menu componets============================== */}
+                    <Submenu categoryData={categoryData} />
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </>
       }
     </>

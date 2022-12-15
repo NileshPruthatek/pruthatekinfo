@@ -50,10 +50,10 @@ export const Homeblog = () => {
 
           {isEmpty ? <h2 className="text-center my-5 vh-100">We are writing blog and will upload soon! Thanks you.</h2> : <>
 
-            <div className={`container mt-5  ${homecss.cardindex}`}>
-              <div className="row justify-content-center px-lg-5">
+            <div className={'container mt-5 ' + homecss.cardindex}>
+              <div className="row justify-content-center">
                 {pageData?.["topThreeBlogs"].map((blog) => {
-                  return <div className="col-md-4 mb-4 mb-md-0 p-lg-5">
+                  return <div className="col-md-4 mb-4 mb-md-0 py-lg-5">
                     <NavLink to={`/blog?x=${blog?.uuid}`} className={homecss.navdecoration}>
                       <div className={`border border-1 mx-0 w-100 ${homecss.myCard}`}>
                         <img src={`${process.env.REACT_APP_IMG_BASEURL}/${blog["thumbnail_img"]}`} className={homecss.cardimgtop} alt="img1" />
@@ -65,7 +65,9 @@ export const Homeblog = () => {
                           </p>
                           <p className="card-text">
                             <small class="text-muted">
-                              {`${blog?.["user"]["username"]} - Last Updated On : ${moment(blog?.["updated_at"]).format("DD MMM, YYYY")}`}
+                              <p style={{ marginBottom: "0.5rem" }}>{blog?.["user"]["username"]}</p>
+                              <p style={{ marginBottom: "0.5rem" }}>Last Updated On : {moment(blog?.["updated_at"]).format("DD MMM, YYYY")}</p>
+                              {/* {`${blog?.["user"]["username"]} - Last Updated On : ${moment(blog?.["updated_at"]).format("DD MMM, YYYY")}`} */}
                             </small>
                           </p>
                         </div>
@@ -82,9 +84,9 @@ export const Homeblog = () => {
             </div>
 
             <div className={`container mb-5  ${homecss.cardindex}`}>
-              <div className="row justify-content-center px-lg-5">
+              <div className="row justify-content-center">
                 {pageData?.["topList"].slice(0, 3).map((blog) => {
-                  return <div className="col-md-4 mb-4 mb-md-0 p-lg-5">
+                  return <div className="col-md-4 mb-4 mb-md-0 py-lg-5">
                     <NavLink to={`/blog?x=${blog?.uuid}`} className={homecss.navdecoration}>
                       <div className={`border border-1 mx-0 w-100 ${homecss.myCard}`}>
                         <img src={`${process.env.REACT_APP_IMG_BASEURL}/${blog["thumbnail_img"]}`} className={homecss.cardimgtop} alt="img1" />
@@ -96,7 +98,9 @@ export const Homeblog = () => {
                           </p>
                           <p className="card-text">
                             <small class="text-muted">
-                              {`${blog?.["user"]["username"]} - Last Updated On : ${moment(blog?.["updated_at"]).format("DD MMM, YYYY")}`}
+                              <p style={{ marginBottom: "0.5rem" }}>{blog?.["user"]["username"]}</p>
+                              <p style={{ marginBottom: "0.5rem" }}>Last Updated On : {moment(blog?.["updated_at"]).format("DD MMM, YYYY")}</p>
+                              {/* {`${blog?.["user"]["username"]} - Last Updated On : ${moment(blog?.["updated_at"]).format("DD MMM, YYYY")}`} */}
                             </small>
                           </p>
                         </div>
@@ -514,7 +518,7 @@ export const Homeblog = () => {
                     <div className={`card`}>
                       <img
                         src={`${process.env.REACT_APP_IMG_BASEURL}/${blog["thumbnail_img"]}`}
-                        className="w-100 img-fluid" alt="..." />
+                        className="w-100 img-fluid" alt="..." style={{ minHeight: "200px", maxHeight: "200px", objectFit: "contain" }} />
                       <div className="card-body py-3 px-2">
                         <NavLink to={`/blog?x=${blog?.uuid}`} className={homecss.navdecoration}>
                           <h5
@@ -527,7 +531,8 @@ export const Homeblog = () => {
                           className={`card-text p-0 ${homecss.howtitlesmallupdated} `}
                         >
                           <small class="text-muted">
-                            {`Last Updated On : ${moment(blog?.["updated_at"]).format("DD MMM, YYYY")}`}
+                            <p style={{ margin: "0.5rem 0" }}>Last Updated On : {moment(blog?.["updated_at"]).format("DD MMM, YYYY")}</p>
+                            {/* {`Last Updated On : ${moment(blog?.["updated_at"]).format("DD MMM, YYYY")}`} */}
                           </small>
                         </p>
                       </div>
