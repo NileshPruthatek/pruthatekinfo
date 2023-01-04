@@ -14,8 +14,29 @@ import TopCategory from './Componets/Pages/Tech/TopCategory';
 import SubCategory from './Componets/Pages/Tech/Subcategary/SubCategory';
 import DetailedBlog from './Componets/Pages/detailedblog/DetailedBlog';
 import Error from './Componets/Pages/error/Error';
+import favicon from "./assets/images/favicon.png";
 
 function App() {
+
+  function setFavicons(favImg) {
+    let headTitle = document.querySelector('head');
+
+    let favIcons = [
+      { rel: 'icon' },
+      { rel: 'apple-touch-icon' },
+      { rel: 'apple-touch-startup-image' },
+      { rel: 'shortcut icon' }
+    ]
+
+    favIcons.forEach(function (favIcon) {
+      let setFavicon = document.createElement('link');
+      setFavicon.setAttribute('rel', favIcon.rel);
+      setFavicon.setAttribute('href', favImg);
+      headTitle.appendChild(setFavicon);
+    });
+  }
+  setFavicons(favicon);
+
   return (
     <>
       <div className="App" style={{ width: "100%" }}>

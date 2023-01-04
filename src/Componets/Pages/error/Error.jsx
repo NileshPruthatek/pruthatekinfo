@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Error = () => {
+  document.title = "Error"
   return (
     <div className="vh-100 d-flex justify-content-center gap-3 align-items-center flex-column">
       <h1 className="fw-bold">This is not the page you are looking for.</h1>

@@ -11,6 +11,7 @@ const EditableBlock = (props) => {
   const { content: block } = props;
   switch (block.type) {
     case blockTypes.HEADING:
+      document.title = block['data']['content']
       return <Heading payload={block} fontSize={32} />;
       break;
     case blockTypes.PARAGRAPH:
