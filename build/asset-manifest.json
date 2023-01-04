@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7a242b10.css",
+    "main.js": "/static/js/main.8a62b2ba.js",
+    "static/media/INSTA  ICON-02.png": "/static/media/INSTA  ICON-02.c79f80cbcd8438ed9947.png",
+    "static/media/NEW LOGO-03.png": "/static/media/NEW LOGO-03.bfbee17ef4368899310e.png",
+    "static/media/image2.jpeg": "/static/media/image2.592a42a3ad3b30e11ae2.jpeg",
+    "static/media/image9.jpeg": "/static/media/image9.7023dd4d20f64ee23732.jpeg",
+    "static/media/image4.jpg": "/static/media/image4.f555a79b6fe5dafebedd.jpg",
+    "static/media/TWITTER  ICON-03.png": "/static/media/TWITTER  ICON-03.9df998b258a3dbdf94a1.png",
+    "static/media/image5.jpeg": "/static/media/image5.c9a6e5fb9d4376fa4c6e.jpeg",
+    "static/media/image3.jpeg": "/static/media/image3.1e3ccd7c31fba2bd40ed.jpeg",
+    "static/media/LINKDIN  ICON-04.png": "/static/media/LINKDIN  ICON-04.671cbc46e6bc0864fb98.png",
+    "static/media/image7.jpeg": "/static/media/image7.8c44578c8c79fc875ae8.jpeg",
+    "static/media/FACEBOOK ICON-01.png": "/static/media/FACEBOOK ICON-01.cdc82b85f588c4c21951.png",
+    "index.html": "/index.html",
+    "main.7a242b10.css.map": "/static/css/main.7a242b10.css.map",
+    "main.8a62b2ba.js.map": "/static/js/main.8a62b2ba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a242b10.css",
+    "static/js/main.8a62b2ba.js"
+  ]
+}
